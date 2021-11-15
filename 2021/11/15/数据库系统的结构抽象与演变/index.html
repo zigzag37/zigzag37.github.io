@@ -25,7 +25,7 @@
         
     
     <!-- title -->
-    <title>傅里叶变换</title>
+    <title>数据库系统的结构抽象与演变</title>
     <!-- styles -->
     
 <link rel="stylesheet" href="/css/style.css">
@@ -66,13 +66,8 @@
     <span id="actions">
       <ul>
           
-              <li><a class="icon" href="/2021/11/15/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%B3%BB%E7%BB%9F%E7%9A%84%E7%BB%93%E6%9E%84%E6%8A%BD%E8%B1%A1%E4%B8%8E%E6%BC%94%E5%8F%98/"><i class="fas fa-chevron-left"
-                                                                           aria-hidden="true"
-                                                                           onmouseover="$('#i-prev').toggle();"
-                                                                           onmouseout="$('#i-prev').toggle();"></i></a></li>
           
-          
-              <li><a class="icon" href="/2021/11/11/11-11/"><i class="fas fa-chevron-right"
+              <li><a class="icon" href="/2021/11/13/%E5%82%85%E9%87%8C%E5%8F%B6%E5%8F%98%E6%8D%A2/"><i class="fas fa-chevron-right"
                                                                            aria-hidden="true"
                                                                            onmouseover="$('#i-next').toggle();"
                                                                            onmouseout="$('#i-next').toggle();"></i></a></li>
@@ -93,19 +88,19 @@
     <div id="share" style="display: none">
       <ul>
     <li><a class="icon"
-           target="_blank" rel="noopener" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://zthrseven.github.io/2021/11/13/%E5%82%85%E9%87%8C%E5%8F%B6%E5%8F%98%E6%8D%A2/&title=傅里叶变换"><i
+           target="_blank" rel="noopener" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://zthrseven.github.io/2021/11/15/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%B3%BB%E7%BB%9F%E7%9A%84%E7%BB%93%E6%9E%84%E6%8A%BD%E8%B1%A1%E4%B8%8E%E6%BC%94%E5%8F%98/&title=数据库系统的结构抽象与演变"><i
                     class="fab fa-qq " aria-hidden="true"></i></a></li>
     <li><a class="icon"
-           target="_blank" rel="noopener" href="https://service.weibo.com/share/share.php?url=https://zthrseven.github.io/2021/11/13/%E5%82%85%E9%87%8C%E5%8F%B6%E5%8F%98%E6%8D%A2/&title=傅里叶变换"><i
+           target="_blank" rel="noopener" href="https://service.weibo.com/share/share.php?url=https://zthrseven.github.io/2021/11/15/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%B3%BB%E7%BB%9F%E7%9A%84%E7%BB%93%E6%9E%84%E6%8A%BD%E8%B1%A1%E4%B8%8E%E6%BC%94%E5%8F%98/&title=数据库系统的结构抽象与演变"><i
                     class="fab fa-weibo " aria-hidden="true"></i></a></li>
-    <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://zthrseven.github.io/2021/11/13/%E5%82%85%E9%87%8C%E5%8F%B6%E5%8F%98%E6%8D%A2/&text=傅里叶变换"><i
+    <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://zthrseven.github.io/2021/11/15/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%B3%BB%E7%BB%9F%E7%9A%84%E7%BB%93%E6%9E%84%E6%8A%BD%E8%B1%A1%E4%B8%8E%E6%BC%94%E5%8F%98/&text=数据库系统的结构抽象与演变"><i
                     class="fab fa-twitter " aria-hidden="true"></i></a></li>
-    <li><a class="icon" href="mailto:?subject=傅里叶变换&body=Check out this article: https://zthrseven.github.io/2021/11/13/%E5%82%85%E9%87%8C%E5%8F%B6%E5%8F%98%E6%8D%A2/"><i
+    <li><a class="icon" href="mailto:?subject=数据库系统的结构抽象与演变&body=Check out this article: https://zthrseven.github.io/2021/11/15/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%B3%BB%E7%BB%9F%E7%9A%84%E7%BB%93%E6%9E%84%E6%8A%BD%E8%B1%A1%E4%B8%8E%E6%BC%94%E5%8F%98/"><i
                     class="fas fa-envelope " aria-hidden="true"></i></a></li>
 </ul>
     </div>
     <div id="toc">
-      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BB%8B%E7%BB%8D"><span class="toc-number">1.</span> <span class="toc-text">介绍</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%89%A9%E7%90%86%E6%84%8F%E4%B9%89"><span class="toc-number">2.</span> <span class="toc-text">物理意义</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%9E%E7%8E%B0%E8%BF%87%E7%A8%8B"><span class="toc-number">3.</span> <span class="toc-text">实现过程</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%8C%E7%BB%B4%E5%82%85%E9%87%8C%E5%8F%B6%E5%8F%98%E6%8D%A2"><span class="toc-number">3.1.</span> <span class="toc-text">二维傅里叶变换</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%A2%91%E8%B0%B1%E4%B8%AD%E5%BF%83%E5%8C%96"><span class="toc-number">3.2.</span> <span class="toc-text">频谱中心化</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86"><span class="toc-number">3.3.</span> <span class="toc-text">图像处理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%A2%91%E8%B0%B1%E4%B8%AD%E5%BF%83%E5%8C%96%E5%8F%8D%E5%8F%98%E6%8D%A2"><span class="toc-number">3.4.</span> <span class="toc-text">频谱中心化反变换</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%8C%E7%BB%B4%E7%A6%BB%E6%95%A3%E5%82%85%E9%87%8C%E5%8F%B6%E5%8F%8D%E5%8F%98%E6%8D%A2"><span class="toc-number">3.5.</span> <span class="toc-text">二维离散傅里叶反变换</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%9E%E4%BE%8B"><span class="toc-number">4.</span> <span class="toc-text">实例</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8F%82%E8%80%83%E9%93%BE%E6%8E%A5"><span class="toc-number">5.</span> <span class="toc-text">参考链接</span></a></li></ol>
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E5%BA%93%E7%B3%BB%E7%BB%9F%E7%9A%84%E6%A0%87%E5%87%86%E7%BB%93%E6%9E%84"><span class="toc-number">1.</span> <span class="toc-text">数据库系统的标准结构</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#DBMS%E7%AE%A1%E7%90%86%E6%95%B0%E6%8D%AE%E7%9A%84%E4%B8%89%E4%B8%AA%E5%B1%82%E6%AC%A1"><span class="toc-number">1.1.</span> <span class="toc-text">DBMS管理数据的三个层次</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%BC%94%E5%8F%98%E4%B8%8E%E5%8F%91%E5%B1%95"><span class="toc-number">2.</span> <span class="toc-text">演变与发展</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AE%80%E8%A6%81%E5%8F%91%E5%B1%95%E5%8F%B2"><span class="toc-number">2.1.</span> <span class="toc-text">简要发展史</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%94%B1%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F%E5%88%B0%E6%95%B0%E6%8D%AE%E5%BA%93"><span class="toc-number">2.2.</span> <span class="toc-text">由文件系统到数据库</span></a></li></ol></li></ol>
     </div>
   </span>
 </div>
@@ -116,7 +111,7 @@
     <header>
         
     <h1 class="posttitle" itemprop="name headline">
-        傅里叶变换
+        数据库系统的结构抽象与演变
     </h1>
 
         <div class="meta">
@@ -129,8 +124,8 @@
             
     <div class="postdate">
         
-            <time datetime="2021-11-13T07:34:46.000Z"
-                  itemprop="datePublished">2021-11-13</time>
+            <time datetime="2021-11-15T09:32:24.000Z"
+                  itemprop="datePublished">2021-11-15</time>
             
         
     </div>
@@ -138,32 +133,71 @@
             
     <div class="article-category">
         <i class="fas fa-archive"></i>
-        <a class="category-link" href="/categories/Matlab/">Matlab</a>
+        <a class="category-link" href="/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/">数据库</a>
     </div>
 
             
-    <div class="article-tag">
-        <i class="fas fa-tag"></i>
-        <a class="tag-link-link" href="/tags/matlab-%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86/" rel="tag">matlab 图像处理</a>
-    </div>
-
         </div>
     </header>
     
     <div class="content" itemprop="articleBody">
-        <h2 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h2><p>傅里叶变换为我们提供了另一个角度观察图像，可以将图像从灰度分布转换化到频域分布。</p>
-<h2 id="物理意义"><a href="#物理意义" class="headerlink" title="物理意义"></a>物理意义</h2><p>图像频域是表征图像中灰度变化剧烈程度的指标。<br>如：大面积的沙漠在图像中是一片灰度变化缓慢的区域（图像的主体特征），对应的频率值很低；而对于地表属性变换剧烈的边缘区域在图像中是一片灰度变化剧烈的区域（边缘、噪声），对应的频率值较高。</p>
-<h2 id="实现过程"><a href="#实现过程" class="headerlink" title="实现过程"></a>实现过程</h2><h3 id="二维傅里叶变换"><a href="#二维傅里叶变换" class="headerlink" title="二维傅里叶变换"></a>二维傅里叶变换</h3><p>   <code> J = fft2(I,m,n）</code><br>参数说明:<br>  ​    I:输入图像<br>  ​    J:傅里叶频谱<br>  ​    m,n:将截断I或尾随零填充I，以便在计算变换之前形成m×n矩阵</p>
-<p>一般采用有填充的傅里叶变换</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">PQ=paddedsize(size(I));</span><br><span class="line">J = fft2(I,PQ(1),PQ(2)); </span><br></pre></td></tr></table></figure>
-<h3 id="频谱中心化"><a href="#频谱中心化" class="headerlink" title="频谱中心化"></a>频谱中心化</h3><p>为了便于频域的滤波和频谱的分析，常常在图像增强处理前进行频谱的中心化使得低频位于中心。</p>
-<p><code>Z = fftshift(J);</code><br>​    参数说明：<br>​         J:傅里叶频谱<br>​         Z:频谱中心化后的频谱</p>
-<h3 id="图像处理"><a href="#图像处理" class="headerlink" title="图像处理"></a>图像处理</h3><p>   在这里对图像相关处理</p>
-<h3 id="频谱中心化反变换"><a href="#频谱中心化反变换" class="headerlink" title="频谱中心化反变换"></a>频谱中心化反变换</h3><p>   <code>J = iffshift(Z)</code><br>   参数说明：<br>   ​    Z:频谱中心化后的频谱<br>   ​    J:频谱中心化反变换结果</p>
-<h3 id="二维离散傅里叶反变换"><a href="#二维离散傅里叶反变换" class="headerlink" title="二维离散傅里叶反变换"></a>二维离散傅里叶反变换</h3><p>​        <code>I = ifftshift(j) </code><br>​        参数说明：<br>​            J:傅里叶频谱<br>​            I:输出图像</p>
-<h2 id="实例"><a href="#实例" class="headerlink" title="实例"></a>实例</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">clear all;</span><br><span class="line">I=imread(&#x27;lena.bmp&#x27;);</span><br><span class="line">[M,N]=size(I);</span><br><span class="line">subplot(1,3,1),imshow(I);title(&#x27;输入图像&#x27;);</span><br><span class="line">PQ= paddedsize(size(I));%获得填充参数</span><br><span class="line">J = fft2(I,PQ(1),PQ(2)); %得到有填充的傅里叶变换</span><br><span class="line">Z =fftshift(J); %频谱图中心化</span><br><span class="line">S=log(1+abs(Z)); %abs(Z)是幅度谱，log用于压缩频谱范围</span><br><span class="line">subplot(1,3,2),imshow(S,[]);title(&#x27;傅里叶变换频谱&#x27;);</span><br><span class="line">%图像增强处理即对频谱Z的处理（后续添加代码）</span><br><span class="line">J1 =ifftshift(Z); %频谱图反中心化</span><br><span class="line">I1=real(ifft2(J1)); %傅里叶反变换 </span><br><span class="line">I1=I1(1:M,1:N);%裁剪左上部矩阵为原始大小</span><br><span class="line">subplot(1,3,3),imshow(uint8(I1));title(&#x27;傅里叶反变换输出图像&#x27;);</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<p><img src="/2021/11/13/%E5%82%85%E9%87%8C%E5%8F%B6%E5%8F%98%E6%8D%A2/lena.png" alt="lena.png"></p>
-<h2 id="参考链接"><a href="#参考链接" class="headerlink" title="参考链接"></a>参考链接</h2><p><a target="_blank" rel="noopener" href="https://www.cnblogs.com/wj-1314/p/11983496.html">https://www.cnblogs.com/wj-1314/p/11983496.html</a></p>
+        <h2 id="数据库系统的标准结构"><a href="#数据库系统的标准结构" class="headerlink" title="数据库系统的标准结构"></a>数据库系统的标准结构</h2><h3 id="DBMS管理数据的三个层次"><a href="#DBMS管理数据的三个层次" class="headerlink" title="DBMS管理数据的三个层次"></a>DBMS管理数据的三个层次</h3><ul>
+<li>External Level = Uesrlevel<br>某一用户能够看到与处理的数据,全局数据中的某.一部分</li>
+<li>Conecptual Level = Logic Level<br>从全局角度理解/管理的数据,含相应的关联约束.</li>
+<li>Internal Level = Physical Level<br>存储在介质上的数据,含存储路径,村春方式,索引方式等.<br>###数据与数据的结构</li>
+<li>模式(Schema)<br>对数据库中数据所进行的一种结构性的描述所观察到数据的结构信息.</li>
+<li>视图(View)/数据(Data)<br>某一种表现形式下表现出来的数据库中的数据<br><img src="https://img2020.cnblogs.com/blog/2183929/202109/2183929-20210913201129682-1793103609.png"><br>###三级模式两层映像</li>
+<li>三级模式<ol>
+<li>外模式(External Schema):某一用户能够看到与处理的数据结构的结构描述</li>
+<li>模式(Schema):从全局角度理解/管理的数据的结构描述,含相应的关联约束</li>
+<li>内模式(Internal Schema):存储在介质上的数据的结构描述,含存储路径,存储方式,索引方式等.<br><img src="https://img2020.cnblogs.com/blog/2183929/202109/2183929-20210913201904593-1689320281.png"></li>
+</ol>
+</li>
+<li>两层映像<ol>
+<li>外模式/模式映像:将外模式映射为概念模式,从而支持实现数据概念视图向外部视图的转换,便于用户观察和使用.</li>
+<li>模式/内模式映像:将概念模式为内模式,从而支持实现数据概念视图向内部视图的转换,便于计算机进行存储和处理.<br><img src="https://img2020.cnblogs.com/blog/2183929/202109/2183929-20210913202426825-284085838.png"><br>###两个独立性</li>
+</ol>
+</li>
+</ul>
+<ol>
+<li>逻辑数据独立性:当概念模式变化时，可以不改变外部模式(只需改变E- C Mapping),从而无需<br>改变应用程序.</li>
+<li>物理数据独立性:当内部模式变化时，可以不改变概念模式(只需改变C- I Mapping),从而不改<br>变外部模式.<br>##数据模型<br>模式与模式的结构:数据模型<br>数据模型:</li>
+</ol>
+<ul>
+<li>规定模式统一描述方式的模型,包括:数据结构,操作和约束.</li>
+<li>数据模型是对模式本身结构的抽象,模式是对数据本身结构形式的抽象.<br><img src="https://img2020.cnblogs.com/blog/2183929/202109/2183929-20210913203248992-157995722.png"><br>###经典数据模型</li>
+</ul>
+<ol>
+<li>关系模型:表的形式组织数据<br><img src="https://img2020.cnblogs.com/blog/2183929/202109/2183929-20210913203445424-2131850712.png"></li>
+<li>层次模型:树的形式组织数据<br><img src="https://img2020.cnblogs.com/blog/2183929/202109/2183929-20210913203507166-115755600.png"></li>
+<li>网状模型:图的形式组织数据<br><img src="https://img2020.cnblogs.com/blog/2183929/202109/2183929-20210913203533554-488083806.png"></li>
+</ol>
+<h2 id="演变与发展"><a href="#演变与发展" class="headerlink" title="演变与发展"></a>演变与发展</h2><h3 id="简要发展史"><a href="#简要发展史" class="headerlink" title="简要发展史"></a>简要发展史</h3><p>第一阶段:数据库技术探索阶段(56-65/67)</p>
+<ul>
+<li>研制成功格式文件系统</li>
+<li>正式提出”Data Base”,开始研究</li>
+</ul>
+<p>第二阶段:数据库技术确立阶段(65/68-75)</p>
+<ul>
+<li>三大数据库:层次,网状及关系数据库相继提出并进行了深入研究</li>
+<li>商用数据库出现并应用,但多为网状及层次模型系统</li>
+<li>数据库模型研究形成理论基础:关系数据库理论</li>
+</ul>
+<p>第三阶段:数据库技术成熟阶段(76-80s前期)</p>
+<ul>
+<li>提出了标准化数据库系统结构模型</li>
+<li>关系DB系统迅速发展：如SOL,QBE, System R, Ingress等</li>
+<li>关系理论日臻完善，包括规范化理论，关系语言，RDB的设计与实<br>现，新型关系模型等；</li>
+<li>数据库应用已十分普及，渗透到社会各个方面，出现众多DB的技术分<br>支，DB走向全面成熟，人称70年代为“数据库的年代”</li>
+</ul>
+<p>第四阶段:数据库技术深化发展阶段(85年以来)</p>
+<ul>
+<li>数据库方法逐步理论化、数据库设计理论不断完善</li>
+<li>新型数据模型、专用数据模型，专用型、新型数据库系统，不断涌现</li>
+<li>数据库技术+其他计算机技术结合==面向各行各业的专用数据库</li>
+</ul>
+<h3 id="由文件系统到数据库"><a href="#由文件系统到数据库" class="headerlink" title="由文件系统到数据库"></a>由文件系统到数据库</h3><p>(懒得写了,了解即可)<br><img src="https://img2020.cnblogs.com/blog/2183929/202109/2183929-20210913204345144-913865233.png"><br><img src="https://img2020.cnblogs.com/blog/2183929/202109/2183929-20210913204414286-668051039.png"><br><img src="https://img2020.cnblogs.com/blog/2183929/202109/2183929-20210913204428671-341152494.png"><br><img src="https://img2020.cnblogs.com/blog/2183929/202109/2183929-20210913204440653-1112034884.png"><br><img src="https://img2020.cnblogs.com/blog/2183929/202109/2183929-20210913204454327-1759576025.png"><br><img src="https://img2020.cnblogs.com/blog/2183929/202109/2183929-20210913204508810-1040772260.png"><br><img src="https://img2020.cnblogs.com/blog/2183929/202109/2183929-20210913204645919-233582808.png"><br><img src="https://img2020.cnblogs.com/blog/2183929/202109/2183929-20210913204659542-592059849.png"><br><img src="https://img2020.cnblogs.com/blog/2183929/202109/2183929-20210913204710203-1631166510.png"><br><img src="https://img2020.cnblogs.com/blog/2183929/202109/2183929-20210913204720331-346275629.png"></p>
+<p>##回顾<br><img src="https://img2020.cnblogs.com/blog/2183929/202109/2183929-20210913204551140-1897430691.png"></p>
 
     </div>
 </article>
@@ -293,20 +327,20 @@
         </div>
 
         <div id="toc-footer" style="display: none">
-            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BB%8B%E7%BB%8D"><span class="toc-number">1.</span> <span class="toc-text">介绍</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%89%A9%E7%90%86%E6%84%8F%E4%B9%89"><span class="toc-number">2.</span> <span class="toc-text">物理意义</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%9E%E7%8E%B0%E8%BF%87%E7%A8%8B"><span class="toc-number">3.</span> <span class="toc-text">实现过程</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%8C%E7%BB%B4%E5%82%85%E9%87%8C%E5%8F%B6%E5%8F%98%E6%8D%A2"><span class="toc-number">3.1.</span> <span class="toc-text">二维傅里叶变换</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%A2%91%E8%B0%B1%E4%B8%AD%E5%BF%83%E5%8C%96"><span class="toc-number">3.2.</span> <span class="toc-text">频谱中心化</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86"><span class="toc-number">3.3.</span> <span class="toc-text">图像处理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%A2%91%E8%B0%B1%E4%B8%AD%E5%BF%83%E5%8C%96%E5%8F%8D%E5%8F%98%E6%8D%A2"><span class="toc-number">3.4.</span> <span class="toc-text">频谱中心化反变换</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%8C%E7%BB%B4%E7%A6%BB%E6%95%A3%E5%82%85%E9%87%8C%E5%8F%B6%E5%8F%8D%E5%8F%98%E6%8D%A2"><span class="toc-number">3.5.</span> <span class="toc-text">二维离散傅里叶反变换</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%9E%E4%BE%8B"><span class="toc-number">4.</span> <span class="toc-text">实例</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8F%82%E8%80%83%E9%93%BE%E6%8E%A5"><span class="toc-number">5.</span> <span class="toc-text">参考链接</span></a></li></ol>
+            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E5%BA%93%E7%B3%BB%E7%BB%9F%E7%9A%84%E6%A0%87%E5%87%86%E7%BB%93%E6%9E%84"><span class="toc-number">1.</span> <span class="toc-text">数据库系统的标准结构</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#DBMS%E7%AE%A1%E7%90%86%E6%95%B0%E6%8D%AE%E7%9A%84%E4%B8%89%E4%B8%AA%E5%B1%82%E6%AC%A1"><span class="toc-number">1.1.</span> <span class="toc-text">DBMS管理数据的三个层次</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%BC%94%E5%8F%98%E4%B8%8E%E5%8F%91%E5%B1%95"><span class="toc-number">2.</span> <span class="toc-text">演变与发展</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AE%80%E8%A6%81%E5%8F%91%E5%B1%95%E5%8F%B2"><span class="toc-number">2.1.</span> <span class="toc-text">简要发展史</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%94%B1%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F%E5%88%B0%E6%95%B0%E6%8D%AE%E5%BA%93"><span class="toc-number">2.2.</span> <span class="toc-text">由文件系统到数据库</span></a></li></ol></li></ol>
         </div>
 
         <div id="share-footer" style="display: none">
             <ul>
     <li><a class="icon"
-           target="_blank" rel="noopener" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://zthrseven.github.io/2021/11/13/%E5%82%85%E9%87%8C%E5%8F%B6%E5%8F%98%E6%8D%A2/&title=傅里叶变换"><i
+           target="_blank" rel="noopener" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://zthrseven.github.io/2021/11/15/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%B3%BB%E7%BB%9F%E7%9A%84%E7%BB%93%E6%9E%84%E6%8A%BD%E8%B1%A1%E4%B8%8E%E6%BC%94%E5%8F%98/&title=数据库系统的结构抽象与演变"><i
                     class="fab fa-qq fa-lg" aria-hidden="true"></i></a></li>
     <li><a class="icon"
-           target="_blank" rel="noopener" href="https://service.weibo.com/share/share.php?url=https://zthrseven.github.io/2021/11/13/%E5%82%85%E9%87%8C%E5%8F%B6%E5%8F%98%E6%8D%A2/&title=傅里叶变换"><i
+           target="_blank" rel="noopener" href="https://service.weibo.com/share/share.php?url=https://zthrseven.github.io/2021/11/15/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%B3%BB%E7%BB%9F%E7%9A%84%E7%BB%93%E6%9E%84%E6%8A%BD%E8%B1%A1%E4%B8%8E%E6%BC%94%E5%8F%98/&title=数据库系统的结构抽象与演变"><i
                     class="fab fa-weibo fa-lg" aria-hidden="true"></i></a></li>
-    <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://zthrseven.github.io/2021/11/13/%E5%82%85%E9%87%8C%E5%8F%B6%E5%8F%98%E6%8D%A2/&text=傅里叶变换"><i
+    <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://zthrseven.github.io/2021/11/15/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%B3%BB%E7%BB%9F%E7%9A%84%E7%BB%93%E6%9E%84%E6%8A%BD%E8%B1%A1%E4%B8%8E%E6%BC%94%E5%8F%98/&text=数据库系统的结构抽象与演变"><i
                     class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
-    <li><a class="icon" href="mailto:?subject=傅里叶变换&body=Check out this article: https://zthrseven.github.io/2021/11/13/%E5%82%85%E9%87%8C%E5%8F%B6%E5%8F%98%E6%8D%A2/"><i
+    <li><a class="icon" href="mailto:?subject=数据库系统的结构抽象与演变&body=Check out this article: https://zthrseven.github.io/2021/11/15/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%B3%BB%E7%BB%9F%E7%9A%84%E7%BB%93%E6%9E%84%E6%8A%BD%E8%B1%A1%E4%B8%8E%E6%BC%94%E5%8F%98/"><i
                     class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
 </ul>
         </div>
