@@ -5,38 +5,24 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="HandheldFriendly" content="True">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
-    <meta name="description" content="介绍傅里叶变换为我们提供了另一个角度观察图像，可以将图像从灰度分布转换化到频域分布。 物理意义图像频域是表征图像中灰度变化剧烈程度的指标。如：大面积的沙漠在图像中是一片灰度变化缓慢的区域（图像的主体特征），对应的频率值很低；而对于地表属性变换剧烈的边缘区域在图像中是一片灰度变化剧烈的区域（边缘、噪声），对应的频率值较高。 实现过程二维傅里叶变换    J &#x3D; fft2(I,m,n）参数说明:  ​">
-<meta property="og:type" content="article">
-<meta property="og:title" content="傅里叶变换">
-<meta property="og:url" content="https://zthrseven.github.io/2021/11/13/%E5%82%85%E9%87%8C%E5%8F%B6%E5%8F%98%E6%8D%A2/index.html">
-<meta property="og:site_name" content="MyBlog">
-<meta property="og:description" content="介绍傅里叶变换为我们提供了另一个角度观察图像，可以将图像从灰度分布转换化到频域分布。 物理意义图像频域是表征图像中灰度变化剧烈程度的指标。如：大面积的沙漠在图像中是一片灰度变化缓慢的区域（图像的主体特征），对应的频率值很低；而对于地表属性变换剧烈的边缘区域在图像中是一片灰度变化剧烈的区域（边缘、噪声），对应的频率值较高。 实现过程二维傅里叶变换    J &#x3D; fft2(I,m,n）参数说明:  ​">
-<meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://zthrseven.github.io/2021/11/13/%E5%82%85%E9%87%8C%E5%8F%B6%E5%8F%98%E6%8D%A2/lena.png">
-<meta property="article:published_time" content="2021-11-13T07:34:46.000Z">
-<meta property="article:modified_time" content="2021-12-09T14:02:10.132Z">
-<meta property="article:author" content="常进">
-<meta property="article:tag" content="Matlab">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://zthrseven.github.io/2021/11/13/%E5%82%85%E9%87%8C%E5%8F%B6%E5%8F%98%E6%8D%A2/lena.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
     
     
-      
         
-          <link rel="shortcut icon" href="/images/favicon.ico">
+            
+                <link rel="shortcut icon" href="/images/favicon.ico">
+            
         
-      
-      
         
-          <link rel="icon" type="image/png" href="/images/favicon-192x192.png" sizes="192x192">
+            
+                <link rel="icon" type="image/png" href="/images/favicon-192x192.png" sizes="192x192">
+            
         
-      
-      
         
-          <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+            
+                <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+            
         
-      
     
     <!-- title -->
     <title>傅里叶变换</title>
@@ -44,50 +30,59 @@
     
 <link rel="stylesheet" href="/css/style.css">
 
-    <!-- persian styles -->
-    
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+SC&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/gh/tonsky/FiraCode@2/distr/fira_code.css" rel="stylesheet">
     <!-- rss -->
     
     
-	<!-- mathjax -->
-	
 <meta name="generator" content="Hexo 5.4.0"></head>
 
 <body class="max-width mx-auto px3 ltr">
-    
-      <div id="header-post">
-  <a id="menu-icon" href="#" aria-label="Menu"><i class="fas fa-bars fa-lg"></i></a>
-  <a id="menu-icon-tablet" href="#" aria-label="Menu"><i class="fas fa-bars fa-lg"></i></a>
-  <a id="top-icon-tablet" href="#" "Top" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fas fa-chevron-up fa-lg"></i></a>
-  <span id="menu">
+
+    <div id="header-post">
+    <a id="menu-icon" href="#"><i class="fas fa-bars fa-lg"></i></a>
+    <a id="menu-icon-tablet" href="#"><i class="fas fa-bars fa-lg"></i></a>
+    <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i
+                class="fas fa-chevron-up fa-lg"></i></a>
+    <span id="menu">
     <span id="nav">
       <ul>
-         
-          <li><a href="/">首页</a></li>
-         
-          <li><a href="https://zthrseven.github.io/categories/">分类</a></li>
-         
-          <li><a href="/archives/">归档</a></li>
-         
-          <li><a href="https://zthrseven.github.io/2021/10/11/About-Me/">关于</a></li>
-         
-          <li><a href="https://zthrseven.github.io/friendlink/">友链</a></li>
-         
-          <li><a href="https://zthrseven.github.io/2021/10/11/%E9%A1%B9%E7%9B%AE/">项目</a></li>
-        
+          
+              <li><a href="/">首页</a></li>
+          
+              <li><a href="https://zthrseven.github.io/categories/">分类</a></li>
+          
+              <li><a href="/archives/">归档</a></li>
+          
+              <li><a href="https://zthrseven.github.io/2021/10/11/About-Me/">关于</a></li>
+          
+              <li><a href="https://zthrseven.github.io/friendlink/">友链</a></li>
+          
+              <li><a href="https://zthrseven.github.io/2021/10/11/%E9%A1%B9%E7%9B%AE/">项目</a></li>
+          
       </ul>
     </span>
     <br/>
     <span id="actions">
       <ul>
-        
-        <li><a class="icon" aria-label="上一篇 " href="/2021/11/15/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%B3%BB%E7%BB%9F%E7%9A%84%E7%BB%93%E6%9E%84%E6%8A%BD%E8%B1%A1%E4%B8%8E%E6%BC%94%E5%8F%98/"><i class="fas fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i></a></li>
-        
-        
-        <li><a class="icon" aria-label="下一篇 " href="/2021/11/11/11-11/"><i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
-        
-        <li><a class="icon" aria-label="返回顶部 " href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
-        <li><a class="icon" aria-label="分享文章 " href="#"><i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+          
+              <li><a class="icon" href="/2021/11/15/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%B3%BB%E7%BB%9F%E7%9A%84%E7%BB%93%E6%9E%84%E6%8A%BD%E8%B1%A1%E4%B8%8E%E6%BC%94%E5%8F%98/"><i class="fas fa-chevron-left"
+                                                                           aria-hidden="true"
+                                                                           onmouseover="$('#i-prev').toggle();"
+                                                                           onmouseout="$('#i-prev').toggle();"></i></a></li>
+          
+          
+              <li><a class="icon" href="/2021/11/11/11-11/"><i class="fas fa-chevron-right"
+                                                                           aria-hidden="true"
+                                                                           onmouseover="$('#i-next').toggle();"
+                                                                           onmouseout="$('#i-next').toggle();"></i></a></li>
+          
+          <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i
+                          class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();"
+                          onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" href="#"><i class="fas fa-share-alt" aria-hidden="true"
+                                        onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();"
+                                        onclick="$('#share').toggle();return false;"></i></a></li>
       </ul>
       <span id="i-prev" class="info" style="display:none;">上一篇</span>
       <span id="i-next" class="info" style="display:none;">下一篇</span>
@@ -97,19 +92,17 @@
     <br/>
     <div id="share" style="display: none">
       <ul>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=https://zthrseven.github.io/2021/11/13/%E5%82%85%E9%87%8C%E5%8F%B6%E5%8F%98%E6%8D%A2/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://zthrseven.github.io/2021/11/13/%E5%82%85%E9%87%8C%E5%8F%B6%E5%8F%98%E6%8D%A2/&text=傅里叶变换"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=https://zthrseven.github.io/2021/11/13/%E5%82%85%E9%87%8C%E5%8F%B6%E5%8F%98%E6%8D%A2/&title=傅里叶变换"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=https://zthrseven.github.io/2021/11/13/%E5%82%85%E9%87%8C%E5%8F%B6%E5%8F%98%E6%8D%A2/&is_video=false&description=傅里叶变换"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="mailto:?subject=傅里叶变换&body=Check out this article: https://zthrseven.github.io/2021/11/13/%E5%82%85%E9%87%8C%E5%8F%B6%E5%8F%98%E6%8D%A2/"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=https://zthrseven.github.io/2021/11/13/%E5%82%85%E9%87%8C%E5%8F%B6%E5%8F%98%E6%8D%A2/&title=傅里叶变换"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=https://zthrseven.github.io/2021/11/13/%E5%82%85%E9%87%8C%E5%8F%B6%E5%8F%98%E6%8D%A2/&title=傅里叶变换"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=https://zthrseven.github.io/2021/11/13/%E5%82%85%E9%87%8C%E5%8F%B6%E5%8F%98%E6%8D%A2/&title=傅里叶变换"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=https://zthrseven.github.io/2021/11/13/%E5%82%85%E9%87%8C%E5%8F%B6%E5%8F%98%E6%8D%A2/&title=傅里叶变换"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=https://zthrseven.github.io/2021/11/13/%E5%82%85%E9%87%8C%E5%8F%B6%E5%8F%98%E6%8D%A2/&name=傅里叶变换&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=https://zthrseven.github.io/2021/11/13/%E5%82%85%E9%87%8C%E5%8F%B6%E5%8F%98%E6%8D%A2/&t=傅里叶变换"><i class="fab fa-hacker-news " aria-hidden="true"></i></a></li>
+    <li><a class="icon"
+           target="_blank" rel="noopener" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://zthrseven.github.io/2021/11/13/%E5%82%85%E9%87%8C%E5%8F%B6%E5%8F%98%E6%8D%A2/&title=傅里叶变换"><i
+                    class="fab fa-qq " aria-hidden="true"></i></a></li>
+    <li><a class="icon"
+           target="_blank" rel="noopener" href="https://service.weibo.com/share/share.php?url=https://zthrseven.github.io/2021/11/13/%E5%82%85%E9%87%8C%E5%8F%B6%E5%8F%98%E6%8D%A2/&title=傅里叶变换"><i
+                    class="fab fa-weibo " aria-hidden="true"></i></a></li>
+    <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://zthrseven.github.io/2021/11/13/%E5%82%85%E9%87%8C%E5%8F%B6%E5%8F%98%E6%8D%A2/&text=傅里叶变换"><i
+                    class="fab fa-twitter " aria-hidden="true"></i></a></li>
+    <li><a class="icon" href="mailto:?subject=傅里叶变换&body=Check out this article: https://zthrseven.github.io/2021/11/13/%E5%82%85%E9%87%8C%E5%8F%B6%E5%8F%98%E6%8D%A2/"><i
+                    class="fas fa-envelope " aria-hidden="true"></i></a></li>
 </ul>
-
     </div>
     <div id="toc">
       <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BB%8B%E7%BB%8D"><span class="toc-number">1.</span> <span class="toc-text">介绍</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%89%A9%E7%90%86%E6%84%8F%E4%B9%89"><span class="toc-number">2.</span> <span class="toc-text">物理意义</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%9E%E7%8E%B0%E8%BF%87%E7%A8%8B"><span class="toc-number">3.</span> <span class="toc-text">实现过程</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%8C%E7%BB%B4%E5%82%85%E9%87%8C%E5%8F%B6%E5%8F%98%E6%8D%A2"><span class="toc-number">3.1.</span> <span class="toc-text">二维傅里叶变换</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%A2%91%E8%B0%B1%E4%B8%AD%E5%BF%83%E5%8C%96"><span class="toc-number">3.2.</span> <span class="toc-text">频谱中心化</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86"><span class="toc-number">3.3.</span> <span class="toc-text">图像处理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%A2%91%E8%B0%B1%E4%B8%AD%E5%BF%83%E5%8C%96%E5%8F%8D%E5%8F%98%E6%8D%A2"><span class="toc-number">3.4.</span> <span class="toc-text">频谱中心化反变换</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%8C%E7%BB%B4%E7%A6%BB%E6%95%A3%E5%82%85%E9%87%8C%E5%8F%B6%E5%8F%8D%E5%8F%98%E6%8D%A2"><span class="toc-number">3.5.</span> <span class="toc-text">二维离散傅里叶反变换</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%9E%E4%BE%8B"><span class="toc-number">4.</span> <span class="toc-text">实例</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8F%82%E8%80%83%E9%93%BE%E6%8E%A5"><span class="toc-number">5.</span> <span class="toc-text">参考链接</span></a></li></ol>
@@ -117,51 +110,48 @@
   </span>
 </div>
 
+<div class="content index py4">
     
-    <div class="content index py4">
+    <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+    <header>
         
-        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
-  <header>
-    
     <h1 class="posttitle" itemprop="name headline">
         傅里叶变换
     </h1>
 
-
-
-    <div class="meta">
+        <div class="meta">
       <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
-        <span itemprop="name">常进</span>
+        <span itemprop="name">
+            常进
+            
+        </span>
       </span>
-      
+            
     <div class="postdate">
-      
-        <time datetime="2021-11-13T07:34:46.000Z" itemprop="datePublished">2021-11-13</time>
         
-      
+            <time datetime="2021-11-13T07:34:46.000Z"
+                  itemprop="datePublished">2021-11-13</time>
+            
+        
     </div>
 
-
-      
+            
     <div class="article-category">
         <i class="fas fa-archive"></i>
         <a class="category-link" href="/categories/Matlab/">Matlab</a>
     </div>
 
-
-      
+            
     <div class="article-tag">
         <i class="fas fa-tag"></i>
         <a class="tag-link-link" href="/tags/Matlab/" rel="tag">Matlab</a>
     </div>
 
-
-    </div>
-  </header>
-  
-
-  <div class="content" itemprop="articleBody">
-    <h2 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h2><p>傅里叶变换为我们提供了另一个角度观察图像，可以将图像从灰度分布转换化到频域分布。</p>
+        </div>
+    </header>
+    
+    <div class="content" itemprop="articleBody">
+        <h2 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h2><p>傅里叶变换为我们提供了另一个角度观察图像，可以将图像从灰度分布转换化到频域分布。</p>
 <h2 id="物理意义"><a href="#物理意义" class="headerlink" title="物理意义"></a>物理意义</h2><p>图像频域是表征图像中灰度变化剧烈程度的指标。<br>如：大面积的沙漠在图像中是一片灰度变化缓慢的区域（图像的主体特征），对应的频率值很低；而对于地表属性变换剧烈的边缘区域在图像中是一片灰度变化剧烈的区域（边缘、噪声），对应的频率值较高。</p>
 <h2 id="实现过程"><a href="#实现过程" class="headerlink" title="实现过程"></a>实现过程</h2><h3 id="二维傅里叶变换"><a href="#二维傅里叶变换" class="headerlink" title="二维傅里叶变换"></a>二维傅里叶变换</h3><p>   <code> J = fft2(I,m,n）</code><br>参数说明:<br>  ​    I:输入图像<br>  ​    J:傅里叶频谱<br>  ​    m,n:将截断I或尾随零填充I，以便在计算变换之前形成m×n矩阵</p>
 <p>一般采用有填充的傅里叶变换</p>
@@ -175,149 +165,226 @@
 <p><img src="/2021/11/13/%E5%82%85%E9%87%8C%E5%8F%B6%E5%8F%98%E6%8D%A2/lena.png" alt="lena.png"></p>
 <h2 id="参考链接"><a href="#参考链接" class="headerlink" title="参考链接"></a>参考链接</h2><p><a target="_blank" rel="noopener" href="https://www.cnblogs.com/wj-1314/p/11983496.html">https://www.cnblogs.com/wj-1314/p/11983496.html</a></p>
 
-  </div>
+    </div>
 </article>
 
 
 
-        
-          <div id="footer-post-container">
-  <div id="footer-post">
+<script>
+    //检测推送
+    var pushType = "";
+    var pushLink = "";
+    var siteName = "MyBlog";
+  
+    var ValineButton = document.getElementsByClassName("vsubmit vbtn")[0];
+    //分情况推送
+    if (pushType === "sc") {
+      var title = "text=" + siteName + "上又有新评论啦~!";
+      function send_valine_Server() {
+        //获取元素信息
+        var pagename = document.title;
+        var wz = pagename.indexOf("|");
+        var res = pagename.substring(0, wz);
+        var pageurl = document.URL;
+        var ptime = new Date();
+        var vnick = document.getElementsByClassName("vnick vinput")[0].value;
+        var vmail = document.getElementsByClassName("vmail vinput")[0].value;
+        var vlink = document.getElementsByClassName("vlink vinput")[0].value;
+        var veditor = document.getElementsByClassName("veditor vinput")[0].value;
+        var text = "desp=";
+        var data =
+          text +
+          "|昵称：" +
+          "|邮箱：" +
+          "|网站地址：" +
+          "|当前页面：" +
+          "|评论内容：" +
+          "|跳转链接：" +
+          "|评论时间" +
+          "\n" +
+          "|----|----|----|----|" +
+          "\n" +
+          "|   " +
+          vnick +
+          "   |   " +
+          vmail +
+          "  |  " +
+          vlink +
+          "|   " +
+          res +
+          "| " +
+          veditor +
+          "| " +
+          pageurl +
+          "|" +
+          ptime.toLocaleString() +
+          "|";
+        var httpRequest = new XMLHttpRequest(); //第一步：创建需要的对象
+        httpRequest.open("POST", pushLink, true); //第二步：打开连接
+        httpRequest.setRequestHeader(
+          "Content-type",
+          "application/x-www-form-urlencoded"
+        ); //设置请求头 注：post方式必须设置请求头（在建立连接后设置请求头）
+        httpRequest.send(title + "&" + data); //发送请求 将情头体写在send中
+      }
+      ValineButton.onclick = send_valine_Server;
+    } else if (pushType === "qmsg") {
+      var title = "msg=" + siteName + "上又有新评论啦~!\n";
+      function send_valine_Qmsg() {
+        //获取元素信息
+        var pagename = document.title;
+        var wz = pagename.indexOf("|");
+        var res = pagename.substring(0, wz);
+        var pageurl = document.URL;
+        var ptime = new Date();
+        var vnick = document.getElementsByClassName("vnick vinput")[0].value;
+        var vmail = document.getElementsByClassName("vmail vinput")[0].value;
+        var vlink = document.getElementsByClassName("vlink vinput")[0].value;
+        var veditor = document.getElementsByClassName("veditor vinput")[0].value;
+        var data =
+          "昵称：" +
+          vnick +
+          "\n邮箱：" +
+          vmail +
+          "\n网站地址：" +
+          vlink +
+          "\n当前页面：" +
+          pagename +
+          "\n评论内容：" +
+          veditor +
+          "\n跳转链接：" +
+          pageurl +
+          "\n评论时间" +
+          ptime.toLocaleString();
+        var httpRequest = new XMLHttpRequest(); //第一步：创建需要的对象
+        httpRequest.open("POST", pushLink, true); //第二步：打开连接
+        httpRequest.setRequestHeader(
+          "Content-type",
+          "application/x-www-form-urlencoded"
+        ); //设置请求头 注：post方式必须设置请求头（在建立连接后设置请求头）
+        httpRequest.send(title + data); //发送请求 将情头体写在send中
+      }
+      ValineButton.onclick = send_valine_Qmsg;
+    }
+  </script>
 
-    <div id="nav-footer" style="display: none">
-      <ul>
-         
-          <li><a href="/">首页</a></li>
-         
-          <li><a href="https://zthrseven.github.io/categories/">分类</a></li>
-         
-          <li><a href="/archives/">归档</a></li>
-         
-          <li><a href="https://zthrseven.github.io/2021/10/11/About-Me/">关于</a></li>
-         
-          <li><a href="https://zthrseven.github.io/friendlink/">友链</a></li>
-         
-          <li><a href="https://zthrseven.github.io/2021/10/11/%E9%A1%B9%E7%9B%AE/">项目</a></li>
-        
-      </ul>
-    </div>
 
-    <div id="toc-footer" style="display: none">
-      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BB%8B%E7%BB%8D"><span class="toc-number">1.</span> <span class="toc-text">介绍</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%89%A9%E7%90%86%E6%84%8F%E4%B9%89"><span class="toc-number">2.</span> <span class="toc-text">物理意义</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%9E%E7%8E%B0%E8%BF%87%E7%A8%8B"><span class="toc-number">3.</span> <span class="toc-text">实现过程</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%8C%E7%BB%B4%E5%82%85%E9%87%8C%E5%8F%B6%E5%8F%98%E6%8D%A2"><span class="toc-number">3.1.</span> <span class="toc-text">二维傅里叶变换</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%A2%91%E8%B0%B1%E4%B8%AD%E5%BF%83%E5%8C%96"><span class="toc-number">3.2.</span> <span class="toc-text">频谱中心化</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86"><span class="toc-number">3.3.</span> <span class="toc-text">图像处理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%A2%91%E8%B0%B1%E4%B8%AD%E5%BF%83%E5%8C%96%E5%8F%8D%E5%8F%98%E6%8D%A2"><span class="toc-number">3.4.</span> <span class="toc-text">频谱中心化反变换</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%8C%E7%BB%B4%E7%A6%BB%E6%95%A3%E5%82%85%E9%87%8C%E5%8F%B6%E5%8F%8D%E5%8F%98%E6%8D%A2"><span class="toc-number">3.5.</span> <span class="toc-text">二维离散傅里叶反变换</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%9E%E4%BE%8B"><span class="toc-number">4.</span> <span class="toc-text">实例</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8F%82%E8%80%83%E9%93%BE%E6%8E%A5"><span class="toc-number">5.</span> <span class="toc-text">参考链接</span></a></li></ol>
-    </div>
 
-    <div id="share-footer" style="display: none">
-      <ul>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=https://zthrseven.github.io/2021/11/13/%E5%82%85%E9%87%8C%E5%8F%B6%E5%8F%98%E6%8D%A2/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://zthrseven.github.io/2021/11/13/%E5%82%85%E9%87%8C%E5%8F%B6%E5%8F%98%E6%8D%A2/&text=傅里叶变换"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=https://zthrseven.github.io/2021/11/13/%E5%82%85%E9%87%8C%E5%8F%B6%E5%8F%98%E6%8D%A2/&title=傅里叶变换"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=https://zthrseven.github.io/2021/11/13/%E5%82%85%E9%87%8C%E5%8F%B6%E5%8F%98%E6%8D%A2/&is_video=false&description=傅里叶变换"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="mailto:?subject=傅里叶变换&body=Check out this article: https://zthrseven.github.io/2021/11/13/%E5%82%85%E9%87%8C%E5%8F%B6%E5%8F%98%E6%8D%A2/"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=https://zthrseven.github.io/2021/11/13/%E5%82%85%E9%87%8C%E5%8F%B6%E5%8F%98%E6%8D%A2/&title=傅里叶变换"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=https://zthrseven.github.io/2021/11/13/%E5%82%85%E9%87%8C%E5%8F%B6%E5%8F%98%E6%8D%A2/&title=傅里叶变换"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=https://zthrseven.github.io/2021/11/13/%E5%82%85%E9%87%8C%E5%8F%B6%E5%8F%98%E6%8D%A2/&title=傅里叶变换"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=https://zthrseven.github.io/2021/11/13/%E5%82%85%E9%87%8C%E5%8F%B6%E5%8F%98%E6%8D%A2/&title=傅里叶变换"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=https://zthrseven.github.io/2021/11/13/%E5%82%85%E9%87%8C%E5%8F%B6%E5%8F%98%E6%8D%A2/&name=傅里叶变换&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=https://zthrseven.github.io/2021/11/13/%E5%82%85%E9%87%8C%E5%8F%B6%E5%8F%98%E6%8D%A2/&t=傅里叶变换"><i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i></a></li>
+    
+        <div id="footer-post-container">
+    <div id="footer-post">
+
+        <div id="nav-footer" style="display: none">
+            <ul>
+                
+                    <li><a href="/">首页</a></li>
+                
+                    <li><a href="https://zthrseven.github.io/categories/">分类</a></li>
+                
+                    <li><a href="/archives/">归档</a></li>
+                
+                    <li><a href="https://zthrseven.github.io/2021/10/11/About-Me/">关于</a></li>
+                
+                    <li><a href="https://zthrseven.github.io/friendlink/">友链</a></li>
+                
+                    <li><a href="https://zthrseven.github.io/2021/10/11/%E9%A1%B9%E7%9B%AE/">项目</a></li>
+                
+            </ul>
+        </div>
+
+        <div id="toc-footer" style="display: none">
+            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BB%8B%E7%BB%8D"><span class="toc-number">1.</span> <span class="toc-text">介绍</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%89%A9%E7%90%86%E6%84%8F%E4%B9%89"><span class="toc-number">2.</span> <span class="toc-text">物理意义</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%9E%E7%8E%B0%E8%BF%87%E7%A8%8B"><span class="toc-number">3.</span> <span class="toc-text">实现过程</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%8C%E7%BB%B4%E5%82%85%E9%87%8C%E5%8F%B6%E5%8F%98%E6%8D%A2"><span class="toc-number">3.1.</span> <span class="toc-text">二维傅里叶变换</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%A2%91%E8%B0%B1%E4%B8%AD%E5%BF%83%E5%8C%96"><span class="toc-number">3.2.</span> <span class="toc-text">频谱中心化</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86"><span class="toc-number">3.3.</span> <span class="toc-text">图像处理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%A2%91%E8%B0%B1%E4%B8%AD%E5%BF%83%E5%8C%96%E5%8F%8D%E5%8F%98%E6%8D%A2"><span class="toc-number">3.4.</span> <span class="toc-text">频谱中心化反变换</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%8C%E7%BB%B4%E7%A6%BB%E6%95%A3%E5%82%85%E9%87%8C%E5%8F%B6%E5%8F%8D%E5%8F%98%E6%8D%A2"><span class="toc-number">3.5.</span> <span class="toc-text">二维离散傅里叶反变换</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%9E%E4%BE%8B"><span class="toc-number">4.</span> <span class="toc-text">实例</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8F%82%E8%80%83%E9%93%BE%E6%8E%A5"><span class="toc-number">5.</span> <span class="toc-text">参考链接</span></a></li></ol>
+        </div>
+
+        <div id="share-footer" style="display: none">
+            <ul>
+    <li><a class="icon"
+           target="_blank" rel="noopener" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://zthrseven.github.io/2021/11/13/%E5%82%85%E9%87%8C%E5%8F%B6%E5%8F%98%E6%8D%A2/&title=傅里叶变换"><i
+                    class="fab fa-qq fa-lg" aria-hidden="true"></i></a></li>
+    <li><a class="icon"
+           target="_blank" rel="noopener" href="https://service.weibo.com/share/share.php?url=https://zthrseven.github.io/2021/11/13/%E5%82%85%E9%87%8C%E5%8F%B6%E5%8F%98%E6%8D%A2/&title=傅里叶变换"><i
+                    class="fab fa-weibo fa-lg" aria-hidden="true"></i></a></li>
+    <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://zthrseven.github.io/2021/11/13/%E5%82%85%E9%87%8C%E5%8F%B6%E5%8F%98%E6%8D%A2/&text=傅里叶变换"><i
+                    class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+    <li><a class="icon" href="mailto:?subject=傅里叶变换&body=Check out this article: https://zthrseven.github.io/2021/11/13/%E5%82%85%E9%87%8C%E5%8F%B6%E5%8F%98%E6%8D%A2/"><i
+                    class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
 </ul>
+        </div>
+
+        <div id="actions-footer">
+            <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i
+                        class="fas fa-bars fa-lg"
+                        aria-hidden="true"></i> 菜单</a>
+            <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i
+                        class="fas fa-list fa-lg"
+                        aria-hidden="true"></i> 目录</a>
+            <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i
+                        class="fas fa-share-alt fa-lg" aria-hidden="true"></i> 分享</a>
+            <a id="top" style="display:none" class="icon" href="#"
+               onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up fa-lg"
+                                                                               aria-hidden="true"></i> 返回顶部
+            </a>
+        </div>
 
     </div>
-
-    <div id="actions-footer">
-        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fas fa-bars fa-lg" aria-hidden="true"></i> 菜单</a>
-        <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fas fa-list fa-lg" aria-hidden="true"></i> 目录</a>
-        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fas fa-share-alt fa-lg" aria-hidden="true"></i> 分享</a>
-        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up fa-lg" aria-hidden="true"></i> 返回顶部</a>
-    </div>
-
-  </div>
 </div>
-
-        
-        <footer id="footer">
-  <div class="footer-left">
-    Copyright &copy;
     
-    
-    2019-2021
-    常进
+    <footer id="footer">
+  <div class="footer-top">
+    &copy; 2021 <i class="fas fa-paper-plane"></i>
+    常进 
   </div>
-  <div class="footer-right">
-    <nav>
-      <ul>
-         
-          <li><a href="/">首页</a></li>
-         
-          <li><a href="https://zthrseven.github.io/categories/">分类</a></li>
-         
-          <li><a href="/archives/">归档</a></li>
-         
-          <li><a href="https://zthrseven.github.io/2021/10/11/About-Me/">关于</a></li>
-         
-          <li><a href="https://zthrseven.github.io/friendlink/">友链</a></li>
-         
-          <li><a href="https://zthrseven.github.io/2021/10/11/%E9%A1%B9%E7%9B%AE/">项目</a></li>
-        
-      </ul>
-    </nav>
+
+  <div class="footer-bottom">
+     
   </div>
 </footer>
 
-    </div>
-    <!-- styles -->
+</div>
+<!-- styles -->
+
+<link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/5.12.1/css/all.min.css">
 
 
+<link rel="stylesheet" href="https://cdn.staticfile.org/justifiedGallery/3.7.0/css/justifiedGallery.min.css">
 
-  <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" crossorigin="anonymous" onload="this.onload=null;this.rel='stylesheet'"/>
+<!-- jquery -->
 
-
-    <!-- jquery -->
- 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" crossorigin="anonymous"></script> 
+<script src="https://cdn.staticfile.org/jquery/3.4.1/jquery.min.js"></script>
 
 
-
+<script src="https://cdn.staticfile.org/justifiedGallery/3.7.0/js/jquery.justifiedGallery.min.js"></script>
 
 <!-- clipboard -->
 
-  
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.7/clipboard.min.js" crossorigin="anonymous"></script> 
-  
-  <script type="text/javascript">
-  $(function() {
-    // copy-btn HTML
-    var btn = "<span class=\"btn-copy tooltipped tooltipped-sw\" aria-label=\"复制到粘贴板!\">";
-    btn += '<i class="far fa-clone"></i>';
-    btn += '</span>'; 
-    // mount it!
-    $(".highlight table").before(btn);
-    var clip = new ClipboardJS('.btn-copy', {
-      text: function(trigger) {
-        return Array.from(trigger.nextElementSibling.querySelectorAll('.code')).reduce((str,it)=>str+it.innerText+'\n','')
-      }
-    });
-    clip.on('success', function(e) {
-      e.trigger.setAttribute('aria-label', "复制成功!");
-      e.clearSelection();
-    })
-  })
-  </script>
+    
+<script src="https://cdn.staticfile.org/clipboard.js/2.0.6/clipboard.min.js"></script>
+
+    <script type="text/javascript">
+        $(function () {
+            // copy-btn HTML
+            var btn = "<span class=\"btn-copy tooltipped tooltipped-sw\" aria-label=\"复制到粘贴板!\">";
+            btn += '<i class="far fa-clone"></i>';
+            btn += '</span>';
+            // mount it!
+            $(".highlight .code pre").before(btn);
+            var clip = new ClipboardJS('.btn-copy', {
+                target: function (trigger) {
+                    return trigger.nextElementSibling;
+                }
+            });
+            clip.on('success', function (e) {
+                e.trigger.setAttribute('aria-label', "复制成功!");
+                e.clearSelection();
+            })
+        })
+    </script>
 
 
 <script src="/js/main.js"></script>
 
 <!-- search -->
 
-<!-- Google Analytics -->
-
-<!-- Baidu Analytics -->
-
-<!-- Cloudflare Analytics -->
-
-<!-- Umami Analytics -->
-
-<!-- Disqus Comments -->
-
-
 </body>
+
 </html>
