@@ -133,13 +133,13 @@
             
     <div class="article-category">
         <i class="fas fa-archive"></i>
-        <a class="category-link" href="/categories/Matlab/">Matlab</a>
+        <a class="category-link" href="/categories/matlab/">matlab</a>
     </div>
 
             
     <div class="article-tag">
         <i class="fas fa-tag"></i>
-        <a class="tag-link-link" href="/tags/Matlab/" rel="tag">Matlab</a>
+        <a class="tag-link-link" href="/tags/matlab/" rel="tag">matlab</a>
     </div>
 
         </div>
@@ -147,7 +147,7 @@
     
     <div class="content" itemprop="articleBody">
         <p>昨天写实验报告，要处理太多的图片，手调实在太累了。<br>最近学习了matlab，正好可以练习一下。<br>缺点是图像质量会降低，现在也没有什么好的解决办法。</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">clear all;clc;</span><br><span class="line">ObjDir = &#x27;.\ObjDir\&#x27;;%图像输入路径</span><br><span class="line">OtpDir = &#x27;.\OtpDir\&#x27;;%图像输出路径</span><br><span class="line">imageFiles = dir(ObjDir);%读取目录下的所有图片文件的信息</span><br><span class="line">numFiles = length(imageFiles);%图片数量</span><br><span class="line">parfor i = 3:numFiles %在numFiles中图片从索引为3的位置开始</span><br><span class="line">    imageFile = strcat(ObjDir,imageFiles(i).name); %得到图片路径和名称</span><br><span class="line">    imageSave = strcat(OtpDir,imageFiles(i).name); %图片保存</span><br><span class="line">    A = imread(imageFile);</span><br><span class="line">    B = imresize(A,[227,227]);</span><br><span class="line">    imwrite(B,imageSave);</span><br><span class="line">end</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">clear all;clc;</span><br><span class="line">ObjDir = &#x27;.\ObjDir\&#x27;;%图像输入路径</span><br><span class="line">OtpDir = &#x27;.\OtpDir\&#x27;;%图像输出路径</span><br><span class="line">imageFiles = dir(ObjDir);%读取目录下的所有图片文件的信息</span><br><span class="line">numFiles = length(imageFiles);%图片数量</span><br><span class="line">parfor i = 3:numFiles %在numFiles中图片从索引为3的位置开始</span><br><span class="line">    imageFile = strcat(ObjDir,imageFiles(i).name); %得到图片路径和名称</span><br><span class="line">    imageSave = strcat(OtpDir,imageFiles(i).name); %图片保存</span><br><span class="line">    A = imread(imageFile);</span><br><span class="line">    B = imresize(A,[227,227]);</span><br><span class="line">    imwrite(B,imageSave);</span><br><span class="line">end</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
     </div>
 </article>
