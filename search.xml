@@ -17,6 +17,18 @@
       </tags>
   </entry>
   <entry>
+    <title>更换主题为next</title>
+    <url>/2023/01/30/%E6%9B%B4%E6%8D%A2%E4%B8%BB%E9%A2%98%E4%B8%BAnext/</url>
+    <content><![CDATA[<p>现阶段next主题开发维护地址更改,跟换时没注意,一直用之前的，屡屡报错，耗费了1天时间，悲。</p>
+]]></content>
+      <categories>
+        <category>杂谈</category>
+      </categories>
+      <tags>
+        <tag>杂谈</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>局部均值滤波算法与实现</title>
     <url>/2021/10/21/%E5%B1%80%E9%83%A8%E5%9D%87%E5%80%BC%E6%BB%A4%E6%B3%A2%E7%AE%97%E6%B3%95%E4%B8%8E%E5%AE%9E%E7%8E%B0/</url>
     <content><![CDATA[<h3 id="算法原理"><a href="#算法原理" class="headerlink" title="算法原理"></a>算法原理</h3><p><img src="/2021/10/21/%E5%B1%80%E9%83%A8%E5%9D%87%E5%80%BC%E6%BB%A4%E6%B3%A2%E7%AE%97%E6%B3%95%E4%B8%8E%E5%AE%9E%E7%8E%B0/%E5%9D%87%E5%80%BC.jpeg" alt="均值.jpeg"><br><img src="/2021/10/21/%E5%B1%80%E9%83%A8%E5%9D%87%E5%80%BC%E6%BB%A4%E6%B3%A2%E7%AE%97%E6%B3%95%E4%B8%8E%E5%AE%9E%E7%8E%B0/%E6%96%B9%E5%B7%AE.jpeg" alt="方差.jpeg"><br><img src="/2021/10/21/%E5%B1%80%E9%83%A8%E5%9D%87%E5%80%BC%E6%BB%A4%E6%B3%A2%E7%AE%97%E6%B3%95%E4%B8%8E%E5%AE%9E%E7%8E%B0/%E5%8E%BB%E5%99%AA%E7%BB%93%E6%9E%9C.jpeg" alt="去噪结果.jpeg"><br><img src="/2021/10/21/%E5%B1%80%E9%83%A8%E5%9D%87%E5%80%BC%E6%BB%A4%E6%B3%A2%E7%AE%97%E6%B3%95%E4%B8%8E%E5%AE%9E%E7%8E%B0/K.jpeg" alt="参数K.jpeg"><br>式（4）中σ为用户输入的参数</p>
@@ -31,18 +43,6 @@
       </categories>
       <tags>
         <tag>matlab</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>更换主题为next</title>
-    <url>/2023/01/30/%E6%9B%B4%E6%8D%A2%E4%B8%BB%E9%A2%98%E4%B8%BAnext/</url>
-    <content><![CDATA[<p>现阶段next主题开发维护地址更改,跟换时没注意,一直用之前的，屡屡报错，耗费了1天时间，悲。</p>
-]]></content>
-      <categories>
-        <category>杂谈</category>
-      </categories>
-      <tags>
-        <tag>杂谈</tag>
       </tags>
   </entry>
 </search>
