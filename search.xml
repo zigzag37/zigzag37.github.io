@@ -1,23 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>局部均值滤波算法与实现</title>
-    <url>/2021/10/21/%E5%B1%80%E9%83%A8%E5%9D%87%E5%80%BC%E6%BB%A4%E6%B3%A2%E7%AE%97%E6%B3%95%E4%B8%8E%E5%AE%9E%E7%8E%B0/</url>
-    <content><![CDATA[<h3 id="算法原理"><a href="#算法原理" class="headerlink" title="算法原理"></a>算法原理</h3><p><img src="/2021/10/21/%E5%B1%80%E9%83%A8%E5%9D%87%E5%80%BC%E6%BB%A4%E6%B3%A2%E7%AE%97%E6%B3%95%E4%B8%8E%E5%AE%9E%E7%8E%B0/%E5%9D%87%E5%80%BC.jpeg" alt="均值.jpeg"><br><img src="/2021/10/21/%E5%B1%80%E9%83%A8%E5%9D%87%E5%80%BC%E6%BB%A4%E6%B3%A2%E7%AE%97%E6%B3%95%E4%B8%8E%E5%AE%9E%E7%8E%B0/%E6%96%B9%E5%B7%AE.jpeg" alt="方差.jpeg"><br><img src="/2021/10/21/%E5%B1%80%E9%83%A8%E5%9D%87%E5%80%BC%E6%BB%A4%E6%B3%A2%E7%AE%97%E6%B3%95%E4%B8%8E%E5%AE%9E%E7%8E%B0/%E5%8E%BB%E5%99%AA%E7%BB%93%E6%9E%9C.jpeg" alt="去噪结果.jpeg"><br><img src="/2021/10/21/%E5%B1%80%E9%83%A8%E5%9D%87%E5%80%BC%E6%BB%A4%E6%B3%A2%E7%AE%97%E6%B3%95%E4%B8%8E%E5%AE%9E%E7%8E%B0/K.jpeg" alt="参数K.jpeg"><br>式（4）中σ为用户输入的参数</p>
-<h3 id="matlab实现"><a href="#matlab实现" class="headerlink" title="matlab实现"></a>matlab实现</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">clear;</span><br><span class="line">r=3;     %邻域大小为:[2*r+1,2*r+1]</span><br><span class="line">q=1000;  %用户自定义参数,范围0~∞</span><br><span class="line"></span><br><span class="line">% 读入图片</span><br><span class="line">I = imread(&#x27;pic.jpg&#x27;);</span><br><span class="line">[n,m,d] = size(I);   %得到图片大小 n行m列矩阵</span><br><span class="line">%I=rgb2gray(I);      %源图片转灰度图</span><br><span class="line">subplot(1,2,1),imshow(I);title(&quot;原图&quot;);</span><br><span class="line">I=double(I);         %转为双精度</span><br><span class="line"></span><br><span class="line">% 扩展输入图片边界</span><br><span class="line">img_expend = zeros(n+2*(2*r+1),m+2*(2*r+1),d);</span><br><span class="line">for i=1:n</span><br><span class="line">    for j=1:m</span><br><span class="line">        img_expend(i+r,j+r,:)=I(i,j,:);</span><br><span class="line">    end</span><br><span class="line">end</span><br><span class="line"></span><br><span class="line">% 计算均值和方差</span><br><span class="line">for i=r+1:r+n</span><br><span class="line">    for j=r+1:r+m  </span><br><span class="line">        %计算邻域范围内的均值</span><br><span class="line">        m_ij=0;</span><br><span class="line">        for x = i-r:i+r</span><br><span class="line">            for y = j-r:j+r</span><br><span class="line">                m_ij = m_ij + img_expend(x,y,:);</span><br><span class="line">            end</span><br><span class="line">        end</span><br><span class="line">        m_ij=m_ij/((2*r+1)*(2*r+1));</span><br><span class="line">        </span><br><span class="line">        %计算领域范围内的方差</span><br><span class="line">        v_ij=0;</span><br><span class="line">        for x = i-r:i+r</span><br><span class="line">            for y = j-r:j+r</span><br><span class="line">                v_ij = v_ij + (img_expend(x,y,:)-m_ij).*(img_expend(x,y,:)-m_ij);</span><br><span class="line">            end</span><br><span class="line">        end</span><br><span class="line">        v_ij=v_ij/((2*r+1)*(2*r+1));</span><br><span class="line"></span><br><span class="line">        %计算输出滤波值</span><br><span class="line">        k = v_ij./(v_ij+q);   </span><br><span class="line">        img_expend(i,j,:) = (1-k).*m_ij + k.*img_expend(i,j,:);   </span><br><span class="line">    end</span><br><span class="line">end</span><br><span class="line"></span><br><span class="line">% 保存结果</span><br><span class="line">result = zeros(n,m,d);</span><br><span class="line">for i=1:n</span><br><span class="line">    for j=1:m</span><br><span class="line">        result(i,j,:)=img_expend(i+r,j+r,:);</span><br><span class="line">    end</span><br><span class="line">end</span><br><span class="line"></span><br><span class="line">% 输出图像</span><br><span class="line">subplot(1,2,2),imshow(mat2gray(result));title(&quot;局部均值滤波&quot;);</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<h3 id="其他方法实现美颜磨皮"><a href="#其他方法实现美颜磨皮" class="headerlink" title="其他方法实现美颜磨皮"></a>其他方法实现美颜磨皮</h3><p><a href="https://www.cnblogs.com/qxzy/p/4109805.html">matlab各向异性扩散滤波</a></p>
-<p><a href="https://blog.csdn.net/IronBull_Zhang/article/details/105158482">Matlab表面模糊程序</a></p>
-<h3 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h3><p><a href="https://blog.csdn.net/trent1985/article/details/80773642">图像保边滤波算法集锦系列</a><br><a href="https://cloud.tencent.com/developer/article/1011865">基于局部均方差相关信息的图像去噪及其在实时磨皮美容算法中的应用。</a></p>
-]]></content>
-      <categories>
-        <category>matlab</category>
-      </categories>
-      <tags>
-        <tag>matlab</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>C++笔记（转载）</title>
     <url>/2021/12/09/C++%E7%AC%94%E8%AE%B0%EF%BC%88%E8%BD%AC%E8%BD%BD%EF%BC%89/</url>
     <content><![CDATA[<h4 id="侯捷C-课程笔记01-面向对象高级编程（上）"><a href="#侯捷C-课程笔记01-面向对象高级编程（上）" class="headerlink" title="侯捷C++课程笔记01: 面向对象高级编程（上）"></a>侯捷C++课程笔记01: 面向对象高级编程（上）</h4><p><a href="https://blog.csdn.net/ncepu_Chen/article/details/113843775">https://blog.csdn.net/ncepu_Chen/article/details/113843775</a></p>
@@ -36,12 +19,22 @@
   <entry>
     <title>滑雪基础</title>
     <url>/2023/02/07/%E6%BB%91%E9%9B%AA%E5%9F%BA%E7%A1%80/</url>
-    <content><![CDATA[<p>#滑雪初级技巧</p>
-<p>##原地基础</p>
-<p>###握雪仗<br>握柄带套入约手腕位置，同时抓住柄带和握柄。<br><a href="%E6%BB%91%E9%9B%AA%E5%9F%BA%E7%A1%80/1.png">握柄</a><br>###坡路穿板<br>先穿下侧雪板，穿上下侧雪板后内刃刻在雪上,之后穿另一侧。<br><a href="%E6%BB%91%E9%9B%AA%E5%9F%BA%E7%A1%80/2.1.png">坡路穿板1</a><br><a href="%E6%BB%91%E9%9B%AA%E5%9F%BA%E7%A1%80/2.2.png">坡路穿板2</a><br>###正确摔倒<br>往两侧去摔倒<br><a href="%E6%BB%91%E9%9B%AA%E5%9F%BA%E7%A1%80/3.1.png">摔倒</a><br>###站起<br>板底冲山下，板头冲山上，雪仗在身体后方支撑，腰腹发力站起。<br><a href="%E6%BB%91%E9%9B%AA%E5%9F%BA%E7%A1%80/4.1.png">站起1</a><br><a href="%E6%BB%91%E9%9B%AA%E5%9F%BA%E7%A1%80/4.2.png">站起2</a><br><a href="%E6%BB%91%E9%9B%AA%E5%9F%BA%E7%A1%80/4.3.png">站起3</a><br>##原地旋转<br>抬起一个雪板，刻住雪，翻转。两雪杖放在身体两侧，另一支板带回。<br><a href="%E6%BB%91%E9%9B%AA%E5%9F%BA%E7%A1%80/5.1.png">旋转1</a><br><a href="%E6%BB%91%E9%9B%AA%E5%9F%BA%E7%A1%80/5.2.png">旋转2</a></p>
-<p>##初级滑</p>
-<p>###支杆前进<br>雪杖支撑点撑在板头至脚尖距离的中点<br><a href="%E6%BB%91%E9%9B%AA%E5%9F%BA%E7%A1%80/6.1.png">支杆前进</a><br>###横向登坡<br>往破上行走时，两膝盖同时下压，山下板内侧和山上板外侧刻住雪面。<br><a href="%E6%BB%91%E9%9B%AA%E5%9F%BA%E7%A1%80/7.1.png">横向登坡</a><br><a href="%E6%BB%91%E9%9B%AA%E5%9F%BA%E7%A1%80/7.2.png">横向登坡</a><br>###梨式制动（梨式刹车）<br>身体前倾，重量放在两个板尖。两腿平均分配力量，一起蹬开。<br>蹬开之后，膝盖自动向里旋转，板刃内侧刻住雪面，外板边立起，两板尖约一拳之隔。<br><a href="%E6%BB%91%E9%9B%AA%E5%9F%BA%E7%A1%80/8.1.png">梨式制动</a><br><a href="%E6%BB%91%E9%9B%AA%E5%9F%BA%E7%A1%80/8.2.png">梨式制动</a><br>##梨式滑降<br>和梨式制动类似，板尖并上（约一拳之隔），板尾分开，内八字。<br>板尖，板尾宽度一直不变，重心在板尖处，虎口朝上，手往前伸，眼睛向前看，不要低头。<br>膝盖不越过鞋尖，臀部不超过鞋尾，手和腰平行。</p>
+    <content><![CDATA[<h1 id="滑雪初级技巧"><a href="#滑雪初级技巧" class="headerlink" title="滑雪初级技巧"></a>滑雪初级技巧</h1><h2 id="原地基础"><a href="#原地基础" class="headerlink" title="原地基础"></a>原地基础</h2><h3 id="握雪仗"><a href="#握雪仗" class="headerlink" title="握雪仗"></a>握雪仗</h3><p>握柄带套入约手腕位置，同时抓住柄带和握柄。<br><img src="/2023/02/07/%E6%BB%91%E9%9B%AA%E5%9F%BA%E7%A1%80/1.png" alt="握柄"></p>
+<h3 id="坡路穿板"><a href="#坡路穿板" class="headerlink" title="坡路穿板"></a>坡路穿板</h3><p>先穿下侧雪板，穿上下侧雪板后内刃刻在雪上,之后穿另一侧。<br><img src="/2023/02/07/%E6%BB%91%E9%9B%AA%E5%9F%BA%E7%A1%80/2.1.png" alt="坡路穿板1"><br><img src="/2023/02/07/%E6%BB%91%E9%9B%AA%E5%9F%BA%E7%A1%80/2.2.png" alt="坡路穿板2"></p>
+<h3 id="正确摔倒"><a href="#正确摔倒" class="headerlink" title="正确摔倒"></a>正确摔倒</h3><p>往两侧去摔倒<br><img src="/2023/02/07/%E6%BB%91%E9%9B%AA%E5%9F%BA%E7%A1%80/3.1.png" alt="摔倒"></p>
+<h3 id="站起"><a href="#站起" class="headerlink" title="站起"></a>站起</h3><p>板底冲山下，板头冲山上，雪仗在身体后方支撑，腰腹发力站起。<br><img src="/2023/02/07/%E6%BB%91%E9%9B%AA%E5%9F%BA%E7%A1%80/4.1.png" alt="站起1"><br><img src="/2023/02/07/%E6%BB%91%E9%9B%AA%E5%9F%BA%E7%A1%80/4.2.png" alt="站起2"><br><img src="/2023/02/07/%E6%BB%91%E9%9B%AA%E5%9F%BA%E7%A1%80/4.3.png" alt="站起3"></p>
+<h2 id="原地旋转"><a href="#原地旋转" class="headerlink" title="原地旋转"></a>原地旋转</h2><p>抬起一个雪板，刻住雪，翻转。两雪杖放在身体两侧，另一支板带回。<br><img src="/2023/02/07/%E6%BB%91%E9%9B%AA%E5%9F%BA%E7%A1%80/5.1.png" alt="旋转1"><br><img src="/2023/02/07/%E6%BB%91%E9%9B%AA%E5%9F%BA%E7%A1%80/5.2.png" alt="旋转2"></p>
+<h2 id="初级滑"><a href="#初级滑" class="headerlink" title="初级滑"></a>初级滑</h2><h3 id="支杆前进"><a href="#支杆前进" class="headerlink" title="支杆前进"></a>支杆前进</h3><p>雪杖支撑点撑在板头至脚尖距离的中点<br><img src="/2023/02/07/%E6%BB%91%E9%9B%AA%E5%9F%BA%E7%A1%80/6.1.png" alt="支杆前进"></p>
+<h3 id="横向登坡"><a href="#横向登坡" class="headerlink" title="横向登坡"></a>横向登坡</h3><p>往破上行走时，两膝盖同时下压，山下板内侧和山上板外侧刻住雪面。<br><img src="/2023/02/07/%E6%BB%91%E9%9B%AA%E5%9F%BA%E7%A1%80/7.1.png" alt="横向登坡"><br><img src="/2023/02/07/%E6%BB%91%E9%9B%AA%E5%9F%BA%E7%A1%80/7.2.png" alt="横向登坡"></p>
+<h3 id="梨式制动（梨式刹车）"><a href="#梨式制动（梨式刹车）" class="headerlink" title="梨式制动（梨式刹车）"></a>梨式制动（梨式刹车）</h3><p>身体前倾，重量放在两个板尖。两腿平均分配力量，一起蹬开。<br>蹬开之后，膝盖自动向里旋转，板刃内侧刻住雪面，外板边立起，两板尖约一拳之隔。<br><img src="/2023/02/07/%E6%BB%91%E9%9B%AA%E5%9F%BA%E7%A1%80/8.1.png" alt="梨式制动"><br><img src="/2023/02/07/%E6%BB%91%E9%9B%AA%E5%9F%BA%E7%A1%80/8.2.png" alt="梨式制动"></p>
+<h3 id="梨式滑降"><a href="#梨式滑降" class="headerlink" title="梨式滑降"></a>梨式滑降</h3><p>和梨式制动类似，板尖并上（约一拳之隔），板尾分开，内八字。<br>板尖，板尾宽度一直不变，重心在板尖处，虎口朝上，手往前伸，眼睛向前看，不要低头。<br>膝盖不越过鞋尖，臀部不超过鞋尾，手和腰平行。<br><img src="/2023/02/07/%E6%BB%91%E9%9B%AA%E5%9F%BA%E7%A1%80/9.1.png" alt="滑降"><br><img src="/2023/02/07/%E6%BB%91%E9%9B%AA%E5%9F%BA%E7%A1%80/9.2.png" alt="滑降"><br><img src="/2023/02/07/%E6%BB%91%E9%9B%AA%E5%9F%BA%E7%A1%80/9.3.png" alt="滑降"></p>
 ]]></content>
+      <categories>
+        <category>随笔</category>
+      </categories>
+      <tags>
+        <tag>滑雪</tag>
+      </tags>
   </entry>
   <entry>
     <title>更换主题为next</title>
@@ -53,6 +46,23 @@
       </categories>
       <tags>
         <tag>杂谈</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>局部均值滤波算法与实现</title>
+    <url>/2021/10/21/%E5%B1%80%E9%83%A8%E5%9D%87%E5%80%BC%E6%BB%A4%E6%B3%A2%E7%AE%97%E6%B3%95%E4%B8%8E%E5%AE%9E%E7%8E%B0/</url>
+    <content><![CDATA[<h3 id="算法原理"><a href="#算法原理" class="headerlink" title="算法原理"></a>算法原理</h3><p><img src="/2021/10/21/%E5%B1%80%E9%83%A8%E5%9D%87%E5%80%BC%E6%BB%A4%E6%B3%A2%E7%AE%97%E6%B3%95%E4%B8%8E%E5%AE%9E%E7%8E%B0/%E5%9D%87%E5%80%BC.jpeg" alt="均值.jpeg"><br><img src="/2021/10/21/%E5%B1%80%E9%83%A8%E5%9D%87%E5%80%BC%E6%BB%A4%E6%B3%A2%E7%AE%97%E6%B3%95%E4%B8%8E%E5%AE%9E%E7%8E%B0/%E6%96%B9%E5%B7%AE.jpeg" alt="方差.jpeg"><br><img src="/2021/10/21/%E5%B1%80%E9%83%A8%E5%9D%87%E5%80%BC%E6%BB%A4%E6%B3%A2%E7%AE%97%E6%B3%95%E4%B8%8E%E5%AE%9E%E7%8E%B0/%E5%8E%BB%E5%99%AA%E7%BB%93%E6%9E%9C.jpeg" alt="去噪结果.jpeg"><br><img src="/2021/10/21/%E5%B1%80%E9%83%A8%E5%9D%87%E5%80%BC%E6%BB%A4%E6%B3%A2%E7%AE%97%E6%B3%95%E4%B8%8E%E5%AE%9E%E7%8E%B0/K.jpeg" alt="参数K.jpeg"><br>式（4）中σ为用户输入的参数</p>
+<h3 id="matlab实现"><a href="#matlab实现" class="headerlink" title="matlab实现"></a>matlab实现</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">clear;</span><br><span class="line">r=3;     %邻域大小为:[2*r+1,2*r+1]</span><br><span class="line">q=1000;  %用户自定义参数,范围0~∞</span><br><span class="line"></span><br><span class="line">% 读入图片</span><br><span class="line">I = imread(&#x27;pic.jpg&#x27;);</span><br><span class="line">[n,m,d] = size(I);   %得到图片大小 n行m列矩阵</span><br><span class="line">%I=rgb2gray(I);      %源图片转灰度图</span><br><span class="line">subplot(1,2,1),imshow(I);title(&quot;原图&quot;);</span><br><span class="line">I=double(I);         %转为双精度</span><br><span class="line"></span><br><span class="line">% 扩展输入图片边界</span><br><span class="line">img_expend = zeros(n+2*(2*r+1),m+2*(2*r+1),d);</span><br><span class="line">for i=1:n</span><br><span class="line">    for j=1:m</span><br><span class="line">        img_expend(i+r,j+r,:)=I(i,j,:);</span><br><span class="line">    end</span><br><span class="line">end</span><br><span class="line"></span><br><span class="line">% 计算均值和方差</span><br><span class="line">for i=r+1:r+n</span><br><span class="line">    for j=r+1:r+m  </span><br><span class="line">        %计算邻域范围内的均值</span><br><span class="line">        m_ij=0;</span><br><span class="line">        for x = i-r:i+r</span><br><span class="line">            for y = j-r:j+r</span><br><span class="line">                m_ij = m_ij + img_expend(x,y,:);</span><br><span class="line">            end</span><br><span class="line">        end</span><br><span class="line">        m_ij=m_ij/((2*r+1)*(2*r+1));</span><br><span class="line">        </span><br><span class="line">        %计算领域范围内的方差</span><br><span class="line">        v_ij=0;</span><br><span class="line">        for x = i-r:i+r</span><br><span class="line">            for y = j-r:j+r</span><br><span class="line">                v_ij = v_ij + (img_expend(x,y,:)-m_ij).*(img_expend(x,y,:)-m_ij);</span><br><span class="line">            end</span><br><span class="line">        end</span><br><span class="line">        v_ij=v_ij/((2*r+1)*(2*r+1));</span><br><span class="line"></span><br><span class="line">        %计算输出滤波值</span><br><span class="line">        k = v_ij./(v_ij+q);   </span><br><span class="line">        img_expend(i,j,:) = (1-k).*m_ij + k.*img_expend(i,j,:);   </span><br><span class="line">    end</span><br><span class="line">end</span><br><span class="line"></span><br><span class="line">% 保存结果</span><br><span class="line">result = zeros(n,m,d);</span><br><span class="line">for i=1:n</span><br><span class="line">    for j=1:m</span><br><span class="line">        result(i,j,:)=img_expend(i+r,j+r,:);</span><br><span class="line">    end</span><br><span class="line">end</span><br><span class="line"></span><br><span class="line">% 输出图像</span><br><span class="line">subplot(1,2,2),imshow(mat2gray(result));title(&quot;局部均值滤波&quot;);</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="其他方法实现美颜磨皮"><a href="#其他方法实现美颜磨皮" class="headerlink" title="其他方法实现美颜磨皮"></a>其他方法实现美颜磨皮</h3><p><a href="https://www.cnblogs.com/qxzy/p/4109805.html">matlab各向异性扩散滤波</a></p>
+<p><a href="https://blog.csdn.net/IronBull_Zhang/article/details/105158482">Matlab表面模糊程序</a></p>
+<h3 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h3><p><a href="https://blog.csdn.net/trent1985/article/details/80773642">图像保边滤波算法集锦系列</a><br><a href="https://cloud.tencent.com/developer/article/1011865">基于局部均方差相关信息的图像去噪及其在实时磨皮美容算法中的应用。</a></p>
+]]></content>
+      <categories>
+        <category>matlab</category>
+      </categories>
+      <tags>
+        <tag>matlab</tag>
       </tags>
   </entry>
 </search>
