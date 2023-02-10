@@ -17,20 +17,22 @@
       </tags>
   </entry>
   <entry>
-    <title>局部均值滤波算法与实现</title>
-    <url>/2021/10/21/%E5%B1%80%E9%83%A8%E5%9D%87%E5%80%BC%E6%BB%A4%E6%B3%A2%E7%AE%97%E6%B3%95%E4%B8%8E%E5%AE%9E%E7%8E%B0/</url>
-    <content><![CDATA[<h3 id="算法原理"><a href="#算法原理" class="headerlink" title="算法原理"></a>算法原理</h3><p><img src="/2021/10/21/%E5%B1%80%E9%83%A8%E5%9D%87%E5%80%BC%E6%BB%A4%E6%B3%A2%E7%AE%97%E6%B3%95%E4%B8%8E%E5%AE%9E%E7%8E%B0/%E5%9D%87%E5%80%BC.jpeg" alt="均值.jpeg"><br><img src="/2021/10/21/%E5%B1%80%E9%83%A8%E5%9D%87%E5%80%BC%E6%BB%A4%E6%B3%A2%E7%AE%97%E6%B3%95%E4%B8%8E%E5%AE%9E%E7%8E%B0/%E6%96%B9%E5%B7%AE.jpeg" alt="方差.jpeg"><br><img src="/2021/10/21/%E5%B1%80%E9%83%A8%E5%9D%87%E5%80%BC%E6%BB%A4%E6%B3%A2%E7%AE%97%E6%B3%95%E4%B8%8E%E5%AE%9E%E7%8E%B0/%E5%8E%BB%E5%99%AA%E7%BB%93%E6%9E%9C.jpeg" alt="去噪结果.jpeg"><br><img src="/2021/10/21/%E5%B1%80%E9%83%A8%E5%9D%87%E5%80%BC%E6%BB%A4%E6%B3%A2%E7%AE%97%E6%B3%95%E4%B8%8E%E5%AE%9E%E7%8E%B0/K.jpeg" alt="参数K.jpeg"><br>式（4）中σ为用户输入的参数</p>
-<h3 id="matlab实现"><a href="#matlab实现" class="headerlink" title="matlab实现"></a>matlab实现</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">clear;</span><br><span class="line">r=3;     %邻域大小为:[2*r+1,2*r+1]</span><br><span class="line">q=1000;  %用户自定义参数,范围0~∞</span><br><span class="line"></span><br><span class="line">% 读入图片</span><br><span class="line">I = imread(&#x27;pic.jpg&#x27;);</span><br><span class="line">[n,m,d] = size(I);   %得到图片大小 n行m列矩阵</span><br><span class="line">%I=rgb2gray(I);      %源图片转灰度图</span><br><span class="line">subplot(1,2,1),imshow(I);title(&quot;原图&quot;);</span><br><span class="line">I=double(I);         %转为双精度</span><br><span class="line"></span><br><span class="line">% 扩展输入图片边界</span><br><span class="line">img_expend = zeros(n+2*(2*r+1),m+2*(2*r+1),d);</span><br><span class="line">for i=1:n</span><br><span class="line">    for j=1:m</span><br><span class="line">        img_expend(i+r,j+r,:)=I(i,j,:);</span><br><span class="line">    end</span><br><span class="line">end</span><br><span class="line"></span><br><span class="line">% 计算均值和方差</span><br><span class="line">for i=r+1:r+n</span><br><span class="line">    for j=r+1:r+m  </span><br><span class="line">        %计算邻域范围内的均值</span><br><span class="line">        m_ij=0;</span><br><span class="line">        for x = i-r:i+r</span><br><span class="line">            for y = j-r:j+r</span><br><span class="line">                m_ij = m_ij + img_expend(x,y,:);</span><br><span class="line">            end</span><br><span class="line">        end</span><br><span class="line">        m_ij=m_ij/((2*r+1)*(2*r+1));</span><br><span class="line">        </span><br><span class="line">        %计算领域范围内的方差</span><br><span class="line">        v_ij=0;</span><br><span class="line">        for x = i-r:i+r</span><br><span class="line">            for y = j-r:j+r</span><br><span class="line">                v_ij = v_ij + (img_expend(x,y,:)-m_ij).*(img_expend(x,y,:)-m_ij);</span><br><span class="line">            end</span><br><span class="line">        end</span><br><span class="line">        v_ij=v_ij/((2*r+1)*(2*r+1));</span><br><span class="line"></span><br><span class="line">        %计算输出滤波值</span><br><span class="line">        k = v_ij./(v_ij+q);   </span><br><span class="line">        img_expend(i,j,:) = (1-k).*m_ij + k.*img_expend(i,j,:);   </span><br><span class="line">    end</span><br><span class="line">end</span><br><span class="line"></span><br><span class="line">% 保存结果</span><br><span class="line">result = zeros(n,m,d);</span><br><span class="line">for i=1:n</span><br><span class="line">    for j=1:m</span><br><span class="line">        result(i,j,:)=img_expend(i+r,j+r,:);</span><br><span class="line">    end</span><br><span class="line">end</span><br><span class="line"></span><br><span class="line">% 输出图像</span><br><span class="line">subplot(1,2,2),imshow(mat2gray(result));title(&quot;局部均值滤波&quot;);</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<h3 id="其他方法实现美颜磨皮"><a href="#其他方法实现美颜磨皮" class="headerlink" title="其他方法实现美颜磨皮"></a>其他方法实现美颜磨皮</h3><p><a href="https://www.cnblogs.com/qxzy/p/4109805.html">matlab各向异性扩散滤波</a></p>
-<p><a href="https://blog.csdn.net/IronBull_Zhang/article/details/105158482">Matlab表面模糊程序</a></p>
-<h3 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h3><p><a href="https://blog.csdn.net/trent1985/article/details/80773642">图像保边滤波算法集锦系列</a><br><a href="https://cloud.tencent.com/developer/article/1011865">基于局部均方差相关信息的图像去噪及其在实时磨皮美容算法中的应用。</a></p>
+    <title>vscode部署远程服务</title>
+    <url>/2023/02/10/vscode%E9%83%A8%E7%BD%B2%E8%BF%9C%E7%A8%8B%E6%9C%8D%E5%8A%A1/</url>
+    <content><![CDATA[<p><code>环境：阿里云centos7.9</code></p>
+<h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2><p>使用ssl登录无效，一直重复输入密码。  </p>
+<h2 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h2><ol>
+<li>修改远程服务器<code>.ssh</code>登文件权限  <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">chmod 700 ..</span><br><span class="line">chmod 700 .</span><br><span class="line">chmod 600 authorized_keys</span><br></pre></td></tr></table></figure></li>
+<li>修改ssh配置服务器信息 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">vim /etc/ssh/sshd_config </span><br><span class="line">    </span><br></pre></td></tr></table></figure>
+ 把 <code>PubkeyAuthentication</code> 前的 # 号去掉</li>
+<li>修改本地私钥文件权限<br> <img src="/2023/02/10/vscode%E9%83%A8%E7%BD%B2%E8%BF%9C%E7%A8%8B%E6%9C%8D%E5%8A%A1/%E7%A7%81%E9%92%A5%E6%9D%83%E9%99%90.png" alt="私钥权限"></li>
+</ol>
 ]]></content>
       <categories>
-        <category>matlab</category>
+        <category>编程工具</category>
       </categories>
       <tags>
-        <tag>matlab</tag>
+        <tag>vscode,服务器</tag>
       </tags>
   </entry>
   <entry>
@@ -63,6 +65,23 @@
       </categories>
       <tags>
         <tag>滑雪</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>局部均值滤波算法与实现</title>
+    <url>/2021/10/21/%E5%B1%80%E9%83%A8%E5%9D%87%E5%80%BC%E6%BB%A4%E6%B3%A2%E7%AE%97%E6%B3%95%E4%B8%8E%E5%AE%9E%E7%8E%B0/</url>
+    <content><![CDATA[<h3 id="算法原理"><a href="#算法原理" class="headerlink" title="算法原理"></a>算法原理</h3><p><img src="/2021/10/21/%E5%B1%80%E9%83%A8%E5%9D%87%E5%80%BC%E6%BB%A4%E6%B3%A2%E7%AE%97%E6%B3%95%E4%B8%8E%E5%AE%9E%E7%8E%B0/%E5%9D%87%E5%80%BC.jpeg" alt="均值.jpeg"><br><img src="/2021/10/21/%E5%B1%80%E9%83%A8%E5%9D%87%E5%80%BC%E6%BB%A4%E6%B3%A2%E7%AE%97%E6%B3%95%E4%B8%8E%E5%AE%9E%E7%8E%B0/%E6%96%B9%E5%B7%AE.jpeg" alt="方差.jpeg"><br><img src="/2021/10/21/%E5%B1%80%E9%83%A8%E5%9D%87%E5%80%BC%E6%BB%A4%E6%B3%A2%E7%AE%97%E6%B3%95%E4%B8%8E%E5%AE%9E%E7%8E%B0/%E5%8E%BB%E5%99%AA%E7%BB%93%E6%9E%9C.jpeg" alt="去噪结果.jpeg"><br><img src="/2021/10/21/%E5%B1%80%E9%83%A8%E5%9D%87%E5%80%BC%E6%BB%A4%E6%B3%A2%E7%AE%97%E6%B3%95%E4%B8%8E%E5%AE%9E%E7%8E%B0/K.jpeg" alt="参数K.jpeg"><br>式（4）中σ为用户输入的参数</p>
+<h3 id="matlab实现"><a href="#matlab实现" class="headerlink" title="matlab实现"></a>matlab实现</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">clear;</span><br><span class="line">r=3;     %邻域大小为:[2*r+1,2*r+1]</span><br><span class="line">q=1000;  %用户自定义参数,范围0~∞</span><br><span class="line"></span><br><span class="line">% 读入图片</span><br><span class="line">I = imread(&#x27;pic.jpg&#x27;);</span><br><span class="line">[n,m,d] = size(I);   %得到图片大小 n行m列矩阵</span><br><span class="line">%I=rgb2gray(I);      %源图片转灰度图</span><br><span class="line">subplot(1,2,1),imshow(I);title(&quot;原图&quot;);</span><br><span class="line">I=double(I);         %转为双精度</span><br><span class="line"></span><br><span class="line">% 扩展输入图片边界</span><br><span class="line">img_expend = zeros(n+2*(2*r+1),m+2*(2*r+1),d);</span><br><span class="line">for i=1:n</span><br><span class="line">    for j=1:m</span><br><span class="line">        img_expend(i+r,j+r,:)=I(i,j,:);</span><br><span class="line">    end</span><br><span class="line">end</span><br><span class="line"></span><br><span class="line">% 计算均值和方差</span><br><span class="line">for i=r+1:r+n</span><br><span class="line">    for j=r+1:r+m  </span><br><span class="line">        %计算邻域范围内的均值</span><br><span class="line">        m_ij=0;</span><br><span class="line">        for x = i-r:i+r</span><br><span class="line">            for y = j-r:j+r</span><br><span class="line">                m_ij = m_ij + img_expend(x,y,:);</span><br><span class="line">            end</span><br><span class="line">        end</span><br><span class="line">        m_ij=m_ij/((2*r+1)*(2*r+1));</span><br><span class="line">        </span><br><span class="line">        %计算领域范围内的方差</span><br><span class="line">        v_ij=0;</span><br><span class="line">        for x = i-r:i+r</span><br><span class="line">            for y = j-r:j+r</span><br><span class="line">                v_ij = v_ij + (img_expend(x,y,:)-m_ij).*(img_expend(x,y,:)-m_ij);</span><br><span class="line">            end</span><br><span class="line">        end</span><br><span class="line">        v_ij=v_ij/((2*r+1)*(2*r+1));</span><br><span class="line"></span><br><span class="line">        %计算输出滤波值</span><br><span class="line">        k = v_ij./(v_ij+q);   </span><br><span class="line">        img_expend(i,j,:) = (1-k).*m_ij + k.*img_expend(i,j,:);   </span><br><span class="line">    end</span><br><span class="line">end</span><br><span class="line"></span><br><span class="line">% 保存结果</span><br><span class="line">result = zeros(n,m,d);</span><br><span class="line">for i=1:n</span><br><span class="line">    for j=1:m</span><br><span class="line">        result(i,j,:)=img_expend(i+r,j+r,:);</span><br><span class="line">    end</span><br><span class="line">end</span><br><span class="line"></span><br><span class="line">% 输出图像</span><br><span class="line">subplot(1,2,2),imshow(mat2gray(result));title(&quot;局部均值滤波&quot;);</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="其他方法实现美颜磨皮"><a href="#其他方法实现美颜磨皮" class="headerlink" title="其他方法实现美颜磨皮"></a>其他方法实现美颜磨皮</h3><p><a href="https://www.cnblogs.com/qxzy/p/4109805.html">matlab各向异性扩散滤波</a></p>
+<p><a href="https://blog.csdn.net/IronBull_Zhang/article/details/105158482">Matlab表面模糊程序</a></p>
+<h3 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h3><p><a href="https://blog.csdn.net/trent1985/article/details/80773642">图像保边滤波算法集锦系列</a><br><a href="https://cloud.tencent.com/developer/article/1011865">基于局部均方差相关信息的图像去噪及其在实时磨皮美容算法中的应用。</a></p>
+]]></content>
+      <categories>
+        <category>matlab</category>
+      </categories>
+      <tags>
+        <tag>matlab</tag>
       </tags>
   </entry>
 </search>
