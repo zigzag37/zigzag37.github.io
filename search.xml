@@ -17,22 +17,28 @@
       </tags>
   </entry>
   <entry>
-    <title>vscode部署远程服务</title>
-    <url>/2023/02/10/vscode%E9%83%A8%E7%BD%B2%E8%BF%9C%E7%A8%8B%E6%9C%8D%E5%8A%A1/</url>
-    <content><![CDATA[<p><code>环境：阿里云centos7.9</code></p>
-<h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2><p>使用ssl登录无效，一直重复输入密码。  </p>
-<h2 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h2><ol>
-<li>修改远程服务器<code>.ssh</code>登文件权限  <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">chmod 700 ..</span><br><span class="line">chmod 700 .</span><br><span class="line">chmod 600 authorized_keys</span><br></pre></td></tr></table></figure></li>
-<li>修改ssh配置服务器信息 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">vim /etc/ssh/sshd_config </span><br><span class="line">    </span><br></pre></td></tr></table></figure>
- 把 <code>PubkeyAuthentication</code> 前的 # 号去掉</li>
-<li>修改本地私钥文件权限<br> <img src="/2023/02/10/vscode%E9%83%A8%E7%BD%B2%E8%BF%9C%E7%A8%8B%E6%9C%8D%E5%8A%A1/%E7%A7%81%E9%92%A5%E6%9D%83%E9%99%90.png" alt="私钥权限"></li>
+    <title>clash_for_widnows去除软件内广告</title>
+    <url>/2023/02/11/clash-for-widnows%E5%8E%BB%E9%99%A4%E8%BD%AF%E4%BB%B6%E5%86%85%E5%B9%BF%E5%91%8A/</url>
+    <content><![CDATA[<h1 id="解包app-asar"><a href="#解包app-asar" class="headerlink" title="解包app.asar"></a>解包app.asar</h1><ol>
+<li>安装npm（去nodejs官方下载稳定版）</li>
+<li>安装好npm后执行命令安装asar：<code>npm install asar -g</code><br>也可以去官方：<a href="https://github.com/electron/asar">https://github.com/electron/asar</a></li>
+<li>在需要逆向的文件目录 /Resources下找到app.asar<br>用asar命令解包：<code>asar e app.asar tmp</code></li>
+<li>到建立的tmp目录下找到需要逆向的js文件去修改，<br>逆向完后重新封装程序 ：<code>asar p tmp/ app.asar</code>，逆向完成。</li>
+</ol>
+<h1 id="修改文件"><a href="#修改文件" class="headerlink" title="修改文件"></a>修改文件</h1><ol>
+<li>找到render.js</li>
+<li>搜索代码片段：advertisement</li>
+<li>移除掉[e._v(“advertisementnt”)]中的<code>advertissment</code>内容然后分别移除 <code>ad-img-list</code> <code>ad-img</code>  <code>lazy-image-view</code></li>
+<li>原始代码:<img src="/2023/02/11/clash-for-widnows%E5%8E%BB%E9%99%A4%E8%BD%AF%E4%BB%B6%E5%86%85%E5%B9%BF%E5%91%8A/clash%E5%8E%BB%E5%B9%BF%E5%91%8A.png" alt="clash去广告"></li>
+<li>修改后 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">i(&quot;div&quot;, &#123; staticClass: &quot;section ad-section&quot; &#125;, [</span><br><span class="line">                            i(&quot;div&quot;, &#123; staticClass: &quot;title&quot; &#125;, [e._v(&quot;&quot;)]),</span><br><span class="line">                            e._v(&quot; &quot;),</span><br><span class="line">                            i(</span><br><span class="line">                                &quot;div&quot;,</span><br><span class="line">                                &#123; staticClass: &quot;&quot; &#125;,</span><br><span class="line">                                e._l(e.adImages, function (t, n) &#123;</span><br><span class="line">                                    return i(</span><br><span class="line">                                        &quot;div&quot;,</span><br><span class="line">                                        &#123; key: n, staticClass: &quot;&quot; &#125;,</span><br><span class="line">                                        [</span><br><span class="line">                                            i(&quot;&quot;, &#123;</span><br><span class="line">                                                attrs: &#123; clickalbe: t.click, src: t.img &#125;,</span><br><span class="line">                                                on: &#123;</span><br><span class="line">                                                    click: function (t) &#123;</span><br><span class="line">                                                        return e.adClick(n);</span><br><span class="line">                                                    &#125;,</span><br><span class="line">                                                &#125;,</span><br><span class="line">                                            &#125;),</span><br><span class="line">                                        ],</span><br><span class="line">                                        1</span><br><span class="line">                                    );</span><br><span class="line">                                &#125;),</span><br><span class="line">                                0</span><br><span class="line">                            ),</span><br><span class="line">                        ]),</span><br><span class="line"></span><br></pre></td></tr></table></figure></li>
 </ol>
 ]]></content>
       <categories>
         <category>编程工具</category>
       </categories>
       <tags>
-        <tag>vscode,服务器</tag>
+        <tag>clash</tag>
+        <tag>科学上网</tag>
       </tags>
   </entry>
   <entry>
@@ -53,6 +59,37 @@
       </tags>
   </entry>
   <entry>
+    <title>vscode部署远程服务</title>
+    <url>/2023/02/10/vscode%E9%83%A8%E7%BD%B2%E8%BF%9C%E7%A8%8B%E6%9C%8D%E5%8A%A1/</url>
+    <content><![CDATA[<p><code>环境：阿里云centos7.9</code></p>
+<h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2><p>使用ssl登录无效，一直重复输入密码。  </p>
+<h2 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h2><ol>
+<li>修改远程服务器<code>.ssh</code>登文件权限  <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">chmod 700 ..</span><br><span class="line">chmod 700 .</span><br><span class="line">chmod 600 authorized_keys</span><br></pre></td></tr></table></figure></li>
+<li>修改ssh配置服务器信息 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">vim /etc/ssh/sshd_config </span><br><span class="line">    </span><br></pre></td></tr></table></figure>
+ 把 <code>PubkeyAuthentication</code> 前的 # 号去掉</li>
+<li>修改本地私钥文件权限<br> <img src="/2023/02/10/vscode%E9%83%A8%E7%BD%B2%E8%BF%9C%E7%A8%8B%E6%9C%8D%E5%8A%A1/%E7%A7%81%E9%92%A5%E6%9D%83%E9%99%90.png" alt="私钥权限"></li>
+</ol>
+]]></content>
+      <categories>
+        <category>编程工具</category>
+      </categories>
+      <tags>
+        <tag>vscode,服务器</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>更换主题为next</title>
+    <url>/2023/01/30/%E6%9B%B4%E6%8D%A2%E4%B8%BB%E9%A2%98%E4%B8%BAnext/</url>
+    <content><![CDATA[<p>现阶段next主题开发维护地址更改,更换时没注意,一直用之前的，屡屡报错，耗费了1天时间，悲。</p>
+]]></content>
+      <categories>
+        <category>杂谈</category>
+      </categories>
+      <tags>
+        <tag>杂谈</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>滑雪基础</title>
     <url>/2023/02/07/%E6%BB%91%E9%9B%AA%E5%9F%BA%E7%A1%80/</url>
     <content><![CDATA[<h1 id="滑雪初级技巧"><a href="#滑雪初级技巧" class="headerlink" title="滑雪初级技巧"></a>滑雪初级技巧</h1><h2 id="原地基础"><a href="#原地基础" class="headerlink" title="原地基础"></a>原地基础</h2><h3 id="握雪仗"><a href="#握雪仗" class="headerlink" title="握雪仗"></a>握雪仗</h3><p>握柄带套入约手腕位置，同时抓住柄带和握柄。<br><img src="/2023/02/07/%E6%BB%91%E9%9B%AA%E5%9F%BA%E7%A1%80/1.png" alt="握柄"></p>
@@ -70,18 +107,6 @@
       </categories>
       <tags>
         <tag>滑雪</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>更换主题为next</title>
-    <url>/2023/01/30/%E6%9B%B4%E6%8D%A2%E4%B8%BB%E9%A2%98%E4%B8%BAnext/</url>
-    <content><![CDATA[<p>现阶段next主题开发维护地址更改,更换时没注意,一直用之前的，屡屡报错，耗费了1天时间，悲。</p>
-]]></content>
-      <categories>
-        <category>杂谈</category>
-      </categories>
-      <tags>
-        <tag>杂谈</tag>
       </tags>
   </entry>
   <entry>
