@@ -1,6 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>C++笔记（转载）</title>
+    <url>/2021/12/09/C++%E7%AC%94%E8%AE%B0%EF%BC%88%E8%BD%AC%E8%BD%BD%EF%BC%89/</url>
+    <content><![CDATA[<h4 id="侯捷C-课程笔记01-面向对象高级编程（上）"><a href="#侯捷C-课程笔记01-面向对象高级编程（上）" class="headerlink" title="侯捷C++课程笔记01: 面向对象高级编程（上）"></a>侯捷C++课程笔记01: 面向对象高级编程（上）</h4><p><a href="https://blog.csdn.net/ncepu_Chen/article/details/113843775">https://blog.csdn.net/ncepu_Chen/article/details/113843775</a></p>
+<h4 id="侯捷C-课程笔记02-面向对象高级编程（下）"><a href="#侯捷C-课程笔记02-面向对象高级编程（下）" class="headerlink" title="侯捷C++课程笔记02: 面向对象高级编程（下）"></a>侯捷C++课程笔记02: 面向对象高级编程（下）</h4><p><a href="https://blog.csdn.net/ncepu_Chen/article/details/114686488">https://blog.csdn.net/ncepu_Chen/article/details/114686488</a></p>
+<h4 id="侯捷C-课程笔记02-面向对象高级编程（下）-1"><a href="#侯捷C-课程笔记02-面向对象高级编程（下）-1" class="headerlink" title="侯捷C++课程笔记02: 面向对象高级编程（下）"></a>侯捷C++课程笔记02: 面向对象高级编程（下）</h4><p><a href="https://blog.csdn.net/ncepu_Chen/article/details/114686488">https://blog.csdn.net/ncepu_Chen/article/details/114686488</a></p>
+<h4 id="侯捷C-课程笔记03-STL标准库与泛型编程"><a href="#侯捷C-课程笔记03-STL标准库与泛型编程" class="headerlink" title="侯捷C++课程笔记03: STL标准库与泛型编程"></a>侯捷C++课程笔记03: STL标准库与泛型编程</h4><p><a href="https://blog.csdn.net/ncepu_Chen/article/details/114947710">https://blog.csdn.net/ncepu_Chen/article/details/114947710</a></p>
+<h4 id="侯捷C-课程笔记04-C-2-0新特性"><a href="#侯捷C-课程笔记04-C-2-0新特性" class="headerlink" title="侯捷C++课程笔记04: C++2.0新特性"></a>侯捷C++课程笔记04: C++2.0新特性</h4><p><a href="https://blog.csdn.net/ncepu_Chen/article/details/115375559">https://blog.csdn.net/ncepu_Chen/article/details/115375559</a></p>
+]]></content>
+      <categories>
+        <category>C++</category>
+      </categories>
+      <tags>
+        <tag>C++</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>vscode部署远程服务</title>
+    <url>/2023/02/10/vscode%E9%83%A8%E7%BD%B2%E8%BF%9C%E7%A8%8B%E6%9C%8D%E5%8A%A1/</url>
+    <content><![CDATA[<p><code>环境：阿里云centos7.9</code></p>
+<h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2><p>使用ssl登录无效，一直重复输入密码。  </p>
+<h2 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h2><ol>
+<li>修改远程服务器<code>.ssh</code>登文件权限  <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">chmod 700 ..</span><br><span class="line">chmod 700 .</span><br><span class="line">chmod 600 authorized_keys</span><br></pre></td></tr></table></figure></li>
+<li>修改ssh配置服务器信息 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">vim /etc/ssh/sshd_config </span><br><span class="line">    </span><br></pre></td></tr></table></figure>
+ 把 <code>PubkeyAuthentication</code> 前的 # 号去掉</li>
+<li>修改本地私钥文件权限<br> <img src="/2023/02/10/vscode%E9%83%A8%E7%BD%B2%E8%BF%9C%E7%A8%8B%E6%9C%8D%E5%8A%A1/%E7%A7%81%E9%92%A5%E6%9D%83%E9%99%90.png" alt="私钥权限"></li>
+</ol>
+]]></content>
+      <categories>
+        <category>编程工具</category>
+      </categories>
+      <tags>
+        <tag>vscode,服务器</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>clash_for_widnows去除软件内广告</title>
     <url>/2023/02/11/clash-for-widnows%E5%8E%BB%E9%99%A4%E8%BD%AF%E4%BB%B6%E5%86%85%E5%B9%BF%E5%91%8A/</url>
     <content><![CDATA[<h1 id="解包app-asar"><a href="#解包app-asar" class="headerlink" title="解包app.asar"></a>解包app.asar</h1><ol>
@@ -26,22 +61,15 @@
       </tags>
   </entry>
   <entry>
-    <title>vscode部署远程服务</title>
-    <url>/2023/02/10/vscode%E9%83%A8%E7%BD%B2%E8%BF%9C%E7%A8%8B%E6%9C%8D%E5%8A%A1/</url>
-    <content><![CDATA[<p><code>环境：阿里云centos7.9</code></p>
-<h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2><p>使用ssl登录无效，一直重复输入密码。  </p>
-<h2 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h2><ol>
-<li>修改远程服务器<code>.ssh</code>登文件权限  <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">chmod 700 ..</span><br><span class="line">chmod 700 .</span><br><span class="line">chmod 600 authorized_keys</span><br></pre></td></tr></table></figure></li>
-<li>修改ssh配置服务器信息 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">vim /etc/ssh/sshd_config </span><br><span class="line">    </span><br></pre></td></tr></table></figure>
- 把 <code>PubkeyAuthentication</code> 前的 # 号去掉</li>
-<li>修改本地私钥文件权限<br> <img src="/2023/02/10/vscode%E9%83%A8%E7%BD%B2%E8%BF%9C%E7%A8%8B%E6%9C%8D%E5%8A%A1/%E7%A7%81%E9%92%A5%E6%9D%83%E9%99%90.png" alt="私钥权限"></li>
-</ol>
+    <title>多情总被无情恼</title>
+    <url>/2023/02/21/%E5%A4%9A%E6%83%85%E6%80%BB%E8%A2%AB%E6%97%A0%E6%83%85%E6%81%BC/</url>
+    <content><![CDATA[<p>今天是2023年2月21日，考研出分，不出所料考的很糟糕，无缘复试。虽是早已知晓的结果，但看到成绩时心里还是难免有些落寞。考研失败的主要原因是自制力不强，年初和自认为关系很好的异性朋友分手，又加上去年在家休息，大半年的时间都打了水漂，最后又有疫情，可谓是多灾多难的一年。<br>性格决定命运，在其他方面都及其阔达，唯独谈到感情，突如其来的分手打乱了生活节奏，不想起床，整天刷手机，逃避现实，像每个失恋的人一样颓废了一段时间，好在随着时间不断流逝，慢慢地也就淡忘了，只有疤痕依旧。人首先得有一个独立的灵魂，对异性的期待太高，依赖太强，有些时候不妨顺其自然,随遇而安。<br>悟已往之不谏注，知来者之可追。2023年上半年计划:<code>减肥</code>，<code>完成毕设</code>，<code>找到工作</code>。</p>
 ]]></content>
       <categories>
-        <category>编程工具</category>
+        <category>随笔</category>
       </categories>
       <tags>
-        <tag>vscode,服务器</tag>
+        <tag>随笔</tag>
       </tags>
   </entry>
   <entry>
@@ -54,6 +82,23 @@
       </categories>
       <tags>
         <tag>博客</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>局部均值滤波算法与实现</title>
+    <url>/2021/10/21/%E5%B1%80%E9%83%A8%E5%9D%87%E5%80%BC%E6%BB%A4%E6%B3%A2%E7%AE%97%E6%B3%95%E4%B8%8E%E5%AE%9E%E7%8E%B0/</url>
+    <content><![CDATA[<h3 id="算法原理"><a href="#算法原理" class="headerlink" title="算法原理"></a>算法原理</h3><p><img src="/2021/10/21/%E5%B1%80%E9%83%A8%E5%9D%87%E5%80%BC%E6%BB%A4%E6%B3%A2%E7%AE%97%E6%B3%95%E4%B8%8E%E5%AE%9E%E7%8E%B0/%E5%9D%87%E5%80%BC.jpeg" alt="均值.jpeg"><br><img src="/2021/10/21/%E5%B1%80%E9%83%A8%E5%9D%87%E5%80%BC%E6%BB%A4%E6%B3%A2%E7%AE%97%E6%B3%95%E4%B8%8E%E5%AE%9E%E7%8E%B0/%E6%96%B9%E5%B7%AE.jpeg" alt="方差.jpeg"><br><img src="/2021/10/21/%E5%B1%80%E9%83%A8%E5%9D%87%E5%80%BC%E6%BB%A4%E6%B3%A2%E7%AE%97%E6%B3%95%E4%B8%8E%E5%AE%9E%E7%8E%B0/%E5%8E%BB%E5%99%AA%E7%BB%93%E6%9E%9C.jpeg" alt="去噪结果.jpeg"><br><img src="/2021/10/21/%E5%B1%80%E9%83%A8%E5%9D%87%E5%80%BC%E6%BB%A4%E6%B3%A2%E7%AE%97%E6%B3%95%E4%B8%8E%E5%AE%9E%E7%8E%B0/K.jpeg" alt="参数K.jpeg"><br>式（4）中σ为用户输入的参数</p>
+<h3 id="matlab实现"><a href="#matlab实现" class="headerlink" title="matlab实现"></a>matlab实现</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">clear;</span><br><span class="line">r=3;     %邻域大小为:[2*r+1,2*r+1]</span><br><span class="line">q=1000;  %用户自定义参数,范围0~∞</span><br><span class="line"></span><br><span class="line">% 读入图片</span><br><span class="line">I = imread(&#x27;pic.jpg&#x27;);</span><br><span class="line">[n,m,d] = size(I);   %得到图片大小 n行m列矩阵</span><br><span class="line">%I=rgb2gray(I);      %源图片转灰度图</span><br><span class="line">subplot(1,2,1),imshow(I);title(&quot;原图&quot;);</span><br><span class="line">I=double(I);         %转为双精度</span><br><span class="line"></span><br><span class="line">% 扩展输入图片边界</span><br><span class="line">img_expend = zeros(n+2*(2*r+1),m+2*(2*r+1),d);</span><br><span class="line">for i=1:n</span><br><span class="line">    for j=1:m</span><br><span class="line">        img_expend(i+r,j+r,:)=I(i,j,:);</span><br><span class="line">    end</span><br><span class="line">end</span><br><span class="line"></span><br><span class="line">% 计算均值和方差</span><br><span class="line">for i=r+1:r+n</span><br><span class="line">    for j=r+1:r+m  </span><br><span class="line">        %计算邻域范围内的均值</span><br><span class="line">        m_ij=0;</span><br><span class="line">        for x = i-r:i+r</span><br><span class="line">            for y = j-r:j+r</span><br><span class="line">                m_ij = m_ij + img_expend(x,y,:);</span><br><span class="line">            end</span><br><span class="line">        end</span><br><span class="line">        m_ij=m_ij/((2*r+1)*(2*r+1));</span><br><span class="line">        </span><br><span class="line">        %计算领域范围内的方差</span><br><span class="line">        v_ij=0;</span><br><span class="line">        for x = i-r:i+r</span><br><span class="line">            for y = j-r:j+r</span><br><span class="line">                v_ij = v_ij + (img_expend(x,y,:)-m_ij).*(img_expend(x,y,:)-m_ij);</span><br><span class="line">            end</span><br><span class="line">        end</span><br><span class="line">        v_ij=v_ij/((2*r+1)*(2*r+1));</span><br><span class="line"></span><br><span class="line">        %计算输出滤波值</span><br><span class="line">        k = v_ij./(v_ij+q);   </span><br><span class="line">        img_expend(i,j,:) = (1-k).*m_ij + k.*img_expend(i,j,:);   </span><br><span class="line">    end</span><br><span class="line">end</span><br><span class="line"></span><br><span class="line">% 保存结果</span><br><span class="line">result = zeros(n,m,d);</span><br><span class="line">for i=1:n</span><br><span class="line">    for j=1:m</span><br><span class="line">        result(i,j,:)=img_expend(i+r,j+r,:);</span><br><span class="line">    end</span><br><span class="line">end</span><br><span class="line"></span><br><span class="line">% 输出图像</span><br><span class="line">subplot(1,2,2),imshow(mat2gray(result));title(&quot;局部均值滤波&quot;);</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="其他方法实现美颜磨皮"><a href="#其他方法实现美颜磨皮" class="headerlink" title="其他方法实现美颜磨皮"></a>其他方法实现美颜磨皮</h3><p><a href="https://www.cnblogs.com/qxzy/p/4109805.html">matlab各向异性扩散滤波</a></p>
+<p><a href="https://blog.csdn.net/IronBull_Zhang/article/details/105158482">Matlab表面模糊程序</a></p>
+<h3 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h3><p><a href="https://blog.csdn.net/trent1985/article/details/80773642">图像保边滤波算法集锦系列</a><br><a href="https://cloud.tencent.com/developer/article/1011865">基于局部均方差相关信息的图像去噪及其在实时磨皮美容算法中的应用。</a></p>
+]]></content>
+      <categories>
+        <category>matlab</category>
+      </categories>
+      <tags>
+        <tag>matlab</tag>
       </tags>
   </entry>
   <entry>
@@ -113,39 +158,6 @@
       <tags>
         <tag>电子书</tag>
         <tag>在线资源</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>C++笔记（转载）</title>
-    <url>/2021/12/09/C++%E7%AC%94%E8%AE%B0%EF%BC%88%E8%BD%AC%E8%BD%BD%EF%BC%89/</url>
-    <content><![CDATA[<h4 id="侯捷C-课程笔记01-面向对象高级编程（上）"><a href="#侯捷C-课程笔记01-面向对象高级编程（上）" class="headerlink" title="侯捷C++课程笔记01: 面向对象高级编程（上）"></a>侯捷C++课程笔记01: 面向对象高级编程（上）</h4><p><a href="https://blog.csdn.net/ncepu_Chen/article/details/113843775">https://blog.csdn.net/ncepu_Chen/article/details/113843775</a></p>
-<h4 id="侯捷C-课程笔记02-面向对象高级编程（下）"><a href="#侯捷C-课程笔记02-面向对象高级编程（下）" class="headerlink" title="侯捷C++课程笔记02: 面向对象高级编程（下）"></a>侯捷C++课程笔记02: 面向对象高级编程（下）</h4><p><a href="https://blog.csdn.net/ncepu_Chen/article/details/114686488">https://blog.csdn.net/ncepu_Chen/article/details/114686488</a></p>
-<h4 id="侯捷C-课程笔记02-面向对象高级编程（下）-1"><a href="#侯捷C-课程笔记02-面向对象高级编程（下）-1" class="headerlink" title="侯捷C++课程笔记02: 面向对象高级编程（下）"></a>侯捷C++课程笔记02: 面向对象高级编程（下）</h4><p><a href="https://blog.csdn.net/ncepu_Chen/article/details/114686488">https://blog.csdn.net/ncepu_Chen/article/details/114686488</a></p>
-<h4 id="侯捷C-课程笔记03-STL标准库与泛型编程"><a href="#侯捷C-课程笔记03-STL标准库与泛型编程" class="headerlink" title="侯捷C++课程笔记03: STL标准库与泛型编程"></a>侯捷C++课程笔记03: STL标准库与泛型编程</h4><p><a href="https://blog.csdn.net/ncepu_Chen/article/details/114947710">https://blog.csdn.net/ncepu_Chen/article/details/114947710</a></p>
-<h4 id="侯捷C-课程笔记04-C-2-0新特性"><a href="#侯捷C-课程笔记04-C-2-0新特性" class="headerlink" title="侯捷C++课程笔记04: C++2.0新特性"></a>侯捷C++课程笔记04: C++2.0新特性</h4><p><a href="https://blog.csdn.net/ncepu_Chen/article/details/115375559">https://blog.csdn.net/ncepu_Chen/article/details/115375559</a></p>
-]]></content>
-      <categories>
-        <category>C++</category>
-      </categories>
-      <tags>
-        <tag>C++</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>局部均值滤波算法与实现</title>
-    <url>/2021/10/21/%E5%B1%80%E9%83%A8%E5%9D%87%E5%80%BC%E6%BB%A4%E6%B3%A2%E7%AE%97%E6%B3%95%E4%B8%8E%E5%AE%9E%E7%8E%B0/</url>
-    <content><![CDATA[<h3 id="算法原理"><a href="#算法原理" class="headerlink" title="算法原理"></a>算法原理</h3><p><img src="/2021/10/21/%E5%B1%80%E9%83%A8%E5%9D%87%E5%80%BC%E6%BB%A4%E6%B3%A2%E7%AE%97%E6%B3%95%E4%B8%8E%E5%AE%9E%E7%8E%B0/%E5%9D%87%E5%80%BC.jpeg" alt="均值.jpeg"><br><img src="/2021/10/21/%E5%B1%80%E9%83%A8%E5%9D%87%E5%80%BC%E6%BB%A4%E6%B3%A2%E7%AE%97%E6%B3%95%E4%B8%8E%E5%AE%9E%E7%8E%B0/%E6%96%B9%E5%B7%AE.jpeg" alt="方差.jpeg"><br><img src="/2021/10/21/%E5%B1%80%E9%83%A8%E5%9D%87%E5%80%BC%E6%BB%A4%E6%B3%A2%E7%AE%97%E6%B3%95%E4%B8%8E%E5%AE%9E%E7%8E%B0/%E5%8E%BB%E5%99%AA%E7%BB%93%E6%9E%9C.jpeg" alt="去噪结果.jpeg"><br><img src="/2021/10/21/%E5%B1%80%E9%83%A8%E5%9D%87%E5%80%BC%E6%BB%A4%E6%B3%A2%E7%AE%97%E6%B3%95%E4%B8%8E%E5%AE%9E%E7%8E%B0/K.jpeg" alt="参数K.jpeg"><br>式（4）中σ为用户输入的参数</p>
-<h3 id="matlab实现"><a href="#matlab实现" class="headerlink" title="matlab实现"></a>matlab实现</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">clear;</span><br><span class="line">r=3;     %邻域大小为:[2*r+1,2*r+1]</span><br><span class="line">q=1000;  %用户自定义参数,范围0~∞</span><br><span class="line"></span><br><span class="line">% 读入图片</span><br><span class="line">I = imread(&#x27;pic.jpg&#x27;);</span><br><span class="line">[n,m,d] = size(I);   %得到图片大小 n行m列矩阵</span><br><span class="line">%I=rgb2gray(I);      %源图片转灰度图</span><br><span class="line">subplot(1,2,1),imshow(I);title(&quot;原图&quot;);</span><br><span class="line">I=double(I);         %转为双精度</span><br><span class="line"></span><br><span class="line">% 扩展输入图片边界</span><br><span class="line">img_expend = zeros(n+2*(2*r+1),m+2*(2*r+1),d);</span><br><span class="line">for i=1:n</span><br><span class="line">    for j=1:m</span><br><span class="line">        img_expend(i+r,j+r,:)=I(i,j,:);</span><br><span class="line">    end</span><br><span class="line">end</span><br><span class="line"></span><br><span class="line">% 计算均值和方差</span><br><span class="line">for i=r+1:r+n</span><br><span class="line">    for j=r+1:r+m  </span><br><span class="line">        %计算邻域范围内的均值</span><br><span class="line">        m_ij=0;</span><br><span class="line">        for x = i-r:i+r</span><br><span class="line">            for y = j-r:j+r</span><br><span class="line">                m_ij = m_ij + img_expend(x,y,:);</span><br><span class="line">            end</span><br><span class="line">        end</span><br><span class="line">        m_ij=m_ij/((2*r+1)*(2*r+1));</span><br><span class="line">        </span><br><span class="line">        %计算领域范围内的方差</span><br><span class="line">        v_ij=0;</span><br><span class="line">        for x = i-r:i+r</span><br><span class="line">            for y = j-r:j+r</span><br><span class="line">                v_ij = v_ij + (img_expend(x,y,:)-m_ij).*(img_expend(x,y,:)-m_ij);</span><br><span class="line">            end</span><br><span class="line">        end</span><br><span class="line">        v_ij=v_ij/((2*r+1)*(2*r+1));</span><br><span class="line"></span><br><span class="line">        %计算输出滤波值</span><br><span class="line">        k = v_ij./(v_ij+q);   </span><br><span class="line">        img_expend(i,j,:) = (1-k).*m_ij + k.*img_expend(i,j,:);   </span><br><span class="line">    end</span><br><span class="line">end</span><br><span class="line"></span><br><span class="line">% 保存结果</span><br><span class="line">result = zeros(n,m,d);</span><br><span class="line">for i=1:n</span><br><span class="line">    for j=1:m</span><br><span class="line">        result(i,j,:)=img_expend(i+r,j+r,:);</span><br><span class="line">    end</span><br><span class="line">end</span><br><span class="line"></span><br><span class="line">% 输出图像</span><br><span class="line">subplot(1,2,2),imshow(mat2gray(result));title(&quot;局部均值滤波&quot;);</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<h3 id="其他方法实现美颜磨皮"><a href="#其他方法实现美颜磨皮" class="headerlink" title="其他方法实现美颜磨皮"></a>其他方法实现美颜磨皮</h3><p><a href="https://www.cnblogs.com/qxzy/p/4109805.html">matlab各向异性扩散滤波</a></p>
-<p><a href="https://blog.csdn.net/IronBull_Zhang/article/details/105158482">Matlab表面模糊程序</a></p>
-<h3 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h3><p><a href="https://blog.csdn.net/trent1985/article/details/80773642">图像保边滤波算法集锦系列</a><br><a href="https://cloud.tencent.com/developer/article/1011865">基于局部均方差相关信息的图像去噪及其在实时磨皮美容算法中的应用。</a></p>
-]]></content>
-      <categories>
-        <category>matlab</category>
-      </categories>
-      <tags>
-        <tag>matlab</tag>
       </tags>
   </entry>
 </search>
