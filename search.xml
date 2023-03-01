@@ -34,26 +34,13 @@
 </ol>
 </li>
 </ol>
-<p><a href="https://www.bilibili.com/list/watchlater?bvid=BV14G4y1C7rq">视频教程</a></p>
-]]></content>
-  </entry>
-  <entry>
-    <title>vscode部署远程服务</title>
-    <url>/2023/02/10/vscode%E9%83%A8%E7%BD%B2%E8%BF%9C%E7%A8%8B%E6%9C%8D%E5%8A%A1/</url>
-    <content><![CDATA[<p><code>环境：阿里云centos7.9</code></p>
-<h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2><p>使用ssl登录无效，一直重复输入密码。  </p>
-<h2 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h2><ol>
-<li>修改远程服务器<code>.ssh</code>登文件权限  <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">chmod 700 ..</span><br><span class="line">chmod 700 .</span><br><span class="line">chmod 600 authorized_keys</span><br></pre></td></tr></table></figure></li>
-<li>修改ssh配置服务器信息 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">vim /etc/ssh/sshd_config </span><br><span class="line">    </span><br></pre></td></tr></table></figure>
- 把 <code>PubkeyAuthentication</code> 前的 # 号去掉</li>
-<li>修改本地私钥文件权限<br> <img src="/2023/02/10/vscode%E9%83%A8%E7%BD%B2%E8%BF%9C%E7%A8%8B%E6%9C%8D%E5%8A%A1/%E7%A7%81%E9%92%A5%E6%9D%83%E9%99%90.png" alt="私钥权限"></li>
-</ol>
+<p><a href="https://www.bilibili.com/video/BV14G4y1C7rq/?spm_id_from=333.880.my_history.page.click&vd_source=b3aa4a236cae89ccf31750ffb9a2fba7">视频教程</a></p>
 ]]></content>
       <categories>
-        <category>编程工具</category>
+        <category>Linux</category>
       </categories>
       <tags>
-        <tag>vscode,服务器</tag>
+        <tag>Linux</tag>
       </tags>
   </entry>
   <entry>
@@ -82,6 +69,37 @@
       </tags>
   </entry>
   <entry>
+    <title>vscode部署远程服务</title>
+    <url>/2023/02/10/vscode%E9%83%A8%E7%BD%B2%E8%BF%9C%E7%A8%8B%E6%9C%8D%E5%8A%A1/</url>
+    <content><![CDATA[<p><code>环境：阿里云centos7.9</code></p>
+<h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2><p>使用ssl登录无效，一直重复输入密码。  </p>
+<h2 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h2><ol>
+<li>修改远程服务器<code>.ssh</code>登文件权限  <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">chmod 700 ..</span><br><span class="line">chmod 700 .</span><br><span class="line">chmod 600 authorized_keys</span><br></pre></td></tr></table></figure></li>
+<li>修改ssh配置服务器信息 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">vim /etc/ssh/sshd_config </span><br><span class="line">    </span><br></pre></td></tr></table></figure>
+ 把 <code>PubkeyAuthentication</code> 前的 # 号去掉</li>
+<li>修改本地私钥文件权限<br> <img src="/2023/02/10/vscode%E9%83%A8%E7%BD%B2%E8%BF%9C%E7%A8%8B%E6%9C%8D%E5%8A%A1/%E7%A7%81%E9%92%A5%E6%9D%83%E9%99%90.png" alt="私钥权限"></li>
+</ol>
+]]></content>
+      <categories>
+        <category>编程工具</category>
+      </categories>
+      <tags>
+        <tag>vscode,服务器</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>更换主题为next</title>
+    <url>/2023/01/30/%E6%9B%B4%E6%8D%A2%E4%B8%BB%E9%A2%98%E4%B8%BAnext/</url>
+    <content><![CDATA[<p>现阶段next主题开发维护地址更改,更换时没注意,一直用之前的，屡屡报错，耗费了1天时间，悲。</p>
+]]></content>
+      <categories>
+        <category>博客</category>
+      </categories>
+      <tags>
+        <tag>博客</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>局部均值滤波算法与实现</title>
     <url>/2021/10/21/%E5%B1%80%E9%83%A8%E5%9D%87%E5%80%BC%E6%BB%A4%E6%B3%A2%E7%AE%97%E6%B3%95%E4%B8%8E%E5%AE%9E%E7%8E%B0/</url>
     <content><![CDATA[<h3 id="算法原理"><a href="#算法原理" class="headerlink" title="算法原理"></a>算法原理</h3><p><img src="/2021/10/21/%E5%B1%80%E9%83%A8%E5%9D%87%E5%80%BC%E6%BB%A4%E6%B3%A2%E7%AE%97%E6%B3%95%E4%B8%8E%E5%AE%9E%E7%8E%B0/%E5%9D%87%E5%80%BC.jpeg" alt="均值.jpeg"><br><img src="/2021/10/21/%E5%B1%80%E9%83%A8%E5%9D%87%E5%80%BC%E6%BB%A4%E6%B3%A2%E7%AE%97%E6%B3%95%E4%B8%8E%E5%AE%9E%E7%8E%B0/%E6%96%B9%E5%B7%AE.jpeg" alt="方差.jpeg"><br><img src="/2021/10/21/%E5%B1%80%E9%83%A8%E5%9D%87%E5%80%BC%E6%BB%A4%E6%B3%A2%E7%AE%97%E6%B3%95%E4%B8%8E%E5%AE%9E%E7%8E%B0/%E5%8E%BB%E5%99%AA%E7%BB%93%E6%9E%9C.jpeg" alt="去噪结果.jpeg"><br><img src="/2021/10/21/%E5%B1%80%E9%83%A8%E5%9D%87%E5%80%BC%E6%BB%A4%E6%B3%A2%E7%AE%97%E6%B3%95%E4%B8%8E%E5%AE%9E%E7%8E%B0/K.jpeg" alt="参数K.jpeg"><br>式（4）中σ为用户输入的参数</p>
@@ -99,15 +117,17 @@
       </tags>
   </entry>
   <entry>
-    <title>更换主题为next</title>
-    <url>/2023/01/30/%E6%9B%B4%E6%8D%A2%E4%B8%BB%E9%A2%98%E4%B8%BAnext/</url>
-    <content><![CDATA[<p>现阶段next主题开发维护地址更改,更换时没注意,一直用之前的，屡屡报错，耗费了1天时间，悲。</p>
+    <title>每日一句3.1</title>
+    <url>/2023/03/01/%E6%AF%8F%E6%97%A5%E4%B8%80%E5%8F%A53-11/</url>
+    <content><![CDATA[<p>It is difficult to the point of impossibility for the average reader under the age of forty to imagine a time when high-quality arts criticism could be found in most big-city newspapers.</p>
+<p>生词： to the point of:达到。。。点 ,到了。。。程度</p>
+<p>翻译：对于年龄在四十岁以下的普通读者来说很难想象在大多数城市报纸上都能找到高质量的艺术评论。</p>
 ]]></content>
       <categories>
-        <category>博客</category>
+        <category>每日一句</category>
       </categories>
       <tags>
-        <tag>博客</tag>
+        <tag>每日一句</tag>
       </tags>
   </entry>
   <entry>
