@@ -88,18 +88,6 @@
       </tags>
   </entry>
   <entry>
-    <title>更换主题为next</title>
-    <url>/2023/01/30/%E6%9B%B4%E6%8D%A2%E4%B8%BB%E9%A2%98%E4%B8%BAnext/</url>
-    <content><![CDATA[<p>现阶段next主题开发维护地址更改,更换时没注意,一直用之前的，屡屡报错，耗费了1天时间，悲。</p>
-]]></content>
-      <categories>
-        <category>博客</category>
-      </categories>
-      <tags>
-        <tag>博客</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>局部均值滤波算法与实现</title>
     <url>/2021/10/21/%E5%B1%80%E9%83%A8%E5%9D%87%E5%80%BC%E6%BB%A4%E6%B3%A2%E7%AE%97%E6%B3%95%E4%B8%8E%E5%AE%9E%E7%8E%B0/</url>
     <content><![CDATA[<h3 id="算法原理"><a href="#算法原理" class="headerlink" title="算法原理"></a>算法原理</h3><p><img src="/2021/10/21/%E5%B1%80%E9%83%A8%E5%9D%87%E5%80%BC%E6%BB%A4%E6%B3%A2%E7%AE%97%E6%B3%95%E4%B8%8E%E5%AE%9E%E7%8E%B0/%E5%9D%87%E5%80%BC.jpeg" alt="均值.jpeg"><br><img src="/2021/10/21/%E5%B1%80%E9%83%A8%E5%9D%87%E5%80%BC%E6%BB%A4%E6%B3%A2%E7%AE%97%E6%B3%95%E4%B8%8E%E5%AE%9E%E7%8E%B0/%E6%96%B9%E5%B7%AE.jpeg" alt="方差.jpeg"><br><img src="/2021/10/21/%E5%B1%80%E9%83%A8%E5%9D%87%E5%80%BC%E6%BB%A4%E6%B3%A2%E7%AE%97%E6%B3%95%E4%B8%8E%E5%AE%9E%E7%8E%B0/%E5%8E%BB%E5%99%AA%E7%BB%93%E6%9E%9C.jpeg" alt="去噪结果.jpeg"><br><img src="/2021/10/21/%E5%B1%80%E9%83%A8%E5%9D%87%E5%80%BC%E6%BB%A4%E6%B3%A2%E7%AE%97%E6%B3%95%E4%B8%8E%E5%AE%9E%E7%8E%B0/K.jpeg" alt="参数K.jpeg"><br>式（4）中σ为用户输入的参数</p>
@@ -117,11 +105,51 @@
       </tags>
   </entry>
   <entry>
+    <title>更换主题为next</title>
+    <url>/2023/01/30/%E6%9B%B4%E6%8D%A2%E4%B8%BB%E9%A2%98%E4%B8%BAnext/</url>
+    <content><![CDATA[<p>现阶段next主题开发维护地址更改,更换时没注意,一直用之前的，屡屡报错，耗费了1天时间，悲。</p>
+]]></content>
+      <categories>
+        <category>博客</category>
+      </categories>
+      <tags>
+        <tag>博客</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>每日一句3.2</title>
+    <url>/2023/03/02/%E6%AF%8F%E6%97%A5%E4%B8%80%E5%8F%A53-2/</url>
+    <content><![CDATA[<p>原句： Of all the changes that have taken place in English-language newspapers during the past quarter-century,perhaps the most far-reaching has been the inexorable decline in the scope and seriousness of their arts coverage.</p>
+<p>生词： <code>inexorable:不可阻挡的，无法改变的</code> <code>far-reaching:影响深远的，广泛的</code> <code>coverage:覆盖，报道</code></p>
+<p>翻译： 在过去25年里英文报纸发生的所有改变中可能最深远的就是艺术报道地严肃性和范围不可避免地下降。</p>
+]]></content>
+      <categories>
+        <category>每日一句</category>
+      </categories>
+      <tags>
+        <tag>每日一句</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>每日一句3.1</title>
     <url>/2023/03/01/%E6%AF%8F%E6%97%A5%E4%B8%80%E5%8F%A53-1/</url>
     <content><![CDATA[<p>原句：It is difficult to the point of impossibility for the average reader under the age of forty to imagine a time when high-quality arts criticism could be found in most big-city newspapers.</p>
 <p>生词： to the point of:达到。。。点 ,到了。。。程度</p>
 <p>翻译：对于年龄在四十岁以下的普通读者来说很难想象在大多数城市报纸上都能找到高质量的艺术评论。</p>
+]]></content>
+      <categories>
+        <category>每日一句</category>
+      </categories>
+      <tags>
+        <tag>每日一句</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>每日一句3.3</title>
+    <url>/2023/03/03/%E6%AF%8F%E6%97%A5%E4%B8%80%E5%8F%A53-3/</url>
+    <content><![CDATA[<p>原句: We are even farther removed from the unfocused newspaper reviews published in England between the turn of the 20th century and the eve of World War II,at a time when newsprint was dirt-cheap and stylish arts criticism was considered an ornament to the publications in which it appeared.</p>
+<p>生词：<code>ornament  [n.] 装饰品;首饰;饰物;装饰;摆设;点缀;为…增添光彩的人（或事物）  [vt.]装饰;点缀;美化</code></p>
+<p>翻译：在二十世纪初到第二次世界大战前夕期间，我们甚至远离了那些发表在英国的无重点的报纸评论。在那时，新闻纸非常便宜，高水平的艺术评论被认为是出现在出版物上的点缀。</p>
 ]]></content>
       <categories>
         <category>每日一句</category>
@@ -159,34 +187,6 @@
       </tags>
   </entry>
   <entry>
-    <title>每日一句3.2</title>
-    <url>/2023/03/02/%E6%AF%8F%E6%97%A5%E4%B8%80%E5%8F%A53-2/</url>
-    <content><![CDATA[<p>原句： Of all the changes that have taken place in English-language newspapers during the past quarter-century,perhaps the most far-reaching has been the inexorable decline in the scope and seriousness of their arts coverage.</p>
-<p>生词： <code>inexorable:不可阻挡的，无法改变的</code> <code>far-reaching:影响深远的，广泛的</code> <code>coverage:覆盖，报道</code></p>
-<p>翻译： 在过去25年里英文报纸发生的所有改变中可能最深远的就是艺术报道地严肃性和范围不可避免地下降。</p>
-]]></content>
-      <categories>
-        <category>每日一句</category>
-      </categories>
-      <tags>
-        <tag>每日一句</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>每日一句3.3</title>
-    <url>/2023/03/03/%E6%AF%8F%E6%97%A5%E4%B8%80%E5%8F%A53-3/</url>
-    <content><![CDATA[<p>原句: We are even farther removed from the unfocused newspaper reviews published in England between the turn of the 20th century and the eve of World War II,at a time when newsprint was dirt-cheap and stylish arts criticism was considered an ornament to the publications in which it appeared.</p>
-<p>生词：<code>ornament  [n.] 装饰品;首饰;饰物;装饰;摆设;点缀;为…增添光彩的人（或事物）  [vt.]装饰;点缀;美化</code></p>
-<p>翻译：在二十世纪初到第二次世界大战前夕期间，我们甚至远离了那些发表在英国的无重点的报纸评论。在那时，新闻纸非常便宜，高水平的艺术评论被认为是出现在出版物上的点缀。</p>
-]]></content>
-      <categories>
-        <category>每日一句</category>
-      </categories>
-      <tags>
-        <tag>每日一句</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>每日一句3.6</title>
     <url>/2023/03/06/%E6%AF%8F%E6%97%A5%E4%B8%80%E5%8F%A53-6/</url>
     <content><![CDATA[<p>原句：The Federal Circuit issued an unusual order stating that the case would be heard by all 12 of the court’s judges,rather than a typical panel of three,and that one issue it wants to evaluate is whether it should “reconsider” its State Street Bank ruling.</p>
@@ -213,6 +213,26 @@
       </categories>
       <tags>
         <tag>每日一句</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>滑雪基础</title>
+    <url>/2023/02/07/%E6%BB%91%E9%9B%AA%E5%9F%BA%E7%A1%80/</url>
+    <content><![CDATA[<h1 id="滑雪初级技巧"><a href="#滑雪初级技巧" class="headerlink" title="滑雪初级技巧"></a>滑雪初级技巧</h1><h2 id="原地基础"><a href="#原地基础" class="headerlink" title="原地基础"></a>原地基础</h2><h3 id="握雪仗"><a href="#握雪仗" class="headerlink" title="握雪仗"></a>握雪仗</h3><p>握柄带套入约手腕位置，同时抓住柄带和握柄。<br><img src="/2023/02/07/%E6%BB%91%E9%9B%AA%E5%9F%BA%E7%A1%80/1.png" alt="握柄"></p>
+<h3 id="坡路穿板"><a href="#坡路穿板" class="headerlink" title="坡路穿板"></a>坡路穿板</h3><p>先穿下侧雪板，穿上下侧雪板后内刃刻在雪上,之后穿另一侧。<br><img src="/2023/02/07/%E6%BB%91%E9%9B%AA%E5%9F%BA%E7%A1%80/2.1.png" alt="坡路穿板1"><br><img src="/2023/02/07/%E6%BB%91%E9%9B%AA%E5%9F%BA%E7%A1%80/2.2.png" alt="坡路穿板2"></p>
+<h3 id="正确摔倒"><a href="#正确摔倒" class="headerlink" title="正确摔倒"></a>正确摔倒</h3><p>往两侧去摔倒<br><img src="/2023/02/07/%E6%BB%91%E9%9B%AA%E5%9F%BA%E7%A1%80/3.1.png" alt="摔倒"></p>
+<h3 id="站起"><a href="#站起" class="headerlink" title="站起"></a>站起</h3><p>板底冲山下，板头冲山上，雪仗在身体后方支撑，腰腹发力站起。<br><img src="/2023/02/07/%E6%BB%91%E9%9B%AA%E5%9F%BA%E7%A1%80/4.1.png" alt="站起1"><br><img src="/2023/02/07/%E6%BB%91%E9%9B%AA%E5%9F%BA%E7%A1%80/4.2.png" alt="站起2"><br><img src="/2023/02/07/%E6%BB%91%E9%9B%AA%E5%9F%BA%E7%A1%80/4.3.png" alt="站起3"></p>
+<h2 id="原地旋转"><a href="#原地旋转" class="headerlink" title="原地旋转"></a>原地旋转</h2><p>抬起一个雪板，刻住雪，翻转。两雪杖放在身体两侧，另一支板带回。<br><img src="/2023/02/07/%E6%BB%91%E9%9B%AA%E5%9F%BA%E7%A1%80/5.1.png" alt="旋转1"><br><img src="/2023/02/07/%E6%BB%91%E9%9B%AA%E5%9F%BA%E7%A1%80/5.2.png" alt="旋转2"></p>
+<h2 id="初级滑"><a href="#初级滑" class="headerlink" title="初级滑"></a>初级滑</h2><h3 id="支杆前进"><a href="#支杆前进" class="headerlink" title="支杆前进"></a>支杆前进</h3><p>雪杖支撑点撑在板头至脚尖距离的中点<br><img src="/2023/02/07/%E6%BB%91%E9%9B%AA%E5%9F%BA%E7%A1%80/6.1.png" alt="支杆前进"></p>
+<h3 id="横向登坡"><a href="#横向登坡" class="headerlink" title="横向登坡"></a>横向登坡</h3><p>往破上行走时，两膝盖同时下压，山下板内侧和山上板外侧刻住雪面。<br><img src="/2023/02/07/%E6%BB%91%E9%9B%AA%E5%9F%BA%E7%A1%80/7.1.png" alt="横向登坡"><br><img src="/2023/02/07/%E6%BB%91%E9%9B%AA%E5%9F%BA%E7%A1%80/7.2.png" alt="横向登坡"></p>
+<h3 id="梨式制动（梨式刹车）"><a href="#梨式制动（梨式刹车）" class="headerlink" title="梨式制动（梨式刹车）"></a>梨式制动（梨式刹车）</h3><p>身体前倾，重量放在两个板尖。两腿平均分配力量，一起蹬开。<br>蹬开之后，膝盖自动向里旋转，板刃内侧刻住雪面，外板边立起，两板尖约一拳之隔。<br><img src="/2023/02/07/%E6%BB%91%E9%9B%AA%E5%9F%BA%E7%A1%80/8.1.png" alt="梨式制动"><br><img src="/2023/02/07/%E6%BB%91%E9%9B%AA%E5%9F%BA%E7%A1%80/8.2.png" alt="梨式制动"></p>
+<h3 id="梨式滑降"><a href="#梨式滑降" class="headerlink" title="梨式滑降"></a>梨式滑降</h3><p>和梨式制动类似，板尖并上（约一拳之隔），板尾分开，内八字。<br>板尖，板尾宽度一直不变，重心在板尖处，虎口朝上，手往前伸，眼睛向前看，不要低头。<br>膝盖不越过鞋尖，臀部不超过鞋尾，手和腰平行。<br><img src="/2023/02/07/%E6%BB%91%E9%9B%AA%E5%9F%BA%E7%A1%80/9.1.png" alt="滑降"><br><img src="/2023/02/07/%E6%BB%91%E9%9B%AA%E5%9F%BA%E7%A1%80/9.2.png" alt="滑降"><br><img src="/2023/02/07/%E6%BB%91%E9%9B%AA%E5%9F%BA%E7%A1%80/9.3.png" alt="滑降"></p>
+]]></content>
+      <categories>
+        <category>随笔</category>
+      </categories>
+      <tags>
+        <tag>滑雪</tag>
       </tags>
   </entry>
   <entry>
@@ -252,26 +272,6 @@
       <tags>
         <tag>电子书</tag>
         <tag>在线资源</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>滑雪基础</title>
-    <url>/2023/02/07/%E6%BB%91%E9%9B%AA%E5%9F%BA%E7%A1%80/</url>
-    <content><![CDATA[<h1 id="滑雪初级技巧"><a href="#滑雪初级技巧" class="headerlink" title="滑雪初级技巧"></a>滑雪初级技巧</h1><h2 id="原地基础"><a href="#原地基础" class="headerlink" title="原地基础"></a>原地基础</h2><h3 id="握雪仗"><a href="#握雪仗" class="headerlink" title="握雪仗"></a>握雪仗</h3><p>握柄带套入约手腕位置，同时抓住柄带和握柄。<br><img src="/2023/02/07/%E6%BB%91%E9%9B%AA%E5%9F%BA%E7%A1%80/1.png" alt="握柄"></p>
-<h3 id="坡路穿板"><a href="#坡路穿板" class="headerlink" title="坡路穿板"></a>坡路穿板</h3><p>先穿下侧雪板，穿上下侧雪板后内刃刻在雪上,之后穿另一侧。<br><img src="/2023/02/07/%E6%BB%91%E9%9B%AA%E5%9F%BA%E7%A1%80/2.1.png" alt="坡路穿板1"><br><img src="/2023/02/07/%E6%BB%91%E9%9B%AA%E5%9F%BA%E7%A1%80/2.2.png" alt="坡路穿板2"></p>
-<h3 id="正确摔倒"><a href="#正确摔倒" class="headerlink" title="正确摔倒"></a>正确摔倒</h3><p>往两侧去摔倒<br><img src="/2023/02/07/%E6%BB%91%E9%9B%AA%E5%9F%BA%E7%A1%80/3.1.png" alt="摔倒"></p>
-<h3 id="站起"><a href="#站起" class="headerlink" title="站起"></a>站起</h3><p>板底冲山下，板头冲山上，雪仗在身体后方支撑，腰腹发力站起。<br><img src="/2023/02/07/%E6%BB%91%E9%9B%AA%E5%9F%BA%E7%A1%80/4.1.png" alt="站起1"><br><img src="/2023/02/07/%E6%BB%91%E9%9B%AA%E5%9F%BA%E7%A1%80/4.2.png" alt="站起2"><br><img src="/2023/02/07/%E6%BB%91%E9%9B%AA%E5%9F%BA%E7%A1%80/4.3.png" alt="站起3"></p>
-<h2 id="原地旋转"><a href="#原地旋转" class="headerlink" title="原地旋转"></a>原地旋转</h2><p>抬起一个雪板，刻住雪，翻转。两雪杖放在身体两侧，另一支板带回。<br><img src="/2023/02/07/%E6%BB%91%E9%9B%AA%E5%9F%BA%E7%A1%80/5.1.png" alt="旋转1"><br><img src="/2023/02/07/%E6%BB%91%E9%9B%AA%E5%9F%BA%E7%A1%80/5.2.png" alt="旋转2"></p>
-<h2 id="初级滑"><a href="#初级滑" class="headerlink" title="初级滑"></a>初级滑</h2><h3 id="支杆前进"><a href="#支杆前进" class="headerlink" title="支杆前进"></a>支杆前进</h3><p>雪杖支撑点撑在板头至脚尖距离的中点<br><img src="/2023/02/07/%E6%BB%91%E9%9B%AA%E5%9F%BA%E7%A1%80/6.1.png" alt="支杆前进"></p>
-<h3 id="横向登坡"><a href="#横向登坡" class="headerlink" title="横向登坡"></a>横向登坡</h3><p>往破上行走时，两膝盖同时下压，山下板内侧和山上板外侧刻住雪面。<br><img src="/2023/02/07/%E6%BB%91%E9%9B%AA%E5%9F%BA%E7%A1%80/7.1.png" alt="横向登坡"><br><img src="/2023/02/07/%E6%BB%91%E9%9B%AA%E5%9F%BA%E7%A1%80/7.2.png" alt="横向登坡"></p>
-<h3 id="梨式制动（梨式刹车）"><a href="#梨式制动（梨式刹车）" class="headerlink" title="梨式制动（梨式刹车）"></a>梨式制动（梨式刹车）</h3><p>身体前倾，重量放在两个板尖。两腿平均分配力量，一起蹬开。<br>蹬开之后，膝盖自动向里旋转，板刃内侧刻住雪面，外板边立起，两板尖约一拳之隔。<br><img src="/2023/02/07/%E6%BB%91%E9%9B%AA%E5%9F%BA%E7%A1%80/8.1.png" alt="梨式制动"><br><img src="/2023/02/07/%E6%BB%91%E9%9B%AA%E5%9F%BA%E7%A1%80/8.2.png" alt="梨式制动"></p>
-<h3 id="梨式滑降"><a href="#梨式滑降" class="headerlink" title="梨式滑降"></a>梨式滑降</h3><p>和梨式制动类似，板尖并上（约一拳之隔），板尾分开，内八字。<br>板尖，板尾宽度一直不变，重心在板尖处，虎口朝上，手往前伸，眼睛向前看，不要低头。<br>膝盖不越过鞋尖，臀部不超过鞋尾，手和腰平行。<br><img src="/2023/02/07/%E6%BB%91%E9%9B%AA%E5%9F%BA%E7%A1%80/9.1.png" alt="滑降"><br><img src="/2023/02/07/%E6%BB%91%E9%9B%AA%E5%9F%BA%E7%A1%80/9.2.png" alt="滑降"><br><img src="/2023/02/07/%E6%BB%91%E9%9B%AA%E5%9F%BA%E7%A1%80/9.3.png" alt="滑降"></p>
-]]></content>
-      <categories>
-        <category>随笔</category>
-      </categories>
-      <tags>
-        <tag>滑雪</tag>
       </tags>
   </entry>
 </search>
