@@ -1,6 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>24小时直播间</title>
+    <url>/2023/02/28/24%E5%B0%8F%E6%97%B6%E7%9B%B4%E6%92%AD%E9%97%B4/</url>
+    <content><![CDATA[<h3 id="配置环境"><a href="#配置环境" class="headerlink" title="配置环境"></a>配置环境</h3><ol>
+<li>centos7.9</li>
+<li>服务器配置ffmpeg</li>
+<li>安装screen： <code>yum -y install screen</code></li>
+</ol>
+<h3 id="创建进程"><a href="#创建进程" class="headerlink" title="创建进程"></a>创建进程</h3><ol>
+<li>新建窗口：<code>screen -S Garrick</code></li>
+<li>运行bash: <code>bash bash.sh</code><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">while true</span><br><span class="line">do</span><br><span class="line">    cd /usr/ffmpeg/video</span><br><span class="line">    # 定义推流地址和推流码</span><br><span class="line">    read -p &quot;输入你的推流地址和推流码(rtmp协议):&quot; rtmp</span><br><span class="line">    video=$(find ./ -type f | shuf -n 1)</span><br><span class="line">    ffmpeg -re -i &quot;$video&quot; -preset ultrafast -vcodec libx264 -g 60 -b:v 800k -c:a aac -b:a 92k -strict -2 -f flv $&#123;rtmp&#125;</span><br><span class="line">done</span><br></pre></td></tr></table></figure></li>
+<li>挂起进程<ol>
+<li>查看当前screen进程列表：<code>screen -ls</code></li>
+<li>更改状态为detached: <code>screen -d 进程名称</code></li>
+<li>关闭某个进程： <code>screen -S 进程名称 -X quit</code></li>
+</ol>
+</li>
+</ol>
+<p><a href="https://www.bilibili.com/video/BV14G4y1C7rq/?spm_id_from=333.880.my_history.page.click&vd_source=b3aa4a236cae89ccf31750ffb9a2fba7">视频教程</a></p>
+]]></content>
+      <categories>
+        <category>Linux</category>
+      </categories>
+      <tags>
+        <tag>Linux</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>clash_for_widnows去除软件内广告</title>
     <url>/2023/02/11/clash-for-widnows%E5%8E%BB%E9%99%A4%E8%BD%AF%E4%BB%B6%E5%86%85%E5%B9%BF%E5%91%8A/</url>
     <content><![CDATA[<h1 id="解包app-asar"><a href="#解包app-asar" class="headerlink" title="解包app.asar"></a>解包app.asar</h1><ol>
@@ -26,30 +53,19 @@
       </tags>
   </entry>
   <entry>
-    <title>24小时直播间</title>
-    <url>/2023/02/28/24%E5%B0%8F%E6%97%B6%E7%9B%B4%E6%92%AD%E9%97%B4/</url>
-    <content><![CDATA[<h3 id="配置环境"><a href="#配置环境" class="headerlink" title="配置环境"></a>配置环境</h3><ol>
-<li>centos7.9</li>
-<li>服务器配置ffmpeg</li>
-<li>安装screen： <code>yum -y install screen</code></li>
-</ol>
-<h3 id="创建进程"><a href="#创建进程" class="headerlink" title="创建进程"></a>创建进程</h3><ol>
-<li>新建窗口：<code>screen -S Garrick</code></li>
-<li>运行bash: <code>bash bash.sh</code><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">while true</span><br><span class="line">do</span><br><span class="line">    cd /usr/ffmpeg/video</span><br><span class="line">    # 定义推流地址和推流码</span><br><span class="line">    read -p &quot;输入你的推流地址和推流码(rtmp协议):&quot; rtmp</span><br><span class="line">    video=$(find ./ -type f | shuf -n 1)</span><br><span class="line">    ffmpeg -re -i &quot;$video&quot; -preset ultrafast -vcodec libx264 -g 60 -b:v 800k -c:a aac -b:a 92k -strict -2 -f flv $&#123;rtmp&#125;</span><br><span class="line">done</span><br></pre></td></tr></table></figure></li>
-<li>挂起进程<ol>
-<li>查看当前screen进程列表：<code>screen -ls</code></li>
-<li>更改状态为detached: <code>screen -d 进程名称</code></li>
-<li>关闭某个进程： <code>screen -S 进程名称 -X quit</code></li>
-</ol>
-</li>
-</ol>
-<p><a href="https://www.bilibili.com/video/BV14G4y1C7rq/?spm_id_from=333.880.my_history.page.click&vd_source=b3aa4a236cae89ccf31750ffb9a2fba7">视频教程</a></p>
+    <title>C++笔记（转载）</title>
+    <url>/2021/12/09/C++%E7%AC%94%E8%AE%B0%EF%BC%88%E8%BD%AC%E8%BD%BD%EF%BC%89/</url>
+    <content><![CDATA[<h4 id="侯捷C-课程笔记01-面向对象高级编程（上）"><a href="#侯捷C-课程笔记01-面向对象高级编程（上）" class="headerlink" title="侯捷C++课程笔记01: 面向对象高级编程（上）"></a>侯捷C++课程笔记01: 面向对象高级编程（上）</h4><p><a href="https://blog.csdn.net/ncepu_Chen/article/details/113843775">https://blog.csdn.net/ncepu_Chen/article/details/113843775</a></p>
+<h4 id="侯捷C-课程笔记02-面向对象高级编程（下）"><a href="#侯捷C-课程笔记02-面向对象高级编程（下）" class="headerlink" title="侯捷C++课程笔记02: 面向对象高级编程（下）"></a>侯捷C++课程笔记02: 面向对象高级编程（下）</h4><p><a href="https://blog.csdn.net/ncepu_Chen/article/details/114686488">https://blog.csdn.net/ncepu_Chen/article/details/114686488</a></p>
+<h4 id="侯捷C-课程笔记02-面向对象高级编程（下）-1"><a href="#侯捷C-课程笔记02-面向对象高级编程（下）-1" class="headerlink" title="侯捷C++课程笔记02: 面向对象高级编程（下）"></a>侯捷C++课程笔记02: 面向对象高级编程（下）</h4><p><a href="https://blog.csdn.net/ncepu_Chen/article/details/114686488">https://blog.csdn.net/ncepu_Chen/article/details/114686488</a></p>
+<h4 id="侯捷C-课程笔记03-STL标准库与泛型编程"><a href="#侯捷C-课程笔记03-STL标准库与泛型编程" class="headerlink" title="侯捷C++课程笔记03: STL标准库与泛型编程"></a>侯捷C++课程笔记03: STL标准库与泛型编程</h4><p><a href="https://blog.csdn.net/ncepu_Chen/article/details/114947710">https://blog.csdn.net/ncepu_Chen/article/details/114947710</a></p>
+<h4 id="侯捷C-课程笔记04-C-2-0新特性"><a href="#侯捷C-课程笔记04-C-2-0新特性" class="headerlink" title="侯捷C++课程笔记04: C++2.0新特性"></a>侯捷C++课程笔记04: C++2.0新特性</h4><p><a href="https://blog.csdn.net/ncepu_Chen/article/details/115375559">https://blog.csdn.net/ncepu_Chen/article/details/115375559</a></p>
 ]]></content>
       <categories>
-        <category>Linux</category>
+        <category>C++</category>
       </categories>
       <tags>
-        <tag>Linux</tag>
+        <tag>C++</tag>
       </tags>
   </entry>
   <entry>
@@ -103,20 +119,37 @@
       </tags>
   </entry>
   <entry>
-    <title>C++笔记（转载）</title>
-    <url>/2021/12/09/C++%E7%AC%94%E8%AE%B0%EF%BC%88%E8%BD%AC%E8%BD%BD%EF%BC%89/</url>
-    <content><![CDATA[<h4 id="侯捷C-课程笔记01-面向对象高级编程（上）"><a href="#侯捷C-课程笔记01-面向对象高级编程（上）" class="headerlink" title="侯捷C++课程笔记01: 面向对象高级编程（上）"></a>侯捷C++课程笔记01: 面向对象高级编程（上）</h4><p><a href="https://blog.csdn.net/ncepu_Chen/article/details/113843775">https://blog.csdn.net/ncepu_Chen/article/details/113843775</a></p>
-<h4 id="侯捷C-课程笔记02-面向对象高级编程（下）"><a href="#侯捷C-课程笔记02-面向对象高级编程（下）" class="headerlink" title="侯捷C++课程笔记02: 面向对象高级编程（下）"></a>侯捷C++课程笔记02: 面向对象高级编程（下）</h4><p><a href="https://blog.csdn.net/ncepu_Chen/article/details/114686488">https://blog.csdn.net/ncepu_Chen/article/details/114686488</a></p>
-<h4 id="侯捷C-课程笔记02-面向对象高级编程（下）-1"><a href="#侯捷C-课程笔记02-面向对象高级编程（下）-1" class="headerlink" title="侯捷C++课程笔记02: 面向对象高级编程（下）"></a>侯捷C++课程笔记02: 面向对象高级编程（下）</h4><p><a href="https://blog.csdn.net/ncepu_Chen/article/details/114686488">https://blog.csdn.net/ncepu_Chen/article/details/114686488</a></p>
-<h4 id="侯捷C-课程笔记03-STL标准库与泛型编程"><a href="#侯捷C-课程笔记03-STL标准库与泛型编程" class="headerlink" title="侯捷C++课程笔记03: STL标准库与泛型编程"></a>侯捷C++课程笔记03: STL标准库与泛型编程</h4><p><a href="https://blog.csdn.net/ncepu_Chen/article/details/114947710">https://blog.csdn.net/ncepu_Chen/article/details/114947710</a></p>
-<h4 id="侯捷C-课程笔记04-C-2-0新特性"><a href="#侯捷C-课程笔记04-C-2-0新特性" class="headerlink" title="侯捷C++课程笔记04: C++2.0新特性"></a>侯捷C++课程笔记04: C++2.0新特性</h4><p><a href="https://blog.csdn.net/ncepu_Chen/article/details/115375559">https://blog.csdn.net/ncepu_Chen/article/details/115375559</a></p>
+    <title>每日一句3.3</title>
+    <url>/2023/03/03/%E6%AF%8F%E6%97%A5%E4%B8%80%E5%8F%A53-3/</url>
+    <content><![CDATA[<p>原句: We are even farther removed from the unfocused newspaper reviews published in England between the turn of the 20th century and the eve of World War II,at a time when newsprint was dirt-cheap and stylish arts criticism was considered an ornament to the publications in which it appeared.</p>
+<p>生词：<code>ornament  [n.] 装饰品;首饰;饰物;装饰;摆设;点缀;为…增添光彩的人（或事物）  [vt.]装饰;点缀;美化</code></p>
+<p>翻译：在二十世纪初到第二次世界大战前夕期间，我们甚至远离了那些发表在英国的无重点的报纸评论。在那时，新闻纸非常便宜，高水平的艺术评论被认为是出现在出版物上的点缀。</p>
 ]]></content>
-      <categories>
-        <category>C++</category>
-      </categories>
-      <tags>
-        <tag>C++</tag>
-      </tags>
+  </entry>
+  <entry>
+    <title>每日一句3.4</title>
+    <url>/2023/03/04/%E6%AF%8F%E6%97%A5%E4%B8%80%E5%8F%A53-4/</url>
+    <content><![CDATA[<p>原句： Now the nation‘s top patent court appears completely ready to scale back on business-method patents,which hava been controversial ever since they were first authorized 10 years ago.</p>
+<p>生词：<code>scale back 缩减</code></p>
+<p>翻译：现在国家顶级专利法庭似乎完全准备好缩减早在十年前第一次批准时就一直都饱受争议的商业方法专利。</p>
+]]></content>
+  </entry>
+  <entry>
+    <title>每日一句3.6</title>
+    <url>/2023/03/06/%E6%AF%8F%E6%97%A5%E4%B8%80%E5%8F%A53-6/</url>
+    <content><![CDATA[<p>原句：The Federal Circuit issued an unusual order stating that the case would be heard by all 12 of the court’s judges,rather than a typical panel of three,and that one issue it wants to evaluate is whether it should “reconsider” its State Street Bank ruling.</p>
+<p>生词：<code>scale back 缩减</code></p>
+<p>翻译：联邦巡回法庭发布了一项不寻常的指令，该指令称本案件将会被法院所有的12个法官听审，而不是典型的三人小组法官，并且它想要评估的一个问题是：是否应该“重新考虑”其道富银行的裁决。</p>
+<p>。</p>
+]]></content>
+  </entry>
+  <entry>
+    <title>每日一句3.5</title>
+    <url>/2023/03/05/%E6%AF%8F%E6%97%A5%E4%B8%80%E5%8F%A53-5/</url>
+    <content><![CDATA[<p>原句：Curbs on business-method claims would be adramatic about-face,because it was the Federal Circuit itself the introduced such patents with its 1998 decision in the so-called State Street Bank case ,approving a patent on a way of pooling mutual-fund assets.</p>
+<p>生词：<code>curb 限制</code> <code>about-face 逆转，转变</code> <code>Federal Circuit 联邦法庭</code> <code>mutual-fund 共同基金</code> <code>polling 聚集的</code></p>
+<p>翻译：对商业方法专利的限制是一个巨大的转变，因为在1998年提出的叫道富银行案件中,联邦法庭自己通过了关于聚集共同基金资产的专利。</p>
+]]></content>
   </entry>
   <entry>
     <title>更换主题为next</title>
@@ -128,34 +161,6 @@
       </categories>
       <tags>
         <tag>博客</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>每日一句3.3</title>
-    <url>/2023/03/03/%E6%AF%8F%E6%97%A5%E4%B8%80%E5%8F%A53-3/</url>
-    <content><![CDATA[<p>原句: We are even farther removed from the unfocused newspaper reviews published in England between the turn of the 20th century and the eve of World War II,at a time when newsprint was dirt-cheap and stylish arts criticism was considered an ornament to the publications in which it appeared.</p>
-<p>生词：<code>ornament  [n.] 装饰品;首饰;饰物;装饰;摆设;点缀;为…增添光彩的人（或事物）  [vt.]装饰;点缀;美化</code></p>
-<p>翻译：在二十世纪初到第二次世界大战前夕期间，我们甚至远离了那些发表在英国的无重点的报纸评论。在那时，新闻纸非常便宜，高水平的艺术评论被认为是出现在出版物上的点缀。</p>
-]]></content>
-  </entry>
-  <entry>
-    <title>滑雪基础</title>
-    <url>/2023/02/07/%E6%BB%91%E9%9B%AA%E5%9F%BA%E7%A1%80/</url>
-    <content><![CDATA[<h1 id="滑雪初级技巧"><a href="#滑雪初级技巧" class="headerlink" title="滑雪初级技巧"></a>滑雪初级技巧</h1><h2 id="原地基础"><a href="#原地基础" class="headerlink" title="原地基础"></a>原地基础</h2><h3 id="握雪仗"><a href="#握雪仗" class="headerlink" title="握雪仗"></a>握雪仗</h3><p>握柄带套入约手腕位置，同时抓住柄带和握柄。<br><img src="/2023/02/07/%E6%BB%91%E9%9B%AA%E5%9F%BA%E7%A1%80/1.png" alt="握柄"></p>
-<h3 id="坡路穿板"><a href="#坡路穿板" class="headerlink" title="坡路穿板"></a>坡路穿板</h3><p>先穿下侧雪板，穿上下侧雪板后内刃刻在雪上,之后穿另一侧。<br><img src="/2023/02/07/%E6%BB%91%E9%9B%AA%E5%9F%BA%E7%A1%80/2.1.png" alt="坡路穿板1"><br><img src="/2023/02/07/%E6%BB%91%E9%9B%AA%E5%9F%BA%E7%A1%80/2.2.png" alt="坡路穿板2"></p>
-<h3 id="正确摔倒"><a href="#正确摔倒" class="headerlink" title="正确摔倒"></a>正确摔倒</h3><p>往两侧去摔倒<br><img src="/2023/02/07/%E6%BB%91%E9%9B%AA%E5%9F%BA%E7%A1%80/3.1.png" alt="摔倒"></p>
-<h3 id="站起"><a href="#站起" class="headerlink" title="站起"></a>站起</h3><p>板底冲山下，板头冲山上，雪仗在身体后方支撑，腰腹发力站起。<br><img src="/2023/02/07/%E6%BB%91%E9%9B%AA%E5%9F%BA%E7%A1%80/4.1.png" alt="站起1"><br><img src="/2023/02/07/%E6%BB%91%E9%9B%AA%E5%9F%BA%E7%A1%80/4.2.png" alt="站起2"><br><img src="/2023/02/07/%E6%BB%91%E9%9B%AA%E5%9F%BA%E7%A1%80/4.3.png" alt="站起3"></p>
-<h2 id="原地旋转"><a href="#原地旋转" class="headerlink" title="原地旋转"></a>原地旋转</h2><p>抬起一个雪板，刻住雪，翻转。两雪杖放在身体两侧，另一支板带回。<br><img src="/2023/02/07/%E6%BB%91%E9%9B%AA%E5%9F%BA%E7%A1%80/5.1.png" alt="旋转1"><br><img src="/2023/02/07/%E6%BB%91%E9%9B%AA%E5%9F%BA%E7%A1%80/5.2.png" alt="旋转2"></p>
-<h2 id="初级滑"><a href="#初级滑" class="headerlink" title="初级滑"></a>初级滑</h2><h3 id="支杆前进"><a href="#支杆前进" class="headerlink" title="支杆前进"></a>支杆前进</h3><p>雪杖支撑点撑在板头至脚尖距离的中点<br><img src="/2023/02/07/%E6%BB%91%E9%9B%AA%E5%9F%BA%E7%A1%80/6.1.png" alt="支杆前进"></p>
-<h3 id="横向登坡"><a href="#横向登坡" class="headerlink" title="横向登坡"></a>横向登坡</h3><p>往破上行走时，两膝盖同时下压，山下板内侧和山上板外侧刻住雪面。<br><img src="/2023/02/07/%E6%BB%91%E9%9B%AA%E5%9F%BA%E7%A1%80/7.1.png" alt="横向登坡"><br><img src="/2023/02/07/%E6%BB%91%E9%9B%AA%E5%9F%BA%E7%A1%80/7.2.png" alt="横向登坡"></p>
-<h3 id="梨式制动（梨式刹车）"><a href="#梨式制动（梨式刹车）" class="headerlink" title="梨式制动（梨式刹车）"></a>梨式制动（梨式刹车）</h3><p>身体前倾，重量放在两个板尖。两腿平均分配力量，一起蹬开。<br>蹬开之后，膝盖自动向里旋转，板刃内侧刻住雪面，外板边立起，两板尖约一拳之隔。<br><img src="/2023/02/07/%E6%BB%91%E9%9B%AA%E5%9F%BA%E7%A1%80/8.1.png" alt="梨式制动"><br><img src="/2023/02/07/%E6%BB%91%E9%9B%AA%E5%9F%BA%E7%A1%80/8.2.png" alt="梨式制动"></p>
-<h3 id="梨式滑降"><a href="#梨式滑降" class="headerlink" title="梨式滑降"></a>梨式滑降</h3><p>和梨式制动类似，板尖并上（约一拳之隔），板尾分开，内八字。<br>板尖，板尾宽度一直不变，重心在板尖处，虎口朝上，手往前伸，眼睛向前看，不要低头。<br>膝盖不越过鞋尖，臀部不超过鞋尾，手和腰平行。<br><img src="/2023/02/07/%E6%BB%91%E9%9B%AA%E5%9F%BA%E7%A1%80/9.1.png" alt="滑降"><br><img src="/2023/02/07/%E6%BB%91%E9%9B%AA%E5%9F%BA%E7%A1%80/9.2.png" alt="滑降"><br><img src="/2023/02/07/%E6%BB%91%E9%9B%AA%E5%9F%BA%E7%A1%80/9.3.png" alt="滑降"></p>
-]]></content>
-      <categories>
-        <category>随笔</category>
-      </categories>
-      <tags>
-        <tag>滑雪</tag>
       </tags>
   </entry>
   <entry>
@@ -195,6 +200,34 @@
       <tags>
         <tag>电子书</tag>
         <tag>在线资源</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>每日一句3.7</title>
+    <url>/2023/03/07/%E6%AF%8F%E6%97%A5%E4%B8%80%E5%8F%A53-7/</url>
+    <content><![CDATA[<p>原句：In his book The Tipping Point,Malcolm Gladwell argues that “social epidemics” are driven in large part by the actions of a tiny minority of special individuals,often called infuluentials,who are unusually informed,persuasive or well connected.</p>
+<p>生词：<code>informed 见多识广的，有学问的，有见识的</code></p>
+<p>翻译：在Manlcolm Gladwell 的著作《引爆点》中提到的一个观点，社会流行潮在很大程度上是被特殊的个体中的少数的行为驱使的，这些人被称作有影响力的人，他们有不寻常的学识储备，说服力和好的人脉关系。</p>
+]]></content>
+  </entry>
+  <entry>
+    <title>滑雪基础</title>
+    <url>/2023/02/07/%E6%BB%91%E9%9B%AA%E5%9F%BA%E7%A1%80/</url>
+    <content><![CDATA[<h1 id="滑雪初级技巧"><a href="#滑雪初级技巧" class="headerlink" title="滑雪初级技巧"></a>滑雪初级技巧</h1><h2 id="原地基础"><a href="#原地基础" class="headerlink" title="原地基础"></a>原地基础</h2><h3 id="握雪仗"><a href="#握雪仗" class="headerlink" title="握雪仗"></a>握雪仗</h3><p>握柄带套入约手腕位置，同时抓住柄带和握柄。<br><img src="/2023/02/07/%E6%BB%91%E9%9B%AA%E5%9F%BA%E7%A1%80/1.png" alt="握柄"></p>
+<h3 id="坡路穿板"><a href="#坡路穿板" class="headerlink" title="坡路穿板"></a>坡路穿板</h3><p>先穿下侧雪板，穿上下侧雪板后内刃刻在雪上,之后穿另一侧。<br><img src="/2023/02/07/%E6%BB%91%E9%9B%AA%E5%9F%BA%E7%A1%80/2.1.png" alt="坡路穿板1"><br><img src="/2023/02/07/%E6%BB%91%E9%9B%AA%E5%9F%BA%E7%A1%80/2.2.png" alt="坡路穿板2"></p>
+<h3 id="正确摔倒"><a href="#正确摔倒" class="headerlink" title="正确摔倒"></a>正确摔倒</h3><p>往两侧去摔倒<br><img src="/2023/02/07/%E6%BB%91%E9%9B%AA%E5%9F%BA%E7%A1%80/3.1.png" alt="摔倒"></p>
+<h3 id="站起"><a href="#站起" class="headerlink" title="站起"></a>站起</h3><p>板底冲山下，板头冲山上，雪仗在身体后方支撑，腰腹发力站起。<br><img src="/2023/02/07/%E6%BB%91%E9%9B%AA%E5%9F%BA%E7%A1%80/4.1.png" alt="站起1"><br><img src="/2023/02/07/%E6%BB%91%E9%9B%AA%E5%9F%BA%E7%A1%80/4.2.png" alt="站起2"><br><img src="/2023/02/07/%E6%BB%91%E9%9B%AA%E5%9F%BA%E7%A1%80/4.3.png" alt="站起3"></p>
+<h2 id="原地旋转"><a href="#原地旋转" class="headerlink" title="原地旋转"></a>原地旋转</h2><p>抬起一个雪板，刻住雪，翻转。两雪杖放在身体两侧，另一支板带回。<br><img src="/2023/02/07/%E6%BB%91%E9%9B%AA%E5%9F%BA%E7%A1%80/5.1.png" alt="旋转1"><br><img src="/2023/02/07/%E6%BB%91%E9%9B%AA%E5%9F%BA%E7%A1%80/5.2.png" alt="旋转2"></p>
+<h2 id="初级滑"><a href="#初级滑" class="headerlink" title="初级滑"></a>初级滑</h2><h3 id="支杆前进"><a href="#支杆前进" class="headerlink" title="支杆前进"></a>支杆前进</h3><p>雪杖支撑点撑在板头至脚尖距离的中点<br><img src="/2023/02/07/%E6%BB%91%E9%9B%AA%E5%9F%BA%E7%A1%80/6.1.png" alt="支杆前进"></p>
+<h3 id="横向登坡"><a href="#横向登坡" class="headerlink" title="横向登坡"></a>横向登坡</h3><p>往破上行走时，两膝盖同时下压，山下板内侧和山上板外侧刻住雪面。<br><img src="/2023/02/07/%E6%BB%91%E9%9B%AA%E5%9F%BA%E7%A1%80/7.1.png" alt="横向登坡"><br><img src="/2023/02/07/%E6%BB%91%E9%9B%AA%E5%9F%BA%E7%A1%80/7.2.png" alt="横向登坡"></p>
+<h3 id="梨式制动（梨式刹车）"><a href="#梨式制动（梨式刹车）" class="headerlink" title="梨式制动（梨式刹车）"></a>梨式制动（梨式刹车）</h3><p>身体前倾，重量放在两个板尖。两腿平均分配力量，一起蹬开。<br>蹬开之后，膝盖自动向里旋转，板刃内侧刻住雪面，外板边立起，两板尖约一拳之隔。<br><img src="/2023/02/07/%E6%BB%91%E9%9B%AA%E5%9F%BA%E7%A1%80/8.1.png" alt="梨式制动"><br><img src="/2023/02/07/%E6%BB%91%E9%9B%AA%E5%9F%BA%E7%A1%80/8.2.png" alt="梨式制动"></p>
+<h3 id="梨式滑降"><a href="#梨式滑降" class="headerlink" title="梨式滑降"></a>梨式滑降</h3><p>和梨式制动类似，板尖并上（约一拳之隔），板尾分开，内八字。<br>板尖，板尾宽度一直不变，重心在板尖处，虎口朝上，手往前伸，眼睛向前看，不要低头。<br>膝盖不越过鞋尖，臀部不超过鞋尾，手和腰平行。<br><img src="/2023/02/07/%E6%BB%91%E9%9B%AA%E5%9F%BA%E7%A1%80/9.1.png" alt="滑降"><br><img src="/2023/02/07/%E6%BB%91%E9%9B%AA%E5%9F%BA%E7%A1%80/9.2.png" alt="滑降"><br><img src="/2023/02/07/%E6%BB%91%E9%9B%AA%E5%9F%BA%E7%A1%80/9.3.png" alt="滑降"></p>
+]]></content>
+      <categories>
+        <category>随笔</category>
+      </categories>
+      <tags>
+        <tag>滑雪</tag>
       </tags>
   </entry>
 </search>
