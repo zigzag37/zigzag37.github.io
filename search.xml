@@ -1,22 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>C++笔记（转载）</title>
-    <url>/2021/12/09/C++%E7%AC%94%E8%AE%B0%EF%BC%88%E8%BD%AC%E8%BD%BD%EF%BC%89/</url>
-    <content><![CDATA[<h4 id="侯捷C-课程笔记01-面向对象高级编程（上）"><a href="#侯捷C-课程笔记01-面向对象高级编程（上）" class="headerlink" title="侯捷C++课程笔记01: 面向对象高级编程（上）"></a>侯捷C++课程笔记01: 面向对象高级编程（上）</h4><p><a href="https://blog.csdn.net/ncepu_Chen/article/details/113843775">https://blog.csdn.net/ncepu_Chen/article/details/113843775</a></p>
-<h4 id="侯捷C-课程笔记02-面向对象高级编程（下）"><a href="#侯捷C-课程笔记02-面向对象高级编程（下）" class="headerlink" title="侯捷C++课程笔记02: 面向对象高级编程（下）"></a>侯捷C++课程笔记02: 面向对象高级编程（下）</h4><p><a href="https://blog.csdn.net/ncepu_Chen/article/details/114686488">https://blog.csdn.net/ncepu_Chen/article/details/114686488</a></p>
-<h4 id="侯捷C-课程笔记02-面向对象高级编程（下）-1"><a href="#侯捷C-课程笔记02-面向对象高级编程（下）-1" class="headerlink" title="侯捷C++课程笔记02: 面向对象高级编程（下）"></a>侯捷C++课程笔记02: 面向对象高级编程（下）</h4><p><a href="https://blog.csdn.net/ncepu_Chen/article/details/114686488">https://blog.csdn.net/ncepu_Chen/article/details/114686488</a></p>
-<h4 id="侯捷C-课程笔记03-STL标准库与泛型编程"><a href="#侯捷C-课程笔记03-STL标准库与泛型编程" class="headerlink" title="侯捷C++课程笔记03: STL标准库与泛型编程"></a>侯捷C++课程笔记03: STL标准库与泛型编程</h4><p><a href="https://blog.csdn.net/ncepu_Chen/article/details/114947710">https://blog.csdn.net/ncepu_Chen/article/details/114947710</a></p>
-<h4 id="侯捷C-课程笔记04-C-2-0新特性"><a href="#侯捷C-课程笔记04-C-2-0新特性" class="headerlink" title="侯捷C++课程笔记04: C++2.0新特性"></a>侯捷C++课程笔记04: C++2.0新特性</h4><p><a href="https://blog.csdn.net/ncepu_Chen/article/details/115375559">https://blog.csdn.net/ncepu_Chen/article/details/115375559</a></p>
-]]></content>
-      <categories>
-        <category>C++</category>
-      </categories>
-      <tags>
-        <tag>C++</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>24小时直播间</title>
     <url>/2023/02/28/24%E5%B0%8F%E6%97%B6%E7%9B%B4%E6%92%AD%E9%97%B4/</url>
     <content><![CDATA[<h3 id="配置环境"><a href="#配置环境" class="headerlink" title="配置环境"></a>配置环境</h3><ol>
@@ -44,6 +28,41 @@
       </tags>
   </entry>
   <entry>
+    <title>vscode部署远程服务</title>
+    <url>/2023/02/10/vscode%E9%83%A8%E7%BD%B2%E8%BF%9C%E7%A8%8B%E6%9C%8D%E5%8A%A1/</url>
+    <content><![CDATA[<p><code>环境：阿里云centos7.9</code></p>
+<h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2><p>使用ssl登录无效，一直重复输入密码。  </p>
+<h2 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h2><ol>
+<li>修改远程服务器<code>.ssh</code>登文件权限  <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">chmod 700 ..</span><br><span class="line">chmod 700 .</span><br><span class="line">chmod 600 authorized_keys</span><br></pre></td></tr></table></figure></li>
+<li>修改ssh配置服务器信息 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">vim /etc/ssh/sshd_config </span><br><span class="line">    </span><br></pre></td></tr></table></figure>
+ 把 <code>PubkeyAuthentication</code> 前的 # 号去掉</li>
+<li>修改本地私钥文件权限<br> <img src="/2023/02/10/vscode%E9%83%A8%E7%BD%B2%E8%BF%9C%E7%A8%8B%E6%9C%8D%E5%8A%A1/%E7%A7%81%E9%92%A5%E6%9D%83%E9%99%90.png" alt="私钥权限"></li>
+</ol>
+]]></content>
+      <categories>
+        <category>编程工具</category>
+      </categories>
+      <tags>
+        <tag>vscode,服务器</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>C++笔记（转载）</title>
+    <url>/2021/12/09/C++%E7%AC%94%E8%AE%B0%EF%BC%88%E8%BD%AC%E8%BD%BD%EF%BC%89/</url>
+    <content><![CDATA[<h4 id="侯捷C-课程笔记01-面向对象高级编程（上）"><a href="#侯捷C-课程笔记01-面向对象高级编程（上）" class="headerlink" title="侯捷C++课程笔记01: 面向对象高级编程（上）"></a>侯捷C++课程笔记01: 面向对象高级编程（上）</h4><p><a href="https://blog.csdn.net/ncepu_Chen/article/details/113843775">https://blog.csdn.net/ncepu_Chen/article/details/113843775</a></p>
+<h4 id="侯捷C-课程笔记02-面向对象高级编程（下）"><a href="#侯捷C-课程笔记02-面向对象高级编程（下）" class="headerlink" title="侯捷C++课程笔记02: 面向对象高级编程（下）"></a>侯捷C++课程笔记02: 面向对象高级编程（下）</h4><p><a href="https://blog.csdn.net/ncepu_Chen/article/details/114686488">https://blog.csdn.net/ncepu_Chen/article/details/114686488</a></p>
+<h4 id="侯捷C-课程笔记02-面向对象高级编程（下）-1"><a href="#侯捷C-课程笔记02-面向对象高级编程（下）-1" class="headerlink" title="侯捷C++课程笔记02: 面向对象高级编程（下）"></a>侯捷C++课程笔记02: 面向对象高级编程（下）</h4><p><a href="https://blog.csdn.net/ncepu_Chen/article/details/114686488">https://blog.csdn.net/ncepu_Chen/article/details/114686488</a></p>
+<h4 id="侯捷C-课程笔记03-STL标准库与泛型编程"><a href="#侯捷C-课程笔记03-STL标准库与泛型编程" class="headerlink" title="侯捷C++课程笔记03: STL标准库与泛型编程"></a>侯捷C++课程笔记03: STL标准库与泛型编程</h4><p><a href="https://blog.csdn.net/ncepu_Chen/article/details/114947710">https://blog.csdn.net/ncepu_Chen/article/details/114947710</a></p>
+<h4 id="侯捷C-课程笔记04-C-2-0新特性"><a href="#侯捷C-课程笔记04-C-2-0新特性" class="headerlink" title="侯捷C++课程笔记04: C++2.0新特性"></a>侯捷C++课程笔记04: C++2.0新特性</h4><p><a href="https://blog.csdn.net/ncepu_Chen/article/details/115375559">https://blog.csdn.net/ncepu_Chen/article/details/115375559</a></p>
+]]></content>
+      <categories>
+        <category>C++</category>
+      </categories>
+      <tags>
+        <tag>C++</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>clash_for_widnows去除软件内广告</title>
     <url>/2023/02/11/clash-for-widnows%E5%8E%BB%E9%99%A4%E8%BD%AF%E4%BB%B6%E5%86%85%E5%B9%BF%E5%91%8A/</url>
     <content><![CDATA[<h1 id="解包app-asar"><a href="#解包app-asar" class="headerlink" title="解包app.asar"></a>解包app.asar</h1><ol>
@@ -66,25 +85,6 @@
       <tags>
         <tag>clash</tag>
         <tag>科学上网</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>vscode部署远程服务</title>
-    <url>/2023/02/10/vscode%E9%83%A8%E7%BD%B2%E8%BF%9C%E7%A8%8B%E6%9C%8D%E5%8A%A1/</url>
-    <content><![CDATA[<p><code>环境：阿里云centos7.9</code></p>
-<h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2><p>使用ssl登录无效，一直重复输入密码。  </p>
-<h2 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h2><ol>
-<li>修改远程服务器<code>.ssh</code>登文件权限  <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">chmod 700 ..</span><br><span class="line">chmod 700 .</span><br><span class="line">chmod 600 authorized_keys</span><br></pre></td></tr></table></figure></li>
-<li>修改ssh配置服务器信息 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">vim /etc/ssh/sshd_config </span><br><span class="line">    </span><br></pre></td></tr></table></figure>
- 把 <code>PubkeyAuthentication</code> 前的 # 号去掉</li>
-<li>修改本地私钥文件权限<br> <img src="/2023/02/10/vscode%E9%83%A8%E7%BD%B2%E8%BF%9C%E7%A8%8B%E6%9C%8D%E5%8A%A1/%E7%A7%81%E9%92%A5%E6%9D%83%E9%99%90.png" alt="私钥权限"></li>
-</ol>
-]]></content>
-      <categories>
-        <category>编程工具</category>
-      </categories>
-      <tags>
-        <tag>vscode,服务器</tag>
       </tags>
   </entry>
   <entry>
@@ -117,11 +117,38 @@
       </tags>
   </entry>
   <entry>
+    <title>每日一句3.10</title>
+    <url>/2023/03/10/%E6%AF%8F%E6%97%A5%E4%B8%80%E5%8F%A53-10/</url>
+    <content><![CDATA[<p>原句：The IASB says it does not want to act without overall planning,but the pressure to fold when it completes its reconstruction of rules later this year is strong.</p>
+<p>生词：<code>overrall planning 整体的，全部的规划</code> <code>complete 完全的，完整的，完成，结束</code></p>
+<p>翻译：国际会计准则理事会表示，它不想在没有整体规划的情况下采取行动，但在今年晚些时候完成规则重建时，它面临着巨大的让步压力</p>
+]]></content>
+      <categories>
+        <category>每日一句</category>
+      </categories>
+      <tags>
+        <tag>每日一句</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>每日一句3.1</title>
     <url>/2023/03/01/%E6%AF%8F%E6%97%A5%E4%B8%80%E5%8F%A53-1/</url>
     <content><![CDATA[<p>原句：It is difficult to the point of impossibility for the average reader under the age of forty to imagine a time when high-quality arts criticism could be found in most big-city newspapers.</p>
 <p>生词： to the point of:达到。。。点 ,到了。。。程度</p>
 <p>翻译：对于年龄在四十岁以下的普通读者来说很难想象在大多数城市报纸上都能找到高质量的艺术评论。</p>
+]]></content>
+      <categories>
+        <category>每日一句</category>
+      </categories>
+      <tags>
+        <tag>每日一句</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>每日一句3.11</title>
+    <url>/2023/03/11/%E6%AF%8F%E6%97%A5%E4%B8%80%E5%8F%A53-11/</url>
+    <content><![CDATA[<p>原句：The longest bull run in a century of art-market history ended on a dramatic note with a sale of 56 works by Damien Hirst,Beautiful Inside My head Forever ,at Sotheby’s in London on September 15th 2008.<br>生词：<code>bull 牛市，市场上场（bull market)，</code> <code>run 状态，态势，一段时间</code>  <code>note 音符</code>  <code>Sotheby&#39;s su&#39;shibi</code></p>
+<p>翻译：2008年9月15日，在伦敦苏是比拍卖行举办的美永存心间拍卖会上，随着Damien Hirst的56件拍品成交，本世纪艺术品市场中最长的牛市迎来了戏剧性的结尾。</p>
 ]]></content>
       <categories>
         <category>每日一句</category>
@@ -144,11 +171,11 @@
       </tags>
   </entry>
   <entry>
-    <title>每日一句3.10</title>
-    <url>/2023/03/10/%E6%AF%8F%E6%97%A5%E4%B8%80%E5%8F%A53-10/</url>
-    <content><![CDATA[<p>原句：The IASB says it does not want to act without overall planning,but the pressure to fold when it completes its reconstruction of rules later this year is strong.</p>
-<p>生词：<code>overrall planning 整体的，全部的规划</code> <code>complete 完全的，完整的，完成，结束</code></p>
-<p>翻译：国际会计准则理事会表示，它不想在没有整体规划的情况下采取行动，但在今年晚些时候完成规则重建时，它面临着巨大的让步压力</p>
+    <title>每日一句3.3</title>
+    <url>/2023/03/03/%E6%AF%8F%E6%97%A5%E4%B8%80%E5%8F%A53-3/</url>
+    <content><![CDATA[<p>原句: We are even farther removed from the unfocused newspaper reviews published in England between the turn of the 20th century and the eve of World War II,at a time when newsprint was dirt-cheap and stylish arts criticism was considered an ornament to the publications in which it appeared.</p>
+<p>生词：<code>ornament  [n.] 装饰品;首饰;饰物;装饰;摆设;点缀;为…增添光彩的人（或事物）  [vt.]装饰;点缀;美化</code></p>
+<p>翻译：在二十世纪初到第二次世界大战前夕期间，我们甚至远离了那些发表在英国的无重点的报纸评论。在那时，新闻纸非常便宜，高水平的艺术评论被认为是出现在出版物上的点缀。</p>
 ]]></content>
       <categories>
         <category>每日一句</category>
@@ -199,52 +226,11 @@
       </tags>
   </entry>
   <entry>
-    <title>每日一句3.3</title>
-    <url>/2023/03/03/%E6%AF%8F%E6%97%A5%E4%B8%80%E5%8F%A53-3/</url>
-    <content><![CDATA[<p>原句: We are even farther removed from the unfocused newspaper reviews published in England between the turn of the 20th century and the eve of World War II,at a time when newsprint was dirt-cheap and stylish arts criticism was considered an ornament to the publications in which it appeared.</p>
-<p>生词：<code>ornament  [n.] 装饰品;首饰;饰物;装饰;摆设;点缀;为…增添光彩的人（或事物）  [vt.]装饰;点缀;美化</code></p>
-<p>翻译：在二十世纪初到第二次世界大战前夕期间，我们甚至远离了那些发表在英国的无重点的报纸评论。在那时，新闻纸非常便宜，高水平的艺术评论被认为是出现在出版物上的点缀。</p>
-]]></content>
-      <categories>
-        <category>每日一句</category>
-      </categories>
-      <tags>
-        <tag>每日一句</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>每日一句3.11</title>
-    <url>/2023/03/11/%E6%AF%8F%E6%97%A5%E4%B8%80%E5%8F%A53-11/</url>
-    <content><![CDATA[<p>原句：The longest bull run in a century of art-market history ended on a dramatic note with a sale of 56 works by Damien Hirst,Beautiful Inside My head Forever ,at Sotheby’s in London on September 15th 2008.<br>生词：<code>bull 牛市，市场上场（bull market)，</code> <code>run 状态，态势，一段时间</code>  <code>note 音符</code>  <code>Sotheby&#39;s su&#39;shibi</code></p>
-<p>翻译：2008年9月15日，在伦敦苏是比拍卖行举办的美永存心间拍卖会上，随着Damien Hirst的56件拍品成交，本世纪艺术品市场中最长的牛市迎来了戏剧性的结尾。</p>
-]]></content>
-      <categories>
-        <category>每日一句</category>
-      </categories>
-      <tags>
-        <tag>每日一句</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>每日一句3.5</title>
     <url>/2023/03/05/%E6%AF%8F%E6%97%A5%E4%B8%80%E5%8F%A53-5/</url>
     <content><![CDATA[<p>原句：Curbs on business-method claims would be adramatic about-face,because it was the Federal Circuit itself the introduced such patents with its 1998 decision in the so-called State Street Bank case ,approving a patent on a way of pooling mutual-fund assets.</p>
 <p>生词：<code>curb 限制</code> <code>about-face 逆转，转变</code> <code>Federal Circuit 联邦法庭</code> <code>mutual-fund 共同基金</code> <code>polling 聚集的</code></p>
 <p>翻译：对商业方法专利的限制是一个巨大的转变，因为在1998年提出的叫道富银行案件中,联邦法庭自己通过了关于聚集共同基金资产的专利。</p>
-]]></content>
-      <categories>
-        <category>每日一句</category>
-      </categories>
-      <tags>
-        <tag>每日一句</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>每日一句3.7</title>
-    <url>/2023/03/08/%E6%AF%8F%E6%97%A5%E4%B8%80%E5%8F%A53-8/</url>
-    <content><![CDATA[<p>原句：For a social epidemic to occur,however,each person so affected must then influcence his or her own acquaintances,who must in turn influence theirs,and so on;and just how many others pay attention to each of these people has little to do with the inital influential.</p>
-<p>生词：<code>in turn 反过来，依次。。。</code> <code>has little to do with 和...之间没多少关系</code></p>
-<p>翻译：然而，要让一种社会流行潮发生，每个受到影响的人必然会影响到他/她自己的熟人，这些人又反过来影响他们等等，有多人注意到这些人中的每一个人跟最初的影响者没有什么关系。</p>
 ]]></content>
       <categories>
         <category>每日一句</category>
@@ -269,6 +255,20 @@
       </tags>
   </entry>
   <entry>
+    <title>每日一句3.9</title>
+    <url>/2023/03/09/%E6%AF%8F%E6%97%A5%E4%B8%80%E5%8F%A53-9/</url>
+    <content><![CDATA[<p>原句：They found that the principal requirement for what is called “global cascades”一the widespread propagation of influence through networks一is the presence not of a few influentials but,rather,of a critical mass of easily influenced people.</p>
+<p>生词：<code>principal 主要的，重要的，首要的</code> <code>cascade 瀑布，水流</code> <code>propagation 传播，传达</code> <code>critical 批判的，批评的，至关重要的</code></p>
+<p>翻译：他们发现针对“全球瀑布流”(通过网络广泛传播)的首要条件，不是一些有影响力的人的存在，而是一大群至关重要的大量的容易被影响的人的存在。</p>
+]]></content>
+      <categories>
+        <category>每日一句</category>
+      </categories>
+      <tags>
+        <tag>每日一句</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>每日一句3.7</title>
     <url>/2023/03/07/%E6%AF%8F%E6%97%A5%E4%B8%80%E5%8F%A53-7/</url>
     <content><![CDATA[<p>原句：In his book The Tipping Point,Malcolm Gladwell argues that “social epidemics” are driven in large part by the actions of a tiny minority of special individuals,often called infuluentials,who are unusually informed,persuasive or well connected.</p>
@@ -283,11 +283,11 @@
       </tags>
   </entry>
   <entry>
-    <title>每日一句3.9</title>
-    <url>/2023/03/09/%E6%AF%8F%E6%97%A5%E4%B8%80%E5%8F%A53-9/</url>
-    <content><![CDATA[<p>原句：They found that the principal requirement for what is called “global cascades”一the widespread propagation of influence through networks一is the presence not of a few influentials but,rather,of a critical mass of easily influenced people.</p>
-<p>生词：<code>principal 主要的，重要的，首要的</code> <code>cascade 瀑布，水流</code> <code>propagation 传播，传达</code> <code>critical 批判的，批评的，至关重要的</code></p>
-<p>翻译：他们发现针对“全球瀑布流”(通过网络广泛传播)的首要条件，不是一些有影响力的人的存在，而是一大群至关重要的大量的容易被影响的人的存在。</p>
+    <title>每日一句3.7</title>
+    <url>/2023/03/08/%E6%AF%8F%E6%97%A5%E4%B8%80%E5%8F%A53-8/</url>
+    <content><![CDATA[<p>原句：For a social epidemic to occur,however,each person so affected must then influcence his or her own acquaintances,who must in turn influence theirs,and so on;and just how many others pay attention to each of these people has little to do with the inital influential.</p>
+<p>生词：<code>in turn 反过来，依次。。。</code> <code>has little to do with 和...之间没多少关系</code></p>
+<p>翻译：然而，要让一种社会流行潮发生，每个受到影响的人必然会影响到他/她自己的熟人，这些人又反过来影响他们等等，有多人注意到这些人中的每一个人跟最初的影响者没有什么关系。</p>
 ]]></content>
       <categories>
         <category>每日一句</category>
