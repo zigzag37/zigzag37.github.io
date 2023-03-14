@@ -1,6 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>24小时直播间</title>
+    <url>/2023/02/28/24%E5%B0%8F%E6%97%B6%E7%9B%B4%E6%92%AD%E9%97%B4/</url>
+    <content><![CDATA[<h3 id="配置环境"><a href="#配置环境" class="headerlink" title="配置环境"></a>配置环境</h3><ol>
+<li>centos7.9</li>
+<li>服务器配置ffmpeg</li>
+<li>安装screen： <code>yum -y install screen</code></li>
+</ol>
+<h3 id="创建进程"><a href="#创建进程" class="headerlink" title="创建进程"></a>创建进程</h3><ol>
+<li>新建窗口：<code>screen -S Garrick</code></li>
+<li>运行bash: <code>bash bash.sh</code><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">while true</span><br><span class="line">do</span><br><span class="line">    cd /usr/ffmpeg/video</span><br><span class="line">    # 定义推流地址和推流码</span><br><span class="line">    read -p &quot;输入你的推流地址和推流码(rtmp协议):&quot; rtmp</span><br><span class="line">    video=$(find ./ -type f | shuf -n 1)</span><br><span class="line">    ffmpeg -re -i &quot;$video&quot; -preset ultrafast -vcodec libx264 -g 60 -b:v 800k -c:a aac -b:a 92k -strict -2 -f flv $&#123;rtmp&#125;</span><br><span class="line">done</span><br></pre></td></tr></table></figure></li>
+<li>挂起进程<ol>
+<li>查看当前screen进程列表：<code>screen -ls</code></li>
+<li>更改状态为detached: <code>screen -d 进程名称</code></li>
+<li>关闭某个进程： <code>screen -S 进程名称 -X quit</code></li>
+</ol>
+</li>
+</ol>
+<p><a href="https://www.bilibili.com/video/BV14G4y1C7rq/?spm_id_from=333.880.my_history.page.click&vd_source=b3aa4a236cae89ccf31750ffb9a2fba7">视频教程</a></p>
+]]></content>
+      <categories>
+        <category>Linux</category>
+      </categories>
+      <tags>
+        <tag>Linux</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>C++笔记（转载）</title>
     <url>/2021/12/09/C++%E7%AC%94%E8%AE%B0%EF%BC%88%E8%BD%AC%E8%BD%BD%EF%BC%89/</url>
     <content><![CDATA[<h4 id="侯捷C-课程笔记01-面向对象高级编程（上）"><a href="#侯捷C-课程笔记01-面向对象高级编程（上）" class="headerlink" title="侯捷C++课程笔记01: 面向对象高级编程（上）"></a>侯捷C++课程笔记01: 面向对象高级编程（上）</h4><p><a href="https://blog.csdn.net/ncepu_Chen/article/details/113843775">https://blog.csdn.net/ncepu_Chen/article/details/113843775</a></p>
@@ -42,33 +69,6 @@
       </tags>
   </entry>
   <entry>
-    <title>24小时直播间</title>
-    <url>/2023/02/28/24%E5%B0%8F%E6%97%B6%E7%9B%B4%E6%92%AD%E9%97%B4/</url>
-    <content><![CDATA[<h3 id="配置环境"><a href="#配置环境" class="headerlink" title="配置环境"></a>配置环境</h3><ol>
-<li>centos7.9</li>
-<li>服务器配置ffmpeg</li>
-<li>安装screen： <code>yum -y install screen</code></li>
-</ol>
-<h3 id="创建进程"><a href="#创建进程" class="headerlink" title="创建进程"></a>创建进程</h3><ol>
-<li>新建窗口：<code>screen -S Garrick</code></li>
-<li>运行bash: <code>bash bash.sh</code><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">while true</span><br><span class="line">do</span><br><span class="line">    cd /usr/ffmpeg/video</span><br><span class="line">    # 定义推流地址和推流码</span><br><span class="line">    read -p &quot;输入你的推流地址和推流码(rtmp协议):&quot; rtmp</span><br><span class="line">    video=$(find ./ -type f | shuf -n 1)</span><br><span class="line">    ffmpeg -re -i &quot;$video&quot; -preset ultrafast -vcodec libx264 -g 60 -b:v 800k -c:a aac -b:a 92k -strict -2 -f flv $&#123;rtmp&#125;</span><br><span class="line">done</span><br></pre></td></tr></table></figure></li>
-<li>挂起进程<ol>
-<li>查看当前screen进程列表：<code>screen -ls</code></li>
-<li>更改状态为detached: <code>screen -d 进程名称</code></li>
-<li>关闭某个进程： <code>screen -S 进程名称 -X quit</code></li>
-</ol>
-</li>
-</ol>
-<p><a href="https://www.bilibili.com/video/BV14G4y1C7rq/?spm_id_from=333.880.my_history.page.click&vd_source=b3aa4a236cae89ccf31750ffb9a2fba7">视频教程</a></p>
-]]></content>
-      <categories>
-        <category>Linux</category>
-      </categories>
-      <tags>
-        <tag>Linux</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>vscode部署远程服务</title>
     <url>/2023/02/10/vscode%E9%83%A8%E7%BD%B2%E8%BF%9C%E7%A8%8B%E6%9C%8D%E5%8A%A1/</url>
     <content><![CDATA[<p><code>环境：阿里云centos7.9</code></p>
@@ -85,18 +85,6 @@
       </categories>
       <tags>
         <tag>vscode,服务器</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>更换主题为next</title>
-    <url>/2023/01/30/%E6%9B%B4%E6%8D%A2%E4%B8%BB%E9%A2%98%E4%B8%BAnext/</url>
-    <content><![CDATA[<p>现阶段next主题开发维护地址更改,更换时没注意,一直用之前的，屡屡报错，耗费了1天时间，悲。</p>
-]]></content>
-      <categories>
-        <category>博客</category>
-      </categories>
-      <tags>
-        <tag>博客</tag>
       </tags>
   </entry>
   <entry>
@@ -117,11 +105,36 @@
       </tags>
   </entry>
   <entry>
+    <title>更换主题为next</title>
+    <url>/2023/01/30/%E6%9B%B4%E6%8D%A2%E4%B8%BB%E9%A2%98%E4%B8%BAnext/</url>
+    <content><![CDATA[<p>现阶段next主题开发维护地址更改,更换时没注意,一直用之前的，屡屡报错，耗费了1天时间，悲。</p>
+]]></content>
+      <categories>
+        <category>博客</category>
+      </categories>
+      <tags>
+        <tag>博客</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>每日一句3.1</title>
     <url>/2023/03/01/%E6%AF%8F%E6%97%A5%E4%B8%80%E5%8F%A53-1/</url>
     <content><![CDATA[<p>原句：It is difficult to the point of impossibility for the average reader under the age of forty to imagine a time when high-quality arts criticism could be found in most big-city newspapers.</p>
 <p>生词： to the point of:达到。。。点 ,到了。。。程度</p>
 <p>翻译：对于年龄在四十岁以下的普通读者来说很难想象在大多数城市报纸上都能找到高质量的艺术评论。</p>
+]]></content>
+      <categories>
+        <category>每日一句</category>
+      </categories>
+      <tags>
+        <tag>每日一句</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>每日一句3.11</title>
+    <url>/2023/03/11/%E6%AF%8F%E6%97%A5%E4%B8%80%E5%8F%A53-11/</url>
+    <content><![CDATA[<p>原句：The longest bull run in a century of art-market history ended on a dramatic note with a sale of 56 works by Damien Hirst,Beautiful Inside My head Forever ,at Sotheby’s in London on September 15th 2008.<br>生词：<code>bull 牛市，市场上场（bull market)，</code> <code>run 状态，态势，一段时间</code>  <code>note 音符</code>  <code>Sotheby&#39;s su&#39;shibi</code></p>
+<p>翻译：2008年9月15日，在伦敦苏是比拍卖行举办的美永存心间拍卖会上，随着Damien Hirst的56件拍品成交，本世纪艺术品市场中最长的牛市迎来了戏剧性的结尾。</p>
 ]]></content>
       <categories>
         <category>每日一句</category>
@@ -145,19 +158,6 @@
       </tags>
   </entry>
   <entry>
-    <title>每日一句3.11</title>
-    <url>/2023/03/11/%E6%AF%8F%E6%97%A5%E4%B8%80%E5%8F%A53-11/</url>
-    <content><![CDATA[<p>原句：The longest bull run in a century of art-market history ended on a dramatic note with a sale of 56 works by Damien Hirst,Beautiful Inside My head Forever ,at Sotheby’s in London on September 15th 2008.<br>生词：<code>bull 牛市，市场上场（bull market)，</code> <code>run 状态，态势，一段时间</code>  <code>note 音符</code>  <code>Sotheby&#39;s su&#39;shibi</code></p>
-<p>翻译：2008年9月15日，在伦敦苏是比拍卖行举办的美永存心间拍卖会上，随着Damien Hirst的56件拍品成交，本世纪艺术品市场中最长的牛市迎来了戏剧性的结尾。</p>
-]]></content>
-      <categories>
-        <category>每日一句</category>
-      </categories>
-      <tags>
-        <tag>每日一句</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>每日一句3.12</title>
     <url>/2023/03/12/%E6%AF%8F%E6%97%A5%E4%B8%80%E5%8F%A53-12/</url>
     <content><![CDATA[<p>原句：But the market generates interest far beyond its size because it brings together great wealth,enormous egos,greed,passion and controversy in away matched by few other industries.</p>
@@ -171,11 +171,10 @@
       </tags>
   </entry>
   <entry>
-    <title>每日一句3.2</title>
-    <url>/2023/03/02/%E6%AF%8F%E6%97%A5%E4%B8%80%E5%8F%A53-2/</url>
-    <content><![CDATA[<p>原句： Of all the changes that have taken place in English-language newspapers during the past quarter-century,perhaps the most far-reaching has been the inexorable decline in the scope and seriousness of their arts coverage.</p>
-<p>生词： <code>inexorable:不可阻挡的，无法改变的</code> <code>far-reaching:影响深远的，广泛的</code> <code>coverage:覆盖，报道</code></p>
-<p>翻译： 在过去25年里英文报纸发生的所有改变中可能最深远的就是艺术报道地严肃性和范围不可避免地下降。</p>
+    <title>每日一句3.13</title>
+    <url>/2023/03/13/%E6%AF%8F%E6%97%A5%E4%B8%80%E5%8F%A53-13/</url>
+    <content><![CDATA[<p>原句：Almost everyone who was interviewed for this special report said the the biggest problem at the moment is not a lack of demand but a lack of good work to sell.</p>
+<p>翻译：几乎每一个被这篇专题报道采访过的人都表示，目前最大的问题不是缺乏需求，而是缺乏好的卖点。</p>
 ]]></content>
       <categories>
         <category>每日一句</category>
@@ -185,10 +184,11 @@
       </tags>
   </entry>
   <entry>
-    <title>每日一句3.13</title>
-    <url>/2023/03/13/%E6%AF%8F%E6%97%A5%E4%B8%80%E5%8F%A53-13/</url>
-    <content><![CDATA[<p>原句：Almost everyone who was interviewed for this special report said the the biggest problem at the moment is not a lack of demand but a lack of good work to sell.</p>
-<p>翻译：几乎每一个被这篇专题报道采访过的人都表示，目前最大的问题不是缺乏需求，而是缺乏好的卖点。</p>
+    <title>每日一句3.14</title>
+    <url>/2023/03/14/%E6%AF%8F%E6%97%A5%E4%B8%80%E5%8F%A53-14/</url>
+    <content><![CDATA[<p>原句：The episode crystallizes the irony that although American men tend to talk more than women in public situations,they often takl less at home.</p>
+<p>生词：<code>episode 一段情节</code> <code>crystalliz 使结晶，使。。。具体化</code> <code>irony 讽刺</code>  </p>
+<p>翻译：这段情节讽刺化了尽管美国男性在公共场合比女性谈论更多但在家里时却交流很少。</p>
 ]]></content>
       <categories>
         <category>每日一句</category>
@@ -212,11 +212,11 @@
       </tags>
   </entry>
   <entry>
-    <title>每日一句3.5</title>
-    <url>/2023/03/05/%E6%AF%8F%E6%97%A5%E4%B8%80%E5%8F%A53-5/</url>
-    <content><![CDATA[<p>原句：Curbs on business-method claims would be adramatic about-face,because it was the Federal Circuit itself the introduced such patents with its 1998 decision in the so-called State Street Bank case ,approving a patent on a way of pooling mutual-fund assets.</p>
-<p>生词：<code>curb 限制</code> <code>about-face 逆转，转变</code> <code>Federal Circuit 联邦法庭</code> <code>mutual-fund 共同基金</code> <code>polling 聚集的</code></p>
-<p>翻译：对商业方法专利的限制是一个巨大的转变，因为在1998年提出的叫道富银行案件中,联邦法庭自己通过了关于聚集共同基金资产的专利。</p>
+    <title>每日一句3.4</title>
+    <url>/2023/03/04/%E6%AF%8F%E6%97%A5%E4%B8%80%E5%8F%A53-4/</url>
+    <content><![CDATA[<p>原句： Now the nation‘s top patent court appears completely ready to scale back on business-method patents,which hava been controversial ever since they were first authorized 10 years ago.</p>
+<p>生词：<code>scale back 缩减</code></p>
+<p>翻译：现在国家顶级专利法庭似乎完全准备好缩减早在十年前第一次批准时就一直都饱受争议的商业方法专利。</p>
 ]]></content>
       <categories>
         <category>每日一句</category>
@@ -226,11 +226,25 @@
       </tags>
   </entry>
   <entry>
-    <title>每日一句3.4</title>
-    <url>/2023/03/04/%E6%AF%8F%E6%97%A5%E4%B8%80%E5%8F%A53-4/</url>
-    <content><![CDATA[<p>原句： Now the nation‘s top patent court appears completely ready to scale back on business-method patents,which hava been controversial ever since they were first authorized 10 years ago.</p>
-<p>生词：<code>scale back 缩减</code></p>
-<p>翻译：现在国家顶级专利法庭似乎完全准备好缩减早在十年前第一次批准时就一直都饱受争议的商业方法专利。</p>
+    <title>每日一句3.2</title>
+    <url>/2023/03/02/%E6%AF%8F%E6%97%A5%E4%B8%80%E5%8F%A53-2/</url>
+    <content><![CDATA[<p>原句： Of all the changes that have taken place in English-language newspapers during the past quarter-century,perhaps the most far-reaching has been the inexorable decline in the scope and seriousness of their arts coverage.</p>
+<p>生词： <code>inexorable:不可阻挡的，无法改变的</code> <code>far-reaching:影响深远的，广泛的</code> <code>coverage:覆盖，报道</code></p>
+<p>翻译： 在过去25年里英文报纸发生的所有改变中可能最深远的就是艺术报道地严肃性和范围不可避免地下降。</p>
+]]></content>
+      <categories>
+        <category>每日一句</category>
+      </categories>
+      <tags>
+        <tag>每日一句</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>每日一句3.5</title>
+    <url>/2023/03/05/%E6%AF%8F%E6%97%A5%E4%B8%80%E5%8F%A53-5/</url>
+    <content><![CDATA[<p>原句：Curbs on business-method claims would be adramatic about-face,because it was the Federal Circuit itself the introduced such patents with its 1998 decision in the so-called State Street Bank case ,approving a patent on a way of pooling mutual-fund assets.</p>
+<p>生词：<code>curb 限制</code> <code>about-face 逆转，转变</code> <code>Federal Circuit 联邦法庭</code> <code>mutual-fund 共同基金</code> <code>polling 聚集的</code></p>
+<p>翻译：对商业方法专利的限制是一个巨大的转变，因为在1998年提出的叫道富银行案件中,联邦法庭自己通过了关于聚集共同基金资产的专利。</p>
 ]]></content>
       <categories>
         <category>每日一句</category>
@@ -269,11 +283,11 @@
       </tags>
   </entry>
   <entry>
-    <title>每日一句3.7</title>
-    <url>/2023/03/07/%E6%AF%8F%E6%97%A5%E4%B8%80%E5%8F%A53-7/</url>
-    <content><![CDATA[<p>原句：In his book The Tipping Point,Malcolm Gladwell argues that “social epidemics” are driven in large part by the actions of a tiny minority of special individuals,often called infuluentials,who are unusually informed,persuasive or well connected.</p>
-<p>生词：<code>informed 见多识广的，有学问的，有见识的</code></p>
-<p>翻译：在Manlcolm Gladwell 的著作《引爆点》中提到的一个观点，社会流行潮在很大程度上是被特殊的个体中的少数的行为驱使的，这些人被称作有影响力的人，他们有不寻常的学识储备，说服力和好的人脉关系。</p>
+    <title>每日一句3.9</title>
+    <url>/2023/03/09/%E6%AF%8F%E6%97%A5%E4%B8%80%E5%8F%A53-9/</url>
+    <content><![CDATA[<p>原句：They found that the principal requirement for what is called “global cascades”一the widespread propagation of influence through networks一is the presence not of a few influentials but,rather,of a critical mass of easily influenced people.</p>
+<p>生词：<code>principal 主要的，重要的，首要的</code> <code>cascade 瀑布，水流</code> <code>propagation 传播，传达</code> <code>critical 批判的，批评的，至关重要的</code></p>
+<p>翻译：他们发现针对“全球瀑布流”(通过网络广泛传播)的首要条件，不是一些有影响力的人的存在，而是一大群至关重要的大量的容易被影响的人的存在。</p>
 ]]></content>
       <categories>
         <category>每日一句</category>
@@ -283,11 +297,11 @@
       </tags>
   </entry>
   <entry>
-    <title>每日一句3.9</title>
-    <url>/2023/03/09/%E6%AF%8F%E6%97%A5%E4%B8%80%E5%8F%A53-9/</url>
-    <content><![CDATA[<p>原句：They found that the principal requirement for what is called “global cascades”一the widespread propagation of influence through networks一is the presence not of a few influentials but,rather,of a critical mass of easily influenced people.</p>
-<p>生词：<code>principal 主要的，重要的，首要的</code> <code>cascade 瀑布，水流</code> <code>propagation 传播，传达</code> <code>critical 批判的，批评的，至关重要的</code></p>
-<p>翻译：他们发现针对“全球瀑布流”(通过网络广泛传播)的首要条件，不是一些有影响力的人的存在，而是一大群至关重要的大量的容易被影响的人的存在。</p>
+    <title>每日一句3.7</title>
+    <url>/2023/03/07/%E6%AF%8F%E6%97%A5%E4%B8%80%E5%8F%A53-7/</url>
+    <content><![CDATA[<p>原句：In his book The Tipping Point,Malcolm Gladwell argues that “social epidemics” are driven in large part by the actions of a tiny minority of special individuals,often called infuluentials,who are unusually informed,persuasive or well connected.</p>
+<p>生词：<code>informed 见多识广的，有学问的，有见识的</code></p>
+<p>翻译：在Manlcolm Gladwell 的著作《引爆点》中提到的一个观点，社会流行潮在很大程度上是被特殊的个体中的少数的行为驱使的，这些人被称作有影响力的人，他们有不寻常的学识储备，说服力和好的人脉关系。</p>
 ]]></content>
       <categories>
         <category>每日一句</category>
