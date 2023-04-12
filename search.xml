@@ -1,6 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>C++笔记（转载）</title>
+    <url>/2021/12/09/C++%E7%AC%94%E8%AE%B0%EF%BC%88%E8%BD%AC%E8%BD%BD%EF%BC%89/</url>
+    <content><![CDATA[<h4 id="侯捷C-课程笔记01-面向对象高级编程（上）"><a href="#侯捷C-课程笔记01-面向对象高级编程（上）" class="headerlink" title="侯捷C++课程笔记01: 面向对象高级编程（上）"></a>侯捷C++课程笔记01: 面向对象高级编程（上）</h4><p><a href="https://blog.csdn.net/ncepu_Chen/article/details/113843775">https://blog.csdn.net/ncepu_Chen/article/details/113843775</a></p>
+<h4 id="侯捷C-课程笔记02-面向对象高级编程（下）"><a href="#侯捷C-课程笔记02-面向对象高级编程（下）" class="headerlink" title="侯捷C++课程笔记02: 面向对象高级编程（下）"></a>侯捷C++课程笔记02: 面向对象高级编程（下）</h4><p><a href="https://blog.csdn.net/ncepu_Chen/article/details/114686488">https://blog.csdn.net/ncepu_Chen/article/details/114686488</a></p>
+<h4 id="侯捷C-课程笔记02-面向对象高级编程（下）-1"><a href="#侯捷C-课程笔记02-面向对象高级编程（下）-1" class="headerlink" title="侯捷C++课程笔记02: 面向对象高级编程（下）"></a>侯捷C++课程笔记02: 面向对象高级编程（下）</h4><p><a href="https://blog.csdn.net/ncepu_Chen/article/details/114686488">https://blog.csdn.net/ncepu_Chen/article/details/114686488</a></p>
+<h4 id="侯捷C-课程笔记03-STL标准库与泛型编程"><a href="#侯捷C-课程笔记03-STL标准库与泛型编程" class="headerlink" title="侯捷C++课程笔记03: STL标准库与泛型编程"></a>侯捷C++课程笔记03: STL标准库与泛型编程</h4><p><a href="https://blog.csdn.net/ncepu_Chen/article/details/114947710">https://blog.csdn.net/ncepu_Chen/article/details/114947710</a></p>
+<h4 id="侯捷C-课程笔记04-C-2-0新特性"><a href="#侯捷C-课程笔记04-C-2-0新特性" class="headerlink" title="侯捷C++课程笔记04: C++2.0新特性"></a>侯捷C++课程笔记04: C++2.0新特性</h4><p><a href="https://blog.csdn.net/ncepu_Chen/article/details/115375559">https://blog.csdn.net/ncepu_Chen/article/details/115375559</a></p>
+]]></content>
+      <categories>
+        <category>C++</category>
+      </categories>
+      <tags>
+        <tag>C++</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>24小时直播间</title>
     <url>/2023/02/28/24%E5%B0%8F%E6%97%B6%E7%9B%B4%E6%92%AD%E9%97%B4/</url>
     <content><![CDATA[<h3 id="配置环境"><a href="#配置环境" class="headerlink" title="配置环境"></a>配置环境</h3><ol>
@@ -28,19 +44,22 @@
       </tags>
   </entry>
   <entry>
-    <title>C++笔记（转载）</title>
-    <url>/2021/12/09/C++%E7%AC%94%E8%AE%B0%EF%BC%88%E8%BD%AC%E8%BD%BD%EF%BC%89/</url>
-    <content><![CDATA[<h4 id="侯捷C-课程笔记01-面向对象高级编程（上）"><a href="#侯捷C-课程笔记01-面向对象高级编程（上）" class="headerlink" title="侯捷C++课程笔记01: 面向对象高级编程（上）"></a>侯捷C++课程笔记01: 面向对象高级编程（上）</h4><p><a href="https://blog.csdn.net/ncepu_Chen/article/details/113843775">https://blog.csdn.net/ncepu_Chen/article/details/113843775</a></p>
-<h4 id="侯捷C-课程笔记02-面向对象高级编程（下）"><a href="#侯捷C-课程笔记02-面向对象高级编程（下）" class="headerlink" title="侯捷C++课程笔记02: 面向对象高级编程（下）"></a>侯捷C++课程笔记02: 面向对象高级编程（下）</h4><p><a href="https://blog.csdn.net/ncepu_Chen/article/details/114686488">https://blog.csdn.net/ncepu_Chen/article/details/114686488</a></p>
-<h4 id="侯捷C-课程笔记02-面向对象高级编程（下）-1"><a href="#侯捷C-课程笔记02-面向对象高级编程（下）-1" class="headerlink" title="侯捷C++课程笔记02: 面向对象高级编程（下）"></a>侯捷C++课程笔记02: 面向对象高级编程（下）</h4><p><a href="https://blog.csdn.net/ncepu_Chen/article/details/114686488">https://blog.csdn.net/ncepu_Chen/article/details/114686488</a></p>
-<h4 id="侯捷C-课程笔记03-STL标准库与泛型编程"><a href="#侯捷C-课程笔记03-STL标准库与泛型编程" class="headerlink" title="侯捷C++课程笔记03: STL标准库与泛型编程"></a>侯捷C++课程笔记03: STL标准库与泛型编程</h4><p><a href="https://blog.csdn.net/ncepu_Chen/article/details/114947710">https://blog.csdn.net/ncepu_Chen/article/details/114947710</a></p>
-<h4 id="侯捷C-课程笔记04-C-2-0新特性"><a href="#侯捷C-课程笔记04-C-2-0新特性" class="headerlink" title="侯捷C++课程笔记04: C++2.0新特性"></a>侯捷C++课程笔记04: C++2.0新特性</h4><p><a href="https://blog.csdn.net/ncepu_Chen/article/details/115375559">https://blog.csdn.net/ncepu_Chen/article/details/115375559</a></p>
+    <title>vscode部署远程服务</title>
+    <url>/2023/02/10/vscode%E9%83%A8%E7%BD%B2%E8%BF%9C%E7%A8%8B%E6%9C%8D%E5%8A%A1/</url>
+    <content><![CDATA[<p><code>环境：阿里云centos7.9</code></p>
+<h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2><p>使用ssl登录无效，一直重复输入密码。  </p>
+<h2 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h2><ol>
+<li>修改远程服务器<code>.ssh</code>登文件权限  <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">chmod 700 ..</span><br><span class="line">chmod 700 .</span><br><span class="line">chmod 600 authorized_keys</span><br></pre></td></tr></table></figure></li>
+<li>修改ssh配置服务器信息 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">vim /etc/ssh/sshd_config </span><br><span class="line">    </span><br></pre></td></tr></table></figure>
+ 把 <code>PubkeyAuthentication</code> 前的 # 号去掉</li>
+<li>修改本地私钥文件权限<br> <img src="/2023/02/10/vscode%E9%83%A8%E7%BD%B2%E8%BF%9C%E7%A8%8B%E6%9C%8D%E5%8A%A1/%E7%A7%81%E9%92%A5%E6%9D%83%E9%99%90.png" alt="私钥权限"></li>
+</ol>
 ]]></content>
       <categories>
-        <category>C++</category>
+        <category>编程工具</category>
       </categories>
       <tags>
-        <tag>C++</tag>
+        <tag>vscode,服务器</tag>
       </tags>
   </entry>
   <entry>
@@ -66,25 +85,6 @@
       <tags>
         <tag>clash</tag>
         <tag>科学上网</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>vscode部署远程服务</title>
-    <url>/2023/02/10/vscode%E9%83%A8%E7%BD%B2%E8%BF%9C%E7%A8%8B%E6%9C%8D%E5%8A%A1/</url>
-    <content><![CDATA[<p><code>环境：阿里云centos7.9</code></p>
-<h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2><p>使用ssl登录无效，一直重复输入密码。  </p>
-<h2 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h2><ol>
-<li>修改远程服务器<code>.ssh</code>登文件权限  <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">chmod 700 ..</span><br><span class="line">chmod 700 .</span><br><span class="line">chmod 600 authorized_keys</span><br></pre></td></tr></table></figure></li>
-<li>修改ssh配置服务器信息 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">vim /etc/ssh/sshd_config </span><br><span class="line">    </span><br></pre></td></tr></table></figure>
- 把 <code>PubkeyAuthentication</code> 前的 # 号去掉</li>
-<li>修改本地私钥文件权限<br> <img src="/2023/02/10/vscode%E9%83%A8%E7%BD%B2%E8%BF%9C%E7%A8%8B%E6%9C%8D%E5%8A%A1/%E7%A7%81%E9%92%A5%E6%9D%83%E9%99%90.png" alt="私钥权限"></li>
-</ol>
-]]></content>
-      <categories>
-        <category>编程工具</category>
-      </categories>
-      <tags>
-        <tag>vscode,服务器</tag>
       </tags>
   </entry>
   <entry>
@@ -131,10 +131,11 @@
       </tags>
   </entry>
   <entry>
-    <title>每日一句3.11</title>
-    <url>/2023/03/11/%E6%AF%8F%E6%97%A5%E4%B8%80%E5%8F%A53-11/</url>
-    <content><![CDATA[<p>原句：The longest bull run in a century of art-market history ended on a dramatic note with a sale of 56 works by Damien Hirst,Beautiful Inside My head Forever ,at Sotheby’s in London on September 15th 2008.<br>生词：<code>bull 牛市，市场上场（bull market)，</code> <code>run 状态，态势，一段时间</code>  <code>note 音符</code>  <code>Sotheby&#39;s su&#39;shibi</code></p>
-<p>翻译：2008年9月15日，在伦敦苏是比拍卖行举办的美永存心间拍卖会上，随着Damien Hirst的56件拍品成交，本世纪艺术品市场中最长的牛市迎来了戏剧性的结尾。</p>
+    <title>每日一句3.10</title>
+    <url>/2023/03/10/%E6%AF%8F%E6%97%A5%E4%B8%80%E5%8F%A53-10/</url>
+    <content><![CDATA[<p>原句：The IASB says it does not want to act without overall planning,but the pressure to fold when it completes its reconstruction of rules later this year is strong.</p>
+<p>生词：<code>overrall planning 整体的，全部的规划</code> <code>complete 完全的，完整的，完成，结束</code></p>
+<p>翻译：国际会计准则理事会表示，它不想在没有整体规划的情况下采取行动，但在今年晚些时候完成规则重建时，它面临着巨大的让步压力</p>
 ]]></content>
       <categories>
         <category>每日一句</category>
@@ -144,11 +145,10 @@
       </tags>
   </entry>
   <entry>
-    <title>每日一句3.10</title>
-    <url>/2023/03/10/%E6%AF%8F%E6%97%A5%E4%B8%80%E5%8F%A53-10/</url>
-    <content><![CDATA[<p>原句：The IASB says it does not want to act without overall planning,but the pressure to fold when it completes its reconstruction of rules later this year is strong.</p>
-<p>生词：<code>overrall planning 整体的，全部的规划</code> <code>complete 完全的，完整的，完成，结束</code></p>
-<p>翻译：国际会计准则理事会表示，它不想在没有整体规划的情况下采取行动，但在今年晚些时候完成规则重建时，它面临着巨大的让步压力</p>
+    <title>每日一句3.11</title>
+    <url>/2023/03/11/%E6%AF%8F%E6%97%A5%E4%B8%80%E5%8F%A53-11/</url>
+    <content><![CDATA[<p>原句：The longest bull run in a century of art-market history ended on a dramatic note with a sale of 56 works by Damien Hirst,Beautiful Inside My head Forever ,at Sotheby’s in London on September 15th 2008.<br>生词：<code>bull 牛市，市场上场（bull market)，</code> <code>run 状态，态势，一段时间</code>  <code>note 音符</code>  <code>Sotheby&#39;s su&#39;shibi</code></p>
+<p>翻译：2008年9月15日，在伦敦苏是比拍卖行举办的美永存心间拍卖会上，随着Damien Hirst的56件拍品成交，本世纪艺术品市场中最长的牛市迎来了戏剧性的结尾。</p>
 ]]></content>
       <categories>
         <category>每日一句</category>
@@ -212,11 +212,11 @@
       </tags>
   </entry>
   <entry>
-    <title>每日一句3.4</title>
-    <url>/2023/03/04/%E6%AF%8F%E6%97%A5%E4%B8%80%E5%8F%A53-4/</url>
-    <content><![CDATA[<p>原句： Now the nation‘s top patent court appears completely ready to scale back on business-method patents,which hava been controversial ever since they were first authorized 10 years ago.</p>
-<p>生词：<code>scale back 缩减</code></p>
-<p>翻译：现在国家顶级专利法庭似乎完全准备好缩减早在十年前第一次批准时就一直都饱受争议的商业方法专利。</p>
+    <title>每日一句3.2</title>
+    <url>/2023/03/02/%E6%AF%8F%E6%97%A5%E4%B8%80%E5%8F%A53-2/</url>
+    <content><![CDATA[<p>原句： Of all the changes that have taken place in English-language newspapers during the past quarter-century,perhaps the most far-reaching has been the inexorable decline in the scope and seriousness of their arts coverage.</p>
+<p>生词： <code>inexorable:不可阻挡的，无法改变的</code> <code>far-reaching:影响深远的，广泛的</code> <code>coverage:覆盖，报道</code></p>
+<p>翻译： 在过去25年里英文报纸发生的所有改变中可能最深远的就是艺术报道地严肃性和范围不可避免地下降。</p>
 ]]></content>
       <categories>
         <category>每日一句</category>
@@ -226,11 +226,11 @@
       </tags>
   </entry>
   <entry>
-    <title>每日一句3.2</title>
-    <url>/2023/03/02/%E6%AF%8F%E6%97%A5%E4%B8%80%E5%8F%A53-2/</url>
-    <content><![CDATA[<p>原句： Of all the changes that have taken place in English-language newspapers during the past quarter-century,perhaps the most far-reaching has been the inexorable decline in the scope and seriousness of their arts coverage.</p>
-<p>生词： <code>inexorable:不可阻挡的，无法改变的</code> <code>far-reaching:影响深远的，广泛的</code> <code>coverage:覆盖，报道</code></p>
-<p>翻译： 在过去25年里英文报纸发生的所有改变中可能最深远的就是艺术报道地严肃性和范围不可避免地下降。</p>
+    <title>每日一句3.15</title>
+    <url>/2023/03/15/%E6%AF%8F%E6%97%A5%E4%B8%80%E5%8F%A53-15/</url>
+    <content><![CDATA[<p>原句：In short,the image that best represents the current crisis is the stereotypical cartoon scene of a man sitting at the breakfast table with a newspaper held up in front of his face,while a woman glares at the back of it,wanting to talk.</p>
+<p>生词：<code>In short 简而言之，长话多说</code> <code>represent 代表，表现</code> <code>stereotypical 典型的，老一套的，刻板化的，模式化的</code>  <code>glare 怒目而视，发出刺眼的光</code></p>
+<p>翻译：简而言之，最能代表当前危机的形象是一个老套的卡通场景，即一个男人在早餐桌前把报纸举在他的脸上，而一位女士盯着报纸的背面，想要说话。</p>
 ]]></content>
       <categories>
         <category>每日一句</category>
@@ -254,12 +254,40 @@
       </tags>
   </entry>
   <entry>
+    <title>每日一句3.4</title>
+    <url>/2023/03/04/%E6%AF%8F%E6%97%A5%E4%B8%80%E5%8F%A53-4/</url>
+    <content><![CDATA[<p>原句： Now the nation‘s top patent court appears completely ready to scale back on business-method patents,which hava been controversial ever since they were first authorized 10 years ago.</p>
+<p>生词：<code>scale back 缩减</code></p>
+<p>翻译：现在国家顶级专利法庭似乎完全准备好缩减早在十年前第一次批准时就一直都饱受争议的商业方法专利。</p>
+]]></content>
+      <categories>
+        <category>每日一句</category>
+      </categories>
+      <tags>
+        <tag>每日一句</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>每日一句3.6</title>
     <url>/2023/03/06/%E6%AF%8F%E6%97%A5%E4%B8%80%E5%8F%A53-6/</url>
     <content><![CDATA[<p>原句：The Federal Circuit issued an unusual order stating that the case would be heard by all 12 of the court’s judges,rather than a typical panel of three,and that one issue it wants to evaluate is whether it should “reconsider” its State Street Bank ruling.</p>
 <p>生词：<code>scale back 缩减</code></p>
 <p>翻译：联邦巡回法庭发布了一项不寻常的指令，该指令称本案件将会被法院所有的12个法官听审，而不是典型的三人小组法官，并且它想要评估的一个问题是：是否应该“重新考虑”其道富银行的裁决。</p>
 <p>。</p>
+]]></content>
+      <categories>
+        <category>每日一句</category>
+      </categories>
+      <tags>
+        <tag>每日一句</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>每日一句3.7</title>
+    <url>/2023/03/07/%E6%AF%8F%E6%97%A5%E4%B8%80%E5%8F%A53-7/</url>
+    <content><![CDATA[<p>原句：In his book The Tipping Point,Malcolm Gladwell argues that “social epidemics” are driven in large part by the actions of a tiny minority of special individuals,often called infuluentials,who are unusually informed,persuasive or well connected.</p>
+<p>生词：<code>informed 见多识广的，有学问的，有见识的</code></p>
+<p>翻译：在Manlcolm Gladwell 的著作《引爆点》中提到的一个观点，社会流行潮在很大程度上是被特殊的个体中的少数的行为驱使的，这些人被称作有影响力的人，他们有不寻常的学识储备，说服力和好的人脉关系。</p>
 ]]></content>
       <categories>
         <category>每日一句</category>
@@ -288,20 +316,6 @@
     <content><![CDATA[<p>原句：They found that the principal requirement for what is called “global cascades”一the widespread propagation of influence through networks一is the presence not of a few influentials but,rather,of a critical mass of easily influenced people.</p>
 <p>生词：<code>principal 主要的，重要的，首要的</code> <code>cascade 瀑布，水流</code> <code>propagation 传播，传达</code> <code>critical 批判的，批评的，至关重要的</code></p>
 <p>翻译：他们发现针对“全球瀑布流”(通过网络广泛传播)的首要条件，不是一些有影响力的人的存在，而是一大群至关重要的大量的容易被影响的人的存在。</p>
-]]></content>
-      <categories>
-        <category>每日一句</category>
-      </categories>
-      <tags>
-        <tag>每日一句</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>每日一句3.7</title>
-    <url>/2023/03/07/%E6%AF%8F%E6%97%A5%E4%B8%80%E5%8F%A53-7/</url>
-    <content><![CDATA[<p>原句：In his book The Tipping Point,Malcolm Gladwell argues that “social epidemics” are driven in large part by the actions of a tiny minority of special individuals,often called infuluentials,who are unusually informed,persuasive or well connected.</p>
-<p>生词：<code>informed 见多识广的，有学问的，有见识的</code></p>
-<p>翻译：在Manlcolm Gladwell 的著作《引爆点》中提到的一个观点，社会流行潮在很大程度上是被特殊的个体中的少数的行为驱使的，这些人被称作有影响力的人，他们有不寻常的学识储备，说服力和好的人脉关系。</p>
 ]]></content>
       <categories>
         <category>每日一句</category>
