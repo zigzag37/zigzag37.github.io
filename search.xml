@@ -44,25 +44,6 @@
       </tags>
   </entry>
   <entry>
-    <title>vscode部署远程服务</title>
-    <url>/2023/02/10/vscode%E9%83%A8%E7%BD%B2%E8%BF%9C%E7%A8%8B%E6%9C%8D%E5%8A%A1/</url>
-    <content><![CDATA[<p><code>环境：阿里云centos7.9</code></p>
-<h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2><p>使用ssl登录无效，一直重复输入密码。  </p>
-<h2 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h2><ol>
-<li>修改远程服务器<code>.ssh</code>登文件权限  <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">chmod 700 ..</span><br><span class="line">chmod 700 .</span><br><span class="line">chmod 600 authorized_keys</span><br></pre></td></tr></table></figure></li>
-<li>修改ssh配置服务器信息 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">vim /etc/ssh/sshd_config </span><br><span class="line">    </span><br></pre></td></tr></table></figure>
- 把 <code>PubkeyAuthentication</code> 前的 # 号去掉</li>
-<li>修改本地私钥文件权限<br> <img src="/2023/02/10/vscode%E9%83%A8%E7%BD%B2%E8%BF%9C%E7%A8%8B%E6%9C%8D%E5%8A%A1/%E7%A7%81%E9%92%A5%E6%9D%83%E9%99%90.png" alt="私钥权限"></li>
-</ol>
-]]></content>
-      <categories>
-        <category>编程工具</category>
-      </categories>
-      <tags>
-        <tag>vscode,服务器</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>clash_for_widnows去除软件内广告</title>
     <url>/2023/02/11/clash-for-widnows%E5%8E%BB%E9%99%A4%E8%BD%AF%E4%BB%B6%E5%86%85%E5%B9%BF%E5%91%8A/</url>
     <content><![CDATA[<h1 id="解包app-asar"><a href="#解包app-asar" class="headerlink" title="解包app.asar"></a>解包app.asar</h1><ol>
@@ -88,6 +69,37 @@
       </tags>
   </entry>
   <entry>
+    <title>vscode部署远程服务</title>
+    <url>/2023/02/10/vscode%E9%83%A8%E7%BD%B2%E8%BF%9C%E7%A8%8B%E6%9C%8D%E5%8A%A1/</url>
+    <content><![CDATA[<p><code>环境：阿里云centos7.9</code></p>
+<h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2><p>使用ssl登录无效，一直重复输入密码。  </p>
+<h2 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h2><ol>
+<li>修改远程服务器<code>.ssh</code>登文件权限  <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">chmod 700 ..</span><br><span class="line">chmod 700 .</span><br><span class="line">chmod 600 authorized_keys</span><br></pre></td></tr></table></figure></li>
+<li>修改ssh配置服务器信息 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">vim /etc/ssh/sshd_config </span><br><span class="line">    </span><br></pre></td></tr></table></figure>
+ 把 <code>PubkeyAuthentication</code> 前的 # 号去掉</li>
+<li>修改本地私钥文件权限<br> <img src="/2023/02/10/vscode%E9%83%A8%E7%BD%B2%E8%BF%9C%E7%A8%8B%E6%9C%8D%E5%8A%A1/%E7%A7%81%E9%92%A5%E6%9D%83%E9%99%90.png" alt="私钥权限"></li>
+</ol>
+]]></content>
+      <categories>
+        <category>编程工具</category>
+      </categories>
+      <tags>
+        <tag>vscode,服务器</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>更换主题为next</title>
+    <url>/2023/01/30/%E6%9B%B4%E6%8D%A2%E4%B8%BB%E9%A2%98%E4%B8%BAnext/</url>
+    <content><![CDATA[<p>现阶段next主题开发维护地址更改,更换时没注意,一直用之前的，屡屡报错，耗费了1天时间，悲。</p>
+]]></content>
+      <categories>
+        <category>博客</category>
+      </categories>
+      <tags>
+        <tag>博客</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>局部均值滤波算法与实现</title>
     <url>/2021/10/21/%E5%B1%80%E9%83%A8%E5%9D%87%E5%80%BC%E6%BB%A4%E6%B3%A2%E7%AE%97%E6%B3%95%E4%B8%8E%E5%AE%9E%E7%8E%B0/</url>
     <content><![CDATA[<h3 id="算法原理"><a href="#算法原理" class="headerlink" title="算法原理"></a>算法原理</h3><p><img src="/2021/10/21/%E5%B1%80%E9%83%A8%E5%9D%87%E5%80%BC%E6%BB%A4%E6%B3%A2%E7%AE%97%E6%B3%95%E4%B8%8E%E5%AE%9E%E7%8E%B0/%E5%9D%87%E5%80%BC.jpeg" alt="均值.jpeg"><br><img src="/2021/10/21/%E5%B1%80%E9%83%A8%E5%9D%87%E5%80%BC%E6%BB%A4%E6%B3%A2%E7%AE%97%E6%B3%95%E4%B8%8E%E5%AE%9E%E7%8E%B0/%E6%96%B9%E5%B7%AE.jpeg" alt="方差.jpeg"><br><img src="/2021/10/21/%E5%B1%80%E9%83%A8%E5%9D%87%E5%80%BC%E6%BB%A4%E6%B3%A2%E7%AE%97%E6%B3%95%E4%B8%8E%E5%AE%9E%E7%8E%B0/%E5%8E%BB%E5%99%AA%E7%BB%93%E6%9E%9C.jpeg" alt="去噪结果.jpeg"><br><img src="/2021/10/21/%E5%B1%80%E9%83%A8%E5%9D%87%E5%80%BC%E6%BB%A4%E6%B3%A2%E7%AE%97%E6%B3%95%E4%B8%8E%E5%AE%9E%E7%8E%B0/K.jpeg" alt="参数K.jpeg"><br>式（4）中σ为用户输入的参数</p>
@@ -105,37 +117,11 @@
       </tags>
   </entry>
   <entry>
-    <title>更换主题为next</title>
-    <url>/2023/01/30/%E6%9B%B4%E6%8D%A2%E4%B8%BB%E9%A2%98%E4%B8%BAnext/</url>
-    <content><![CDATA[<p>现阶段next主题开发维护地址更改,更换时没注意,一直用之前的，屡屡报错，耗费了1天时间，悲。</p>
-]]></content>
-      <categories>
-        <category>博客</category>
-      </categories>
-      <tags>
-        <tag>博客</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>每日一句3.1</title>
     <url>/2023/03/01/%E6%AF%8F%E6%97%A5%E4%B8%80%E5%8F%A53-1/</url>
     <content><![CDATA[<p>原句：It is difficult to the point of impossibility for the average reader under the age of forty to imagine a time when high-quality arts criticism could be found in most big-city newspapers.</p>
 <p>生词： to the point of:达到。。。点 ,到了。。。程度</p>
 <p>翻译：对于年龄在四十岁以下的普通读者来说很难想象在大多数城市报纸上都能找到高质量的艺术评论。</p>
-]]></content>
-      <categories>
-        <category>每日一句</category>
-      </categories>
-      <tags>
-        <tag>每日一句</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>每日一句3.10</title>
-    <url>/2023/03/10/%E6%AF%8F%E6%97%A5%E4%B8%80%E5%8F%A53-10/</url>
-    <content><![CDATA[<p>原句：The IASB says it does not want to act without overall planning,but the pressure to fold when it completes its reconstruction of rules later this year is strong.</p>
-<p>生词：<code>overrall planning 整体的，全部的规划</code> <code>complete 完全的，完整的，完成，结束</code></p>
-<p>翻译：国际会计准则理事会表示，它不想在没有整体规划的情况下采取行动，但在今年晚些时候完成规则重建时，它面临着巨大的让步压力</p>
 ]]></content>
       <categories>
         <category>每日一句</category>
@@ -171,52 +157,24 @@
       </tags>
   </entry>
   <entry>
+    <title>每日一句3.10</title>
+    <url>/2023/03/10/%E6%AF%8F%E6%97%A5%E4%B8%80%E5%8F%A53-10/</url>
+    <content><![CDATA[<p>原句：The IASB says it does not want to act without overall planning,but the pressure to fold when it completes its reconstruction of rules later this year is strong.</p>
+<p>生词：<code>overrall planning 整体的，全部的规划</code> <code>complete 完全的，完整的，完成，结束</code></p>
+<p>翻译：国际会计准则理事会表示，它不想在没有整体规划的情况下采取行动，但在今年晚些时候完成规则重建时，它面临着巨大的让步压力</p>
+]]></content>
+      <categories>
+        <category>每日一句</category>
+      </categories>
+      <tags>
+        <tag>每日一句</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>每日一句3.13</title>
     <url>/2023/03/13/%E6%AF%8F%E6%97%A5%E4%B8%80%E5%8F%A53-13/</url>
     <content><![CDATA[<p>原句：Almost everyone who was interviewed for this special report said the the biggest problem at the moment is not a lack of demand but a lack of good work to sell.</p>
 <p>翻译：几乎每一个被这篇专题报道采访过的人都表示，目前最大的问题不是缺乏需求，而是缺乏好的卖点。</p>
-]]></content>
-      <categories>
-        <category>每日一句</category>
-      </categories>
-      <tags>
-        <tag>每日一句</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>每日一句3.14</title>
-    <url>/2023/03/14/%E6%AF%8F%E6%97%A5%E4%B8%80%E5%8F%A53-14/</url>
-    <content><![CDATA[<p>原句：The episode crystallizes the irony that although American men tend to talk more than women in public situations,they often takl less at home.</p>
-<p>生词：<code>episode 一段情节</code> <code>crystalliz 使结晶，使。。。具体化</code> <code>irony 讽刺</code>  </p>
-<p>翻译：这段情节讽刺化了尽管美国男性在公共场合比女性谈论更多但在家里时却交流很少。</p>
-]]></content>
-      <categories>
-        <category>每日一句</category>
-      </categories>
-      <tags>
-        <tag>每日一句</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>每日一句3.3</title>
-    <url>/2023/03/03/%E6%AF%8F%E6%97%A5%E4%B8%80%E5%8F%A53-3/</url>
-    <content><![CDATA[<p>原句: We are even farther removed from the unfocused newspaper reviews published in England between the turn of the 20th century and the eve of World War II,at a time when newsprint was dirt-cheap and stylish arts criticism was considered an ornament to the publications in which it appeared.</p>
-<p>生词：<code>ornament  [n.] 装饰品;首饰;饰物;装饰;摆设;点缀;为…增添光彩的人（或事物）  [vt.]装饰;点缀;美化</code></p>
-<p>翻译：在二十世纪初到第二次世界大战前夕期间，我们甚至远离了那些发表在英国的无重点的报纸评论。在那时，新闻纸非常便宜，高水平的艺术评论被认为是出现在出版物上的点缀。</p>
-]]></content>
-      <categories>
-        <category>每日一句</category>
-      </categories>
-      <tags>
-        <tag>每日一句</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>每日一句3.2</title>
-    <url>/2023/03/02/%E6%AF%8F%E6%97%A5%E4%B8%80%E5%8F%A53-2/</url>
-    <content><![CDATA[<p>原句： Of all the changes that have taken place in English-language newspapers during the past quarter-century,perhaps the most far-reaching has been the inexorable decline in the scope and seriousness of their arts coverage.</p>
-<p>生词： <code>inexorable:不可阻挡的，无法改变的</code> <code>far-reaching:影响深远的，广泛的</code> <code>coverage:覆盖，报道</code></p>
-<p>翻译： 在过去25年里英文报纸发生的所有改变中可能最深远的就是艺术报道地严肃性和范围不可避免地下降。</p>
 ]]></content>
       <categories>
         <category>每日一句</category>
@@ -240,11 +198,39 @@
       </tags>
   </entry>
   <entry>
-    <title>每日一句3.5</title>
-    <url>/2023/03/05/%E6%AF%8F%E6%97%A5%E4%B8%80%E5%8F%A53-5/</url>
-    <content><![CDATA[<p>原句：Curbs on business-method claims would be adramatic about-face,because it was the Federal Circuit itself the introduced such patents with its 1998 decision in the so-called State Street Bank case ,approving a patent on a way of pooling mutual-fund assets.</p>
-<p>生词：<code>curb 限制</code> <code>about-face 逆转，转变</code> <code>Federal Circuit 联邦法庭</code> <code>mutual-fund 共同基金</code> <code>polling 聚集的</code></p>
-<p>翻译：对商业方法专利的限制是一个巨大的转变，因为在1998年提出的叫道富银行案件中,联邦法庭自己通过了关于聚集共同基金资产的专利。</p>
+    <title>每日一句3.14</title>
+    <url>/2023/03/14/%E6%AF%8F%E6%97%A5%E4%B8%80%E5%8F%A53-14/</url>
+    <content><![CDATA[<p>原句：The episode crystallizes the irony that although American men tend to talk more than women in public situations,they often takl less at home.</p>
+<p>生词：<code>episode 一段情节</code> <code>crystalliz 使结晶，使。。。具体化</code> <code>irony 讽刺</code>  </p>
+<p>翻译：这段情节讽刺化了尽管美国男性在公共场合比女性谈论更多但在家里时却交流很少。</p>
+]]></content>
+      <categories>
+        <category>每日一句</category>
+      </categories>
+      <tags>
+        <tag>每日一句</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>每日一句3.15</title>
+    <url>/2023/03/15/%E6%AF%8F%E6%97%A5%E4%B8%80%E5%8F%A53-16/</url>
+    <content><![CDATA[<p>原句：In short,the image that best represents the current crisis is the stereotypical cartoon scene of a man sitting at the breakfast table with a newspaper held up in front of his face,while a woman glares at the back of it,wanting to talk.</p>
+<p>生词：<code>In short 简而言之，长话多说</code> <code>represent 代表，表现</code> <code>stereotypical 典型的，老一套的，刻板化的，模式化的</code>  <code>glare 怒目而视，发出刺眼的光</code></p>
+<p>翻译：简而言之，最能代表当前危机的形象是一个老套的卡通场景，即一个男人在早餐桌前把报纸举在他的脸上，而一位女士盯着报纸的背面，想要说话。</p>
+]]></content>
+      <categories>
+        <category>每日一句</category>
+      </categories>
+      <tags>
+        <tag>每日一句</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>每日一句3.2</title>
+    <url>/2023/03/02/%E6%AF%8F%E6%97%A5%E4%B8%80%E5%8F%A53-2/</url>
+    <content><![CDATA[<p>原句： Of all the changes that have taken place in English-language newspapers during the past quarter-century,perhaps the most far-reaching has been the inexorable decline in the scope and seriousness of their arts coverage.</p>
+<p>生词： <code>inexorable:不可阻挡的，无法改变的</code> <code>far-reaching:影响深远的，广泛的</code> <code>coverage:覆盖，报道</code></p>
+<p>翻译： 在过去25年里英文报纸发生的所有改变中可能最深远的就是艺术报道地严肃性和范围不可避免地下降。</p>
 ]]></content>
       <categories>
         <category>每日一句</category>
@@ -259,6 +245,20 @@
     <content><![CDATA[<p>原句： Now the nation‘s top patent court appears completely ready to scale back on business-method patents,which hava been controversial ever since they were first authorized 10 years ago.</p>
 <p>生词：<code>scale back 缩减</code></p>
 <p>翻译：现在国家顶级专利法庭似乎完全准备好缩减早在十年前第一次批准时就一直都饱受争议的商业方法专利。</p>
+]]></content>
+      <categories>
+        <category>每日一句</category>
+      </categories>
+      <tags>
+        <tag>每日一句</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>每日一句3.5</title>
+    <url>/2023/03/05/%E6%AF%8F%E6%97%A5%E4%B8%80%E5%8F%A53-5/</url>
+    <content><![CDATA[<p>原句：Curbs on business-method claims would be adramatic about-face,because it was the Federal Circuit itself the introduced such patents with its 1998 decision in the so-called State Street Bank case ,approving a patent on a way of pooling mutual-fund assets.</p>
+<p>生词：<code>curb 限制</code> <code>about-face 逆转，转变</code> <code>Federal Circuit 联邦法庭</code> <code>mutual-fund 共同基金</code> <code>polling 聚集的</code></p>
+<p>翻译：对商业方法专利的限制是一个巨大的转变，因为在1998年提出的叫道富银行案件中,联邦法庭自己通过了关于聚集共同基金资产的专利。</p>
 ]]></content>
       <categories>
         <category>每日一句</category>
@@ -283,11 +283,11 @@
       </tags>
   </entry>
   <entry>
-    <title>每日一句3.7</title>
-    <url>/2023/03/07/%E6%AF%8F%E6%97%A5%E4%B8%80%E5%8F%A53-7/</url>
-    <content><![CDATA[<p>原句：In his book The Tipping Point,Malcolm Gladwell argues that “social epidemics” are driven in large part by the actions of a tiny minority of special individuals,often called infuluentials,who are unusually informed,persuasive or well connected.</p>
-<p>生词：<code>informed 见多识广的，有学问的，有见识的</code></p>
-<p>翻译：在Manlcolm Gladwell 的著作《引爆点》中提到的一个观点，社会流行潮在很大程度上是被特殊的个体中的少数的行为驱使的，这些人被称作有影响力的人，他们有不寻常的学识储备，说服力和好的人脉关系。</p>
+    <title>每日一句3.3</title>
+    <url>/2023/03/03/%E6%AF%8F%E6%97%A5%E4%B8%80%E5%8F%A53-3/</url>
+    <content><![CDATA[<p>原句: We are even farther removed from the unfocused newspaper reviews published in England between the turn of the 20th century and the eve of World War II,at a time when newsprint was dirt-cheap and stylish arts criticism was considered an ornament to the publications in which it appeared.</p>
+<p>生词：<code>ornament  [n.] 装饰品;首饰;饰物;装饰;摆设;点缀;为…增添光彩的人（或事物）  [vt.]装饰;点缀;美化</code></p>
+<p>翻译：在二十世纪初到第二次世界大战前夕期间，我们甚至远离了那些发表在英国的无重点的报纸评论。在那时，新闻纸非常便宜，高水平的艺术评论被认为是出现在出版物上的点缀。</p>
 ]]></content>
       <categories>
         <category>每日一句</category>
@@ -298,10 +298,10 @@
   </entry>
   <entry>
     <title>每日一句3.7</title>
-    <url>/2023/03/08/%E6%AF%8F%E6%97%A5%E4%B8%80%E5%8F%A53-8/</url>
-    <content><![CDATA[<p>原句：For a social epidemic to occur,however,each person so affected must then influcence his or her own acquaintances,who must in turn influence theirs,and so on;and just how many others pay attention to each of these people has little to do with the inital influential.</p>
-<p>生词：<code>in turn 反过来，依次。。。</code> <code>has little to do with 和...之间没多少关系</code></p>
-<p>翻译：然而，要让一种社会流行潮发生，每个受到影响的人必然会影响到他/她自己的熟人，这些人又反过来影响他们等等，有多人注意到这些人中的每一个人跟最初的影响者没有什么关系。</p>
+    <url>/2023/03/07/%E6%AF%8F%E6%97%A5%E4%B8%80%E5%8F%A53-7/</url>
+    <content><![CDATA[<p>原句：In his book The Tipping Point,Malcolm Gladwell argues that “social epidemics” are driven in large part by the actions of a tiny minority of special individuals,often called infuluentials,who are unusually informed,persuasive or well connected.</p>
+<p>生词：<code>informed 见多识广的，有学问的，有见识的</code></p>
+<p>翻译：在Manlcolm Gladwell 的著作《引爆点》中提到的一个观点，社会流行潮在很大程度上是被特殊的个体中的少数的行为驱使的，这些人被称作有影响力的人，他们有不寻常的学识储备，说服力和好的人脉关系。</p>
 ]]></content>
       <categories>
         <category>每日一句</category>
@@ -345,6 +345,20 @@
       </tags>
   </entry>
   <entry>
+    <title>每日一句3.7</title>
+    <url>/2023/03/08/%E6%AF%8F%E6%97%A5%E4%B8%80%E5%8F%A53-8/</url>
+    <content><![CDATA[<p>原句：For a social epidemic to occur,however,each person so affected must then influcence his or her own acquaintances,who must in turn influence theirs,and so on;and just how many others pay attention to each of these people has little to do with the inital influential.</p>
+<p>生词：<code>in turn 反过来，依次。。。</code> <code>has little to do with 和...之间没多少关系</code></p>
+<p>翻译：然而，要让一种社会流行潮发生，每个受到影响的人必然会影响到他/她自己的熟人，这些人又反过来影响他们等等，有多人注意到这些人中的每一个人跟最初的影响者没有什么关系。</p>
+]]></content>
+      <categories>
+        <category>每日一句</category>
+      </categories>
+      <tags>
+        <tag>每日一句</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>电子书资源</title>
     <url>/2023/02/11/%E7%94%B5%E5%AD%90%E4%B9%A6%E8%B5%84%E6%BA%90/</url>
     <content><![CDATA[<h2 id="导航类"><a href="#导航类" class="headerlink" title="导航类"></a>导航类</h2><ul>
@@ -381,6 +395,85 @@
       <tags>
         <tag>电子书</tag>
         <tag>在线资源</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>计算机网络</title>
+    <url>/2023/04/28/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/</url>
+    <content><![CDATA[<h1 id="第一章"><a href="#第一章" class="headerlink" title="第一章"></a>第一章</h1><h2 id="英特网概述"><a href="#英特网概述" class="headerlink" title="英特网概述"></a>英特网概述</h2><p>网络： 结点+链路组成<br>多个网络 + 路由器 = 互联网（英特网）<br>英特网：世界上最大的互联网络<br>英特网 = 边缘部分 + 核心部分<br>边缘部分：所有连接在英特网上的主机组成，用户直接使用，通信+资源共享<br>核心部分：由大量网络 + 路由器组成，为边缘部分提供服务</p>
+<h2 id="三种交换方式"><a href="#三种交换方式" class="headerlink" title="三种交换方式"></a>三种交换方式</h2><p>电路交换：</p>
+<ol>
+<li>优点：通信时延小 有序控制 没有冲突 使用范围广 实时性强 控制简单</li>
+<li>缺点：建立连接时间长，线路独占，使用效率低，灵活性差，难以规格化<br>报文交换：</li>
+<li>优点：无需建立连接，动态分配线路，提高线路可靠性，利用率，提供多目标服务</li>
+<li>缺点：转发时延，较大存储空间，传输额外信息量<br>分组交换：</li>
+<li>优点：无需建立连接，线路利用率高，简化存储管理，加快传输速率，减少出错率和重发数据量</li>
+<li>缺点：转发时延，额为信息量，对于数据服务存在失序，丢失，重复分组的问题，对于虚电路服务，存在呼叫建立，数据传输和虚电释放三个过程。</li>
+</ol>
+<h2 id="计算机网络定义和分类"><a href="#计算机网络定义和分类" class="headerlink" title="计算机网络定义和分类"></a>计算机网络定义和分类</h2><h3 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h3><p>简单定义：一些<code>互相连接</code> <code>自洽</code>的计算机的<code>集合</code></p>
+<p>较好定义：计算机网络主要是由一些<code>通用的、可编程的硬件互连</code>而成的，而这些硬件并非专门用来实现某一特定目的（例如，传送数据或视频信号）。这些可编程的硬件能够用来传送多种不同类型的数据，并能支持广泛的和日益增长的应用。</p>
+<h3 id="分类："><a href="#分类：" class="headerlink" title="分类："></a>分类：</h3><ol>
+<li>交换技术：电路交换，报文交换，分组交换</li>
+<li>使用者： 公用网，专用网</li>
+<li>传输介质：有线网，无线网</li>
+<li>覆盖范围：广域网WAN,城域网MAN,局域网LAN,个域网PAN</li>
+<li>覆盖范围：总线型网络，星型网络，环形网络，网状型网络</li>
+</ol>
+<h2 id="性能指标"><a href="#性能指标" class="headerlink" title="性能指标"></a>性能指标</h2><ol>
+<li>速率：<ul>
+<li>连接在计算机网络上的主机在数字信道上传送比特的速率，也称比特率和数据率</li>
+<li>基本单位：bit/s(b/s,bps),常用单位：kb/s,Mb/s,Gb/s,Tb/s</li>
+</ul>
+</li>
+<li>带宽<ul>
+<li>用来表示网络的通信线路所能传送数据的能力，因此网络带宽表示在单位时间内从网络中某一点到另一点所能通过的“最高数据率”，单位与速率单位相同</li>
+</ul>
+</li>
+<li>吞吐量<ul>
+<li>吞吐量表示在单位时间内通过某个网络（或行道，接口）的数据量</li>
+<li>吞吐量被经常用于对现实世界中的网络的一种测量，以便知道实际上到底有多少数据量能够通过网络；吞吐量受网络的带宽或额定速率的限制</li>
+</ul>
+</li>
+<li>时延<ul>
+<li>发送实验 = 分组长度（b）/ 发送速率（b/s）</li>
+<li>传播时延 = 信道长度（m）/ 电磁波传播速率（m/s）</li>
+<li>处理时延：一般不方便计算</li>
+</ul>
+</li>
+<li>时延带宽积<ul>
+<li>传播时延和带宽的乘积</li>
+<li>若发送端连续发送数据，则在所发送的第一个比特即将到达终点时，发送端就已经发送了时延带宽积个比特</li>
+<li>链路的时延带宽积又称为以比特为单位的链路长度</li>
+</ul>
+</li>
+<li>往返时间RTT<ul>
+<li>双向交互</li>
+</ul>
+</li>
+<li>利用率<ul>
+<li>信道利用率：用来表示信道有百分之几的时间是被利用的（有数据通过）</li>
+<li>网络利用率：全网络的行道利用率的加权平均</li>
+<li>利用率并非越高越好：当某信道的利用率增大时，该信道引起的时延也会迅速增加</li>
+<li>也不能使行到利用率太低，这会使宝贵的信道资源被拜拜浪费</li>
+</ul>
+</li>
+<li>丢包率<ul>
+<li>丢包率即分组丢失率，是指在一定的时间范围内，传输过程中丢失的分组数量与总分组数量的比率</li>
+<li>分组丢失的两个主要原因：分组误码，结点交换机缓存队列满（网络拥塞）</li>
+</ul>
+</li>
+</ol>
+<h2 id="计算机网络体系结构"><a href="#计算机网络体系结构" class="headerlink" title="计算机网络体系结构"></a>计算机网络体系结构</h2><h3 id="常见结构"><a href="#常见结构" class="headerlink" title="常见结构"></a>常见结构</h3><ol>
+<li>OSI体系结构<br>物理层，数据链路层，网络层，运输层，会话层，表示层，应用</li>
+<li>TCP/IP体系结构<br>网络接口层，网际层，运输层，应用层</li>
+<li>教学<br>物理层，数据链路层，网络层，运输层，应用层<h3 id="分层必要性"><a href="#分层必要性" class="headerlink" title="分层必要性"></a>分层必要性</h3></li>
+</ol>
+]]></content>
+      <categories>
+        <category>计算机网络</category>
+      </categories>
+      <tags>
+        <tag>计算机网络</tag>
       </tags>
   </entry>
 </search>
