@@ -1,19 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>C++笔记（转载）</title>
-    <url>/2021/12/09/C++%E7%AC%94%E8%AE%B0%EF%BC%88%E8%BD%AC%E8%BD%BD%EF%BC%89/</url>
-    <content><![CDATA[<h4 id="侯捷C-课程笔记01-面向对象高级编程（上）"><a href="#侯捷C-课程笔记01-面向对象高级编程（上）" class="headerlink" title="侯捷C++课程笔记01: 面向对象高级编程（上）"></a>侯捷C++课程笔记01: 面向对象高级编程（上）</h4><p><a href="https://blog.csdn.net/ncepu_Chen/article/details/113843775">https://blog.csdn.net/ncepu_Chen/article/details/113843775</a></p>
-<h4 id="侯捷C-课程笔记02-面向对象高级编程（下）"><a href="#侯捷C-课程笔记02-面向对象高级编程（下）" class="headerlink" title="侯捷C++课程笔记02: 面向对象高级编程（下）"></a>侯捷C++课程笔记02: 面向对象高级编程（下）</h4><p><a href="https://blog.csdn.net/ncepu_Chen/article/details/114686488">https://blog.csdn.net/ncepu_Chen/article/details/114686488</a></p>
-<h4 id="侯捷C-课程笔记02-面向对象高级编程（下）-1"><a href="#侯捷C-课程笔记02-面向对象高级编程（下）-1" class="headerlink" title="侯捷C++课程笔记02: 面向对象高级编程（下）"></a>侯捷C++课程笔记02: 面向对象高级编程（下）</h4><p><a href="https://blog.csdn.net/ncepu_Chen/article/details/114686488">https://blog.csdn.net/ncepu_Chen/article/details/114686488</a></p>
-<h4 id="侯捷C-课程笔记03-STL标准库与泛型编程"><a href="#侯捷C-课程笔记03-STL标准库与泛型编程" class="headerlink" title="侯捷C++课程笔记03: STL标准库与泛型编程"></a>侯捷C++课程笔记03: STL标准库与泛型编程</h4><p><a href="https://blog.csdn.net/ncepu_Chen/article/details/114947710">https://blog.csdn.net/ncepu_Chen/article/details/114947710</a></p>
-<h4 id="侯捷C-课程笔记04-C-2-0新特性"><a href="#侯捷C-课程笔记04-C-2-0新特性" class="headerlink" title="侯捷C++课程笔记04: C++2.0新特性"></a>侯捷C++课程笔记04: C++2.0新特性</h4><p><a href="https://blog.csdn.net/ncepu_Chen/article/details/115375559">https://blog.csdn.net/ncepu_Chen/article/details/115375559</a></p>
+    <title>clash_for_widnows去除软件内广告</title>
+    <url>/2023/02/11/clash-for-widnows%E5%8E%BB%E9%99%A4%E8%BD%AF%E4%BB%B6%E5%86%85%E5%B9%BF%E5%91%8A/</url>
+    <content><![CDATA[<h1 id="解包app-asar"><a href="#解包app-asar" class="headerlink" title="解包app.asar"></a>解包app.asar</h1><ol>
+<li>安装npm（去nodejs官方下载稳定版）</li>
+<li>安装好npm后执行命令安装asar：<code>npm install asar -g</code><br>也可以去官方：<a href="https://github.com/electron/asar">https://github.com/electron/asar</a></li>
+<li>在需要逆向的文件目录 /Resources下找到app.asar<br>用asar命令解包：<code>asar e app.asar tmp</code></li>
+<li>到建立的tmp目录下找到需要逆向的js文件去修改，<br>逆向完后重新封装程序 ：<code>asar p tmp/ app.asar</code>，逆向完成。</li>
+</ol>
+<h1 id="修改文件"><a href="#修改文件" class="headerlink" title="修改文件"></a>修改文件</h1><ol>
+<li>找到render.js</li>
+<li>搜索代码片段：advertisement</li>
+<li>移除掉[e._v(“advertisementnt”)]中的<code>advertissment</code>内容然后分别移除 <code>ad-img-list</code> <code>ad-img</code>  <code>lazy-image-view</code></li>
+<li>原始代码:<img src="/2023/02/11/clash-for-widnows%E5%8E%BB%E9%99%A4%E8%BD%AF%E4%BB%B6%E5%86%85%E5%B9%BF%E5%91%8A/clash%E5%8E%BB%E5%B9%BF%E5%91%8A.png" alt="clash去广告"></li>
+<li>修改后 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">i(&quot;div&quot;, &#123; staticClass: &quot;section ad-section&quot; &#125;, [</span><br><span class="line">                            i(&quot;div&quot;, &#123; staticClass: &quot;title&quot; &#125;, [e._v(&quot;&quot;)]),</span><br><span class="line">                            e._v(&quot; &quot;),</span><br><span class="line">                            i(</span><br><span class="line">                                &quot;div&quot;,</span><br><span class="line">                                &#123; staticClass: &quot;&quot; &#125;,</span><br><span class="line">                                e._l(e.adImages, function (t, n) &#123;</span><br><span class="line">                                    return i(</span><br><span class="line">                                        &quot;div&quot;,</span><br><span class="line">                                        &#123; key: n, staticClass: &quot;&quot; &#125;,</span><br><span class="line">                                        [</span><br><span class="line">                                            i(&quot;&quot;, &#123;</span><br><span class="line">                                                attrs: &#123; clickalbe: t.click, src: t.img &#125;,</span><br><span class="line">                                                on: &#123;</span><br><span class="line">                                                    click: function (t) &#123;</span><br><span class="line">                                                        return e.adClick(n);</span><br><span class="line">                                                    &#125;,</span><br><span class="line">                                                &#125;,</span><br><span class="line">                                            &#125;),</span><br><span class="line">                                        ],</span><br><span class="line">                                        1</span><br><span class="line">                                    );</span><br><span class="line">                                &#125;),</span><br><span class="line">                                0</span><br><span class="line">                            ),</span><br><span class="line">                        ]),</span><br><span class="line"></span><br></pre></td></tr></table></figure></li>
+</ol>
 ]]></content>
       <categories>
-        <category>C++</category>
+        <category>编程工具</category>
       </categories>
       <tags>
-        <tag>C++</tag>
+        <tag>clash</tag>
+        <tag>科学上网</tag>
       </tags>
   </entry>
   <entry>
@@ -44,28 +53,50 @@
       </tags>
   </entry>
   <entry>
-    <title>clash_for_widnows去除软件内广告</title>
-    <url>/2023/02/11/clash-for-widnows%E5%8E%BB%E9%99%A4%E8%BD%AF%E4%BB%B6%E5%86%85%E5%B9%BF%E5%91%8A/</url>
-    <content><![CDATA[<h1 id="解包app-asar"><a href="#解包app-asar" class="headerlink" title="解包app.asar"></a>解包app.asar</h1><ol>
-<li>安装npm（去nodejs官方下载稳定版）</li>
-<li>安装好npm后执行命令安装asar：<code>npm install asar -g</code><br>也可以去官方：<a href="https://github.com/electron/asar">https://github.com/electron/asar</a></li>
-<li>在需要逆向的文件目录 /Resources下找到app.asar<br>用asar命令解包：<code>asar e app.asar tmp</code></li>
-<li>到建立的tmp目录下找到需要逆向的js文件去修改，<br>逆向完后重新封装程序 ：<code>asar p tmp/ app.asar</code>，逆向完成。</li>
-</ol>
-<h1 id="修改文件"><a href="#修改文件" class="headerlink" title="修改文件"></a>修改文件</h1><ol>
-<li>找到render.js</li>
-<li>搜索代码片段：advertisement</li>
-<li>移除掉[e._v(“advertisementnt”)]中的<code>advertissment</code>内容然后分别移除 <code>ad-img-list</code> <code>ad-img</code>  <code>lazy-image-view</code></li>
-<li>原始代码:<img src="/2023/02/11/clash-for-widnows%E5%8E%BB%E9%99%A4%E8%BD%AF%E4%BB%B6%E5%86%85%E5%B9%BF%E5%91%8A/clash%E5%8E%BB%E5%B9%BF%E5%91%8A.png" alt="clash去广告"></li>
-<li>修改后 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">i(&quot;div&quot;, &#123; staticClass: &quot;section ad-section&quot; &#125;, [</span><br><span class="line">                            i(&quot;div&quot;, &#123; staticClass: &quot;title&quot; &#125;, [e._v(&quot;&quot;)]),</span><br><span class="line">                            e._v(&quot; &quot;),</span><br><span class="line">                            i(</span><br><span class="line">                                &quot;div&quot;,</span><br><span class="line">                                &#123; staticClass: &quot;&quot; &#125;,</span><br><span class="line">                                e._l(e.adImages, function (t, n) &#123;</span><br><span class="line">                                    return i(</span><br><span class="line">                                        &quot;div&quot;,</span><br><span class="line">                                        &#123; key: n, staticClass: &quot;&quot; &#125;,</span><br><span class="line">                                        [</span><br><span class="line">                                            i(&quot;&quot;, &#123;</span><br><span class="line">                                                attrs: &#123; clickalbe: t.click, src: t.img &#125;,</span><br><span class="line">                                                on: &#123;</span><br><span class="line">                                                    click: function (t) &#123;</span><br><span class="line">                                                        return e.adClick(n);</span><br><span class="line">                                                    &#125;,</span><br><span class="line">                                                &#125;,</span><br><span class="line">                                            &#125;),</span><br><span class="line">                                        ],</span><br><span class="line">                                        1</span><br><span class="line">                                    );</span><br><span class="line">                                &#125;),</span><br><span class="line">                                0</span><br><span class="line">                            ),</span><br><span class="line">                        ]),</span><br><span class="line"></span><br></pre></td></tr></table></figure></li>
-</ol>
+    <title>C++笔记（转载）</title>
+    <url>/2021/12/09/C++%E7%AC%94%E8%AE%B0%EF%BC%88%E8%BD%AC%E8%BD%BD%EF%BC%89/</url>
+    <content><![CDATA[<h4 id="侯捷C-课程笔记01-面向对象高级编程（上）"><a href="#侯捷C-课程笔记01-面向对象高级编程（上）" class="headerlink" title="侯捷C++课程笔记01: 面向对象高级编程（上）"></a>侯捷C++课程笔记01: 面向对象高级编程（上）</h4><p><a href="https://blog.csdn.net/ncepu_Chen/article/details/113843775">https://blog.csdn.net/ncepu_Chen/article/details/113843775</a></p>
+<h4 id="侯捷C-课程笔记02-面向对象高级编程（下）"><a href="#侯捷C-课程笔记02-面向对象高级编程（下）" class="headerlink" title="侯捷C++课程笔记02: 面向对象高级编程（下）"></a>侯捷C++课程笔记02: 面向对象高级编程（下）</h4><p><a href="https://blog.csdn.net/ncepu_Chen/article/details/114686488">https://blog.csdn.net/ncepu_Chen/article/details/114686488</a></p>
+<h4 id="侯捷C-课程笔记02-面向对象高级编程（下）-1"><a href="#侯捷C-课程笔记02-面向对象高级编程（下）-1" class="headerlink" title="侯捷C++课程笔记02: 面向对象高级编程（下）"></a>侯捷C++课程笔记02: 面向对象高级编程（下）</h4><p><a href="https://blog.csdn.net/ncepu_Chen/article/details/114686488">https://blog.csdn.net/ncepu_Chen/article/details/114686488</a></p>
+<h4 id="侯捷C-课程笔记03-STL标准库与泛型编程"><a href="#侯捷C-课程笔记03-STL标准库与泛型编程" class="headerlink" title="侯捷C++课程笔记03: STL标准库与泛型编程"></a>侯捷C++课程笔记03: STL标准库与泛型编程</h4><p><a href="https://blog.csdn.net/ncepu_Chen/article/details/114947710">https://blog.csdn.net/ncepu_Chen/article/details/114947710</a></p>
+<h4 id="侯捷C-课程笔记04-C-2-0新特性"><a href="#侯捷C-课程笔记04-C-2-0新特性" class="headerlink" title="侯捷C++课程笔记04: C++2.0新特性"></a>侯捷C++课程笔记04: C++2.0新特性</h4><p><a href="https://blog.csdn.net/ncepu_Chen/article/details/115375559">https://blog.csdn.net/ncepu_Chen/article/details/115375559</a></p>
 ]]></content>
       <categories>
-        <category>编程工具</category>
+        <category>C++</category>
       </categories>
       <tags>
-        <tag>clash</tag>
-        <tag>科学上网</tag>
+        <tag>C++</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>每日一句3.1</title>
+    <url>/2023/03/01/%E6%AF%8F%E6%97%A5%E4%B8%80%E5%8F%A53-1/</url>
+    <content><![CDATA[<p>原句：It is difficult to the point of impossibility for the average reader under the age of forty to imagine a time when high-quality arts criticism could be found in most big-city newspapers.</p>
+<p>生词： to the point of:达到。。。点 ,到了。。。程度</p>
+<p>翻译：对于年龄在四十岁以下的普通读者来说很难想象在大多数城市报纸上都能找到高质量的艺术评论。</p>
+]]></content>
+      <categories>
+        <category>每日一句</category>
+      </categories>
+      <tags>
+        <tag>每日一句</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>局部均值滤波算法与实现</title>
+    <url>/2021/10/21/%E5%B1%80%E9%83%A8%E5%9D%87%E5%80%BC%E6%BB%A4%E6%B3%A2%E7%AE%97%E6%B3%95%E4%B8%8E%E5%AE%9E%E7%8E%B0/</url>
+    <content><![CDATA[<h3 id="算法原理"><a href="#算法原理" class="headerlink" title="算法原理"></a>算法原理</h3><p><img src="/2021/10/21/%E5%B1%80%E9%83%A8%E5%9D%87%E5%80%BC%E6%BB%A4%E6%B3%A2%E7%AE%97%E6%B3%95%E4%B8%8E%E5%AE%9E%E7%8E%B0/%E5%9D%87%E5%80%BC.jpeg" alt="均值.jpeg"><br><img src="/2021/10/21/%E5%B1%80%E9%83%A8%E5%9D%87%E5%80%BC%E6%BB%A4%E6%B3%A2%E7%AE%97%E6%B3%95%E4%B8%8E%E5%AE%9E%E7%8E%B0/%E6%96%B9%E5%B7%AE.jpeg" alt="方差.jpeg"><br><img src="/2021/10/21/%E5%B1%80%E9%83%A8%E5%9D%87%E5%80%BC%E6%BB%A4%E6%B3%A2%E7%AE%97%E6%B3%95%E4%B8%8E%E5%AE%9E%E7%8E%B0/%E5%8E%BB%E5%99%AA%E7%BB%93%E6%9E%9C.jpeg" alt="去噪结果.jpeg"><br><img src="/2021/10/21/%E5%B1%80%E9%83%A8%E5%9D%87%E5%80%BC%E6%BB%A4%E6%B3%A2%E7%AE%97%E6%B3%95%E4%B8%8E%E5%AE%9E%E7%8E%B0/K.jpeg" alt="参数K.jpeg"><br>式（4）中σ为用户输入的参数</p>
+<h3 id="matlab实现"><a href="#matlab实现" class="headerlink" title="matlab实现"></a>matlab实现</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">clear;</span><br><span class="line">r=3;     %邻域大小为:[2*r+1,2*r+1]</span><br><span class="line">q=1000;  %用户自定义参数,范围0~∞</span><br><span class="line"></span><br><span class="line">% 读入图片</span><br><span class="line">I = imread(&#x27;pic.jpg&#x27;);</span><br><span class="line">[n,m,d] = size(I);   %得到图片大小 n行m列矩阵</span><br><span class="line">%I=rgb2gray(I);      %源图片转灰度图</span><br><span class="line">subplot(1,2,1),imshow(I);title(&quot;原图&quot;);</span><br><span class="line">I=double(I);         %转为双精度</span><br><span class="line"></span><br><span class="line">% 扩展输入图片边界</span><br><span class="line">img_expend = zeros(n+2*(2*r+1),m+2*(2*r+1),d);</span><br><span class="line">for i=1:n</span><br><span class="line">    for j=1:m</span><br><span class="line">        img_expend(i+r,j+r,:)=I(i,j,:);</span><br><span class="line">    end</span><br><span class="line">end</span><br><span class="line"></span><br><span class="line">% 计算均值和方差</span><br><span class="line">for i=r+1:r+n</span><br><span class="line">    for j=r+1:r+m  </span><br><span class="line">        %计算邻域范围内的均值</span><br><span class="line">        m_ij=0;</span><br><span class="line">        for x = i-r:i+r</span><br><span class="line">            for y = j-r:j+r</span><br><span class="line">                m_ij = m_ij + img_expend(x,y,:);</span><br><span class="line">            end</span><br><span class="line">        end</span><br><span class="line">        m_ij=m_ij/((2*r+1)*(2*r+1));</span><br><span class="line">        </span><br><span class="line">        %计算领域范围内的方差</span><br><span class="line">        v_ij=0;</span><br><span class="line">        for x = i-r:i+r</span><br><span class="line">            for y = j-r:j+r</span><br><span class="line">                v_ij = v_ij + (img_expend(x,y,:)-m_ij).*(img_expend(x,y,:)-m_ij);</span><br><span class="line">            end</span><br><span class="line">        end</span><br><span class="line">        v_ij=v_ij/((2*r+1)*(2*r+1));</span><br><span class="line"></span><br><span class="line">        %计算输出滤波值</span><br><span class="line">        k = v_ij./(v_ij+q);   </span><br><span class="line">        img_expend(i,j,:) = (1-k).*m_ij + k.*img_expend(i,j,:);   </span><br><span class="line">    end</span><br><span class="line">end</span><br><span class="line"></span><br><span class="line">% 保存结果</span><br><span class="line">result = zeros(n,m,d);</span><br><span class="line">for i=1:n</span><br><span class="line">    for j=1:m</span><br><span class="line">        result(i,j,:)=img_expend(i+r,j+r,:);</span><br><span class="line">    end</span><br><span class="line">end</span><br><span class="line"></span><br><span class="line">% 输出图像</span><br><span class="line">subplot(1,2,2),imshow(mat2gray(result));title(&quot;局部均值滤波&quot;);</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="其他方法实现美颜磨皮"><a href="#其他方法实现美颜磨皮" class="headerlink" title="其他方法实现美颜磨皮"></a>其他方法实现美颜磨皮</h3><p><a href="https://www.cnblogs.com/qxzy/p/4109805.html">matlab各向异性扩散滤波</a></p>
+<p><a href="https://blog.csdn.net/IronBull_Zhang/article/details/105158482">Matlab表面模糊程序</a></p>
+<h3 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h3><p><a href="https://blog.csdn.net/trent1985/article/details/80773642">图像保边滤波算法集锦系列</a><br><a href="https://cloud.tencent.com/developer/article/1011865">基于局部均方差相关信息的图像去噪及其在实时磨皮美容算法中的应用。</a></p>
+]]></content>
+      <categories>
+        <category>matlab</category>
+      </categories>
+      <tags>
+        <tag>matlab</tag>
       </tags>
   </entry>
   <entry>
@@ -100,28 +131,11 @@
       </tags>
   </entry>
   <entry>
-    <title>局部均值滤波算法与实现</title>
-    <url>/2021/10/21/%E5%B1%80%E9%83%A8%E5%9D%87%E5%80%BC%E6%BB%A4%E6%B3%A2%E7%AE%97%E6%B3%95%E4%B8%8E%E5%AE%9E%E7%8E%B0/</url>
-    <content><![CDATA[<h3 id="算法原理"><a href="#算法原理" class="headerlink" title="算法原理"></a>算法原理</h3><p><img src="/2021/10/21/%E5%B1%80%E9%83%A8%E5%9D%87%E5%80%BC%E6%BB%A4%E6%B3%A2%E7%AE%97%E6%B3%95%E4%B8%8E%E5%AE%9E%E7%8E%B0/%E5%9D%87%E5%80%BC.jpeg" alt="均值.jpeg"><br><img src="/2021/10/21/%E5%B1%80%E9%83%A8%E5%9D%87%E5%80%BC%E6%BB%A4%E6%B3%A2%E7%AE%97%E6%B3%95%E4%B8%8E%E5%AE%9E%E7%8E%B0/%E6%96%B9%E5%B7%AE.jpeg" alt="方差.jpeg"><br><img src="/2021/10/21/%E5%B1%80%E9%83%A8%E5%9D%87%E5%80%BC%E6%BB%A4%E6%B3%A2%E7%AE%97%E6%B3%95%E4%B8%8E%E5%AE%9E%E7%8E%B0/%E5%8E%BB%E5%99%AA%E7%BB%93%E6%9E%9C.jpeg" alt="去噪结果.jpeg"><br><img src="/2021/10/21/%E5%B1%80%E9%83%A8%E5%9D%87%E5%80%BC%E6%BB%A4%E6%B3%A2%E7%AE%97%E6%B3%95%E4%B8%8E%E5%AE%9E%E7%8E%B0/K.jpeg" alt="参数K.jpeg"><br>式（4）中σ为用户输入的参数</p>
-<h3 id="matlab实现"><a href="#matlab实现" class="headerlink" title="matlab实现"></a>matlab实现</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">clear;</span><br><span class="line">r=3;     %邻域大小为:[2*r+1,2*r+1]</span><br><span class="line">q=1000;  %用户自定义参数,范围0~∞</span><br><span class="line"></span><br><span class="line">% 读入图片</span><br><span class="line">I = imread(&#x27;pic.jpg&#x27;);</span><br><span class="line">[n,m,d] = size(I);   %得到图片大小 n行m列矩阵</span><br><span class="line">%I=rgb2gray(I);      %源图片转灰度图</span><br><span class="line">subplot(1,2,1),imshow(I);title(&quot;原图&quot;);</span><br><span class="line">I=double(I);         %转为双精度</span><br><span class="line"></span><br><span class="line">% 扩展输入图片边界</span><br><span class="line">img_expend = zeros(n+2*(2*r+1),m+2*(2*r+1),d);</span><br><span class="line">for i=1:n</span><br><span class="line">    for j=1:m</span><br><span class="line">        img_expend(i+r,j+r,:)=I(i,j,:);</span><br><span class="line">    end</span><br><span class="line">end</span><br><span class="line"></span><br><span class="line">% 计算均值和方差</span><br><span class="line">for i=r+1:r+n</span><br><span class="line">    for j=r+1:r+m  </span><br><span class="line">        %计算邻域范围内的均值</span><br><span class="line">        m_ij=0;</span><br><span class="line">        for x = i-r:i+r</span><br><span class="line">            for y = j-r:j+r</span><br><span class="line">                m_ij = m_ij + img_expend(x,y,:);</span><br><span class="line">            end</span><br><span class="line">        end</span><br><span class="line">        m_ij=m_ij/((2*r+1)*(2*r+1));</span><br><span class="line">        </span><br><span class="line">        %计算领域范围内的方差</span><br><span class="line">        v_ij=0;</span><br><span class="line">        for x = i-r:i+r</span><br><span class="line">            for y = j-r:j+r</span><br><span class="line">                v_ij = v_ij + (img_expend(x,y,:)-m_ij).*(img_expend(x,y,:)-m_ij);</span><br><span class="line">            end</span><br><span class="line">        end</span><br><span class="line">        v_ij=v_ij/((2*r+1)*(2*r+1));</span><br><span class="line"></span><br><span class="line">        %计算输出滤波值</span><br><span class="line">        k = v_ij./(v_ij+q);   </span><br><span class="line">        img_expend(i,j,:) = (1-k).*m_ij + k.*img_expend(i,j,:);   </span><br><span class="line">    end</span><br><span class="line">end</span><br><span class="line"></span><br><span class="line">% 保存结果</span><br><span class="line">result = zeros(n,m,d);</span><br><span class="line">for i=1:n</span><br><span class="line">    for j=1:m</span><br><span class="line">        result(i,j,:)=img_expend(i+r,j+r,:);</span><br><span class="line">    end</span><br><span class="line">end</span><br><span class="line"></span><br><span class="line">% 输出图像</span><br><span class="line">subplot(1,2,2),imshow(mat2gray(result));title(&quot;局部均值滤波&quot;);</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<h3 id="其他方法实现美颜磨皮"><a href="#其他方法实现美颜磨皮" class="headerlink" title="其他方法实现美颜磨皮"></a>其他方法实现美颜磨皮</h3><p><a href="https://www.cnblogs.com/qxzy/p/4109805.html">matlab各向异性扩散滤波</a></p>
-<p><a href="https://blog.csdn.net/IronBull_Zhang/article/details/105158482">Matlab表面模糊程序</a></p>
-<h3 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h3><p><a href="https://blog.csdn.net/trent1985/article/details/80773642">图像保边滤波算法集锦系列</a><br><a href="https://cloud.tencent.com/developer/article/1011865">基于局部均方差相关信息的图像去噪及其在实时磨皮美容算法中的应用。</a></p>
-]]></content>
-      <categories>
-        <category>matlab</category>
-      </categories>
-      <tags>
-        <tag>matlab</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>每日一句3.1</title>
-    <url>/2023/03/01/%E6%AF%8F%E6%97%A5%E4%B8%80%E5%8F%A53-1/</url>
-    <content><![CDATA[<p>原句：It is difficult to the point of impossibility for the average reader under the age of forty to imagine a time when high-quality arts criticism could be found in most big-city newspapers.</p>
-<p>生词： to the point of:达到。。。点 ,到了。。。程度</p>
-<p>翻译：对于年龄在四十岁以下的普通读者来说很难想象在大多数城市报纸上都能找到高质量的艺术评论。</p>
+    <title>每日一句3.10</title>
+    <url>/2023/03/10/%E6%AF%8F%E6%97%A5%E4%B8%80%E5%8F%A53-10/</url>
+    <content><![CDATA[<p>原句：The IASB says it does not want to act without overall planning,but the pressure to fold when it completes its reconstruction of rules later this year is strong.</p>
+<p>生词：<code>overrall planning 整体的，全部的规划</code> <code>complete 完全的，完整的，完成，结束</code></p>
+<p>翻译：国际会计准则理事会表示，它不想在没有整体规划的情况下采取行动，但在今年晚些时候完成规则重建时，它面临着巨大的让步压力</p>
 ]]></content>
       <categories>
         <category>每日一句</category>
@@ -157,11 +171,53 @@
       </tags>
   </entry>
   <entry>
-    <title>每日一句3.10</title>
-    <url>/2023/03/10/%E6%AF%8F%E6%97%A5%E4%B8%80%E5%8F%A53-10/</url>
-    <content><![CDATA[<p>原句：The IASB says it does not want to act without overall planning,but the pressure to fold when it completes its reconstruction of rules later this year is strong.</p>
-<p>生词：<code>overrall planning 整体的，全部的规划</code> <code>complete 完全的，完整的，完成，结束</code></p>
-<p>翻译：国际会计准则理事会表示，它不想在没有整体规划的情况下采取行动，但在今年晚些时候完成规则重建时，它面临着巨大的让步压力</p>
+    <title>每日一句3.15</title>
+    <url>/2023/03/15/%E6%AF%8F%E6%97%A5%E4%B8%80%E5%8F%A53-15/</url>
+    <content><![CDATA[<p>原句：In short,the image that best represents the current crisis is the stereotypical cartoon scene of a man sitting at the breakfast table with a newspaper held up in front of his face,while a woman glares at the back of it,wanting to talk.</p>
+<p>生词：<code>In short 简而言之，长话多说</code> <code>represent 代表，表现</code> <code>stereotypical 典型的，老一套的，刻板化的，模式化的</code>  <code>glare 怒目而视，发出刺眼的光</code></p>
+<p>翻译：简而言之，最能代表当前危机的形象是一个老套的卡通场景，即一个男人在早餐桌前把报纸举在他的脸上，而一位女士盯着报纸的背面，想要说话。</p>
+]]></content>
+      <categories>
+        <category>每日一句</category>
+      </categories>
+      <tags>
+        <tag>每日一句</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>每日一句3.15</title>
+    <url>/2023/03/15/%E6%AF%8F%E6%97%A5%E4%B8%80%E5%8F%A53-16/</url>
+    <content><![CDATA[<p>原句：The companies that Dr.Curtis turned to –Procter &amp; Gamble,Colgate-Palmolive and Unilever–had invested hundresd of millions of dollars finding the subtle cues in consumers’lives that corporations could use to introduce new routines.</p>
+<p>生词：<code>turn to 转向，求助</code> <code>subtle 微妙的，以察觉的</code> <code>cues 暗示，提示，线索</code>  <code>corporation 公司</code> <code>routine 惯例</code></p>
+<p>翻译：Dr.Curtis 求助的公司–Procter &amp; …已经投资了几百万美元去发现顾客在生活中微妙的线索，这些线索可以被公司引入新的习惯。</p>
+]]></content>
+      <categories>
+        <category>每日一句</category>
+      </categories>
+      <tags>
+        <tag>每日一句</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>每日一句3.17</title>
+    <url>/2023/03/17/%E6%AF%8F%E6%97%A5%E4%B8%80%E5%8F%A53-17/</url>
+    <content><![CDATA[<p>原句：Many Americans regard the jury sustem as a concrete expression of crucial democratic values,including the principles that all citizens who meet minimal qualifitions of age and literacy are equally competent to serve on juries;that jurors should be selected randomly from a representative cross section of the community;that no citizen should  be denied the right to serve on a jury on account of race,religion,sex,or national origin;that defendants are entitled to trial by their peers;and that verdicts should represent the conscience of the community and not just the letter of the law.</p>
+<p>生词：<code>contrete 具体的，实在的</code> <code>crucial 重要的</code> <code>competent 有能力的</code>  <code>on acount of  因为，由于</code> <code>verdict 判决</code> <code>conscience 良知</code> <code>defendant  被告，被告人</code></p>
+<p>翻译：许多美国人把陪审团制度视为重要民主价值的具体的表达，包括满足年龄和文化水平的最低资格的所有公民都有平等的权利去服务于陪审，陪审员应该随机地从社会各个代表中选出，没有人应该被否定参与陪审的权利因为种族，地区，性别，原始国籍，被告有机会被他的同僚审判，判决代表社会良知而不是法律条文。</p>
+]]></content>
+      <categories>
+        <category>每日一句</category>
+      </categories>
+      <tags>
+        <tag>每日一句</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>每日一句3.2</title>
+    <url>/2023/03/02/%E6%AF%8F%E6%97%A5%E4%B8%80%E5%8F%A53-2/</url>
+    <content><![CDATA[<p>原句： Of all the changes that have taken place in English-language newspapers during the past quarter-century,perhaps the most far-reaching has been the inexorable decline in the scope and seriousness of their arts coverage.</p>
+<p>生词： <code>inexorable:不可阻挡的，无法改变的</code> <code>far-reaching:影响深远的，广泛的</code> <code>coverage:覆盖，报道</code></p>
+<p>翻译： 在过去25年里英文报纸发生的所有改变中可能最深远的就是艺术报道地严肃性和范围不可避免地下降。</p>
 ]]></content>
       <categories>
         <category>每日一句</category>
@@ -184,53 +240,11 @@
       </tags>
   </entry>
   <entry>
-    <title>每日一句3.15</title>
-    <url>/2023/03/15/%E6%AF%8F%E6%97%A5%E4%B8%80%E5%8F%A53-15/</url>
-    <content><![CDATA[<p>原句：In short,the image that best represents the current crisis is the stereotypical cartoon scene of a man sitting at the breakfast table with a newspaper held up in front of his face,while a woman glares at the back of it,wanting to talk.</p>
-<p>生词：<code>In short 简而言之，长话多说</code> <code>represent 代表，表现</code> <code>stereotypical 典型的，老一套的，刻板化的，模式化的</code>  <code>glare 怒目而视，发出刺眼的光</code></p>
-<p>翻译：简而言之，最能代表当前危机的形象是一个老套的卡通场景，即一个男人在早餐桌前把报纸举在他的脸上，而一位女士盯着报纸的背面，想要说话。</p>
-]]></content>
-      <categories>
-        <category>每日一句</category>
-      </categories>
-      <tags>
-        <tag>每日一句</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>每日一句3.14</title>
-    <url>/2023/03/14/%E6%AF%8F%E6%97%A5%E4%B8%80%E5%8F%A53-14/</url>
-    <content><![CDATA[<p>原句：The episode crystallizes the irony that although American men tend to talk more than women in public situations,they often takl less at home.</p>
-<p>生词：<code>episode 一段情节</code> <code>crystalliz 使结晶，使。。。具体化</code> <code>irony 讽刺</code>  </p>
-<p>翻译：这段情节讽刺化了尽管美国男性在公共场合比女性谈论更多但在家里时却交流很少。</p>
-]]></content>
-      <categories>
-        <category>每日一句</category>
-      </categories>
-      <tags>
-        <tag>每日一句</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>每日一句3.15</title>
-    <url>/2023/03/15/%E6%AF%8F%E6%97%A5%E4%B8%80%E5%8F%A53-16/</url>
-    <content><![CDATA[<p>原句：In short,the image that best represents the current crisis is the stereotypical cartoon scene of a man sitting at the breakfast table with a newspaper held up in front of his face,while a woman glares at the back of it,wanting to talk.</p>
-<p>生词：<code>In short 简而言之，长话多说</code> <code>represent 代表，表现</code> <code>stereotypical 典型的，老一套的，刻板化的，模式化的</code>  <code>glare 怒目而视，发出刺眼的光</code></p>
-<p>翻译：简而言之，最能代表当前危机的形象是一个老套的卡通场景，即一个男人在早餐桌前把报纸举在他的脸上，而一位女士盯着报纸的背面，想要说话。</p>
-]]></content>
-      <categories>
-        <category>每日一句</category>
-      </categories>
-      <tags>
-        <tag>每日一句</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>每日一句3.2</title>
-    <url>/2023/03/02/%E6%AF%8F%E6%97%A5%E4%B8%80%E5%8F%A53-2/</url>
-    <content><![CDATA[<p>原句： Of all the changes that have taken place in English-language newspapers during the past quarter-century,perhaps the most far-reaching has been the inexorable decline in the scope and seriousness of their arts coverage.</p>
-<p>生词： <code>inexorable:不可阻挡的，无法改变的</code> <code>far-reaching:影响深远的，广泛的</code> <code>coverage:覆盖，报道</code></p>
-<p>翻译： 在过去25年里英文报纸发生的所有改变中可能最深远的就是艺术报道地严肃性和范围不可避免地下降。</p>
+    <title>每日一句3.3</title>
+    <url>/2023/03/03/%E6%AF%8F%E6%97%A5%E4%B8%80%E5%8F%A53-3/</url>
+    <content><![CDATA[<p>原句: We are even farther removed from the unfocused newspaper reviews published in England between the turn of the 20th century and the eve of World War II,at a time when newsprint was dirt-cheap and stylish arts criticism was considered an ornament to the publications in which it appeared.</p>
+<p>生词：<code>ornament  [n.] 装饰品;首饰;饰物;装饰;摆设;点缀;为…增添光彩的人（或事物）  [vt.]装饰;点缀;美化</code></p>
+<p>翻译：在二十世纪初到第二次世界大战前夕期间，我们甚至远离了那些发表在英国的无重点的报纸评论。在那时，新闻纸非常便宜，高水平的艺术评论被认为是出现在出版物上的点缀。</p>
 ]]></content>
       <categories>
         <category>每日一句</category>
@@ -283,11 +297,11 @@
       </tags>
   </entry>
   <entry>
-    <title>每日一句3.3</title>
-    <url>/2023/03/03/%E6%AF%8F%E6%97%A5%E4%B8%80%E5%8F%A53-3/</url>
-    <content><![CDATA[<p>原句: We are even farther removed from the unfocused newspaper reviews published in England between the turn of the 20th century and the eve of World War II,at a time when newsprint was dirt-cheap and stylish arts criticism was considered an ornament to the publications in which it appeared.</p>
-<p>生词：<code>ornament  [n.] 装饰品;首饰;饰物;装饰;摆设;点缀;为…增添光彩的人（或事物）  [vt.]装饰;点缀;美化</code></p>
-<p>翻译：在二十世纪初到第二次世界大战前夕期间，我们甚至远离了那些发表在英国的无重点的报纸评论。在那时，新闻纸非常便宜，高水平的艺术评论被认为是出现在出版物上的点缀。</p>
+    <title>每日一句3.7</title>
+    <url>/2023/03/07/%E6%AF%8F%E6%97%A5%E4%B8%80%E5%8F%A53-7/</url>
+    <content><![CDATA[<p>原句：In his book The Tipping Point,Malcolm Gladwell argues that “social epidemics” are driven in large part by the actions of a tiny minority of special individuals,often called infuluentials,who are unusually informed,persuasive or well connected.</p>
+<p>生词：<code>informed 见多识广的，有学问的，有见识的</code></p>
+<p>翻译：在Manlcolm Gladwell 的著作《引爆点》中提到的一个观点，社会流行潮在很大程度上是被特殊的个体中的少数的行为驱使的，这些人被称作有影响力的人，他们有不寻常的学识储备，说服力和好的人脉关系。</p>
 ]]></content>
       <categories>
         <category>每日一句</category>
@@ -298,10 +312,10 @@
   </entry>
   <entry>
     <title>每日一句3.7</title>
-    <url>/2023/03/07/%E6%AF%8F%E6%97%A5%E4%B8%80%E5%8F%A53-7/</url>
-    <content><![CDATA[<p>原句：In his book The Tipping Point,Malcolm Gladwell argues that “social epidemics” are driven in large part by the actions of a tiny minority of special individuals,often called infuluentials,who are unusually informed,persuasive or well connected.</p>
-<p>生词：<code>informed 见多识广的，有学问的，有见识的</code></p>
-<p>翻译：在Manlcolm Gladwell 的著作《引爆点》中提到的一个观点，社会流行潮在很大程度上是被特殊的个体中的少数的行为驱使的，这些人被称作有影响力的人，他们有不寻常的学识储备，说服力和好的人脉关系。</p>
+    <url>/2023/03/08/%E6%AF%8F%E6%97%A5%E4%B8%80%E5%8F%A53-8/</url>
+    <content><![CDATA[<p>原句：For a social epidemic to occur,however,each person so affected must then influcence his or her own acquaintances,who must in turn influence theirs,and so on;and just how many others pay attention to each of these people has little to do with the inital influential.</p>
+<p>生词：<code>in turn 反过来，依次。。。</code> <code>has little to do with 和...之间没多少关系</code></p>
+<p>翻译：然而，要让一种社会流行潮发生，每个受到影响的人必然会影响到他/她自己的熟人，这些人又反过来影响他们等等，有多人注意到这些人中的每一个人跟最初的影响者没有什么关系。</p>
 ]]></content>
       <categories>
         <category>每日一句</category>
@@ -322,79 +336,6 @@
       </categories>
       <tags>
         <tag>每日一句</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>滑雪基础</title>
-    <url>/2023/02/07/%E6%BB%91%E9%9B%AA%E5%9F%BA%E7%A1%80/</url>
-    <content><![CDATA[<h1 id="滑雪初级技巧"><a href="#滑雪初级技巧" class="headerlink" title="滑雪初级技巧"></a>滑雪初级技巧</h1><h2 id="原地基础"><a href="#原地基础" class="headerlink" title="原地基础"></a>原地基础</h2><h3 id="握雪仗"><a href="#握雪仗" class="headerlink" title="握雪仗"></a>握雪仗</h3><p>握柄带套入约手腕位置，同时抓住柄带和握柄。<br><img src="/2023/02/07/%E6%BB%91%E9%9B%AA%E5%9F%BA%E7%A1%80/1.png" alt="握柄"></p>
-<h3 id="坡路穿板"><a href="#坡路穿板" class="headerlink" title="坡路穿板"></a>坡路穿板</h3><p>先穿下侧雪板，穿上下侧雪板后内刃刻在雪上,之后穿另一侧。<br><img src="/2023/02/07/%E6%BB%91%E9%9B%AA%E5%9F%BA%E7%A1%80/2.1.png" alt="坡路穿板1"><br><img src="/2023/02/07/%E6%BB%91%E9%9B%AA%E5%9F%BA%E7%A1%80/2.2.png" alt="坡路穿板2"></p>
-<h3 id="正确摔倒"><a href="#正确摔倒" class="headerlink" title="正确摔倒"></a>正确摔倒</h3><p>往两侧去摔倒<br><img src="/2023/02/07/%E6%BB%91%E9%9B%AA%E5%9F%BA%E7%A1%80/3.1.png" alt="摔倒"></p>
-<h3 id="站起"><a href="#站起" class="headerlink" title="站起"></a>站起</h3><p>板底冲山下，板头冲山上，雪仗在身体后方支撑，腰腹发力站起。<br><img src="/2023/02/07/%E6%BB%91%E9%9B%AA%E5%9F%BA%E7%A1%80/4.1.png" alt="站起1"><br><img src="/2023/02/07/%E6%BB%91%E9%9B%AA%E5%9F%BA%E7%A1%80/4.2.png" alt="站起2"><br><img src="/2023/02/07/%E6%BB%91%E9%9B%AA%E5%9F%BA%E7%A1%80/4.3.png" alt="站起3"></p>
-<h2 id="原地旋转"><a href="#原地旋转" class="headerlink" title="原地旋转"></a>原地旋转</h2><p>抬起一个雪板，刻住雪，翻转。两雪杖放在身体两侧，另一支板带回。<br><img src="/2023/02/07/%E6%BB%91%E9%9B%AA%E5%9F%BA%E7%A1%80/5.1.png" alt="旋转1"><br><img src="/2023/02/07/%E6%BB%91%E9%9B%AA%E5%9F%BA%E7%A1%80/5.2.png" alt="旋转2"></p>
-<h2 id="初级滑"><a href="#初级滑" class="headerlink" title="初级滑"></a>初级滑</h2><h3 id="支杆前进"><a href="#支杆前进" class="headerlink" title="支杆前进"></a>支杆前进</h3><p>雪杖支撑点撑在板头至脚尖距离的中点<br><img src="/2023/02/07/%E6%BB%91%E9%9B%AA%E5%9F%BA%E7%A1%80/6.1.png" alt="支杆前进"></p>
-<h3 id="横向登坡"><a href="#横向登坡" class="headerlink" title="横向登坡"></a>横向登坡</h3><p>往破上行走时，两膝盖同时下压，山下板内侧和山上板外侧刻住雪面。<br><img src="/2023/02/07/%E6%BB%91%E9%9B%AA%E5%9F%BA%E7%A1%80/7.1.png" alt="横向登坡"><br><img src="/2023/02/07/%E6%BB%91%E9%9B%AA%E5%9F%BA%E7%A1%80/7.2.png" alt="横向登坡"></p>
-<h3 id="梨式制动（梨式刹车）"><a href="#梨式制动（梨式刹车）" class="headerlink" title="梨式制动（梨式刹车）"></a>梨式制动（梨式刹车）</h3><p>身体前倾，重量放在两个板尖。两腿平均分配力量，一起蹬开。<br>蹬开之后，膝盖自动向里旋转，板刃内侧刻住雪面，外板边立起，两板尖约一拳之隔。<br><img src="/2023/02/07/%E6%BB%91%E9%9B%AA%E5%9F%BA%E7%A1%80/8.1.png" alt="梨式制动"><br><img src="/2023/02/07/%E6%BB%91%E9%9B%AA%E5%9F%BA%E7%A1%80/8.2.png" alt="梨式制动"></p>
-<h3 id="梨式滑降"><a href="#梨式滑降" class="headerlink" title="梨式滑降"></a>梨式滑降</h3><p>和梨式制动类似，板尖并上（约一拳之隔），板尾分开，内八字。<br>板尖，板尾宽度一直不变，重心在板尖处，虎口朝上，手往前伸，眼睛向前看，不要低头。<br>膝盖不越过鞋尖，臀部不超过鞋尾，手和腰平行。<br><img src="/2023/02/07/%E6%BB%91%E9%9B%AA%E5%9F%BA%E7%A1%80/9.1.png" alt="滑降"><br><img src="/2023/02/07/%E6%BB%91%E9%9B%AA%E5%9F%BA%E7%A1%80/9.2.png" alt="滑降"><br><img src="/2023/02/07/%E6%BB%91%E9%9B%AA%E5%9F%BA%E7%A1%80/9.3.png" alt="滑降"></p>
-]]></content>
-      <categories>
-        <category>随笔</category>
-      </categories>
-      <tags>
-        <tag>滑雪</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>每日一句3.7</title>
-    <url>/2023/03/08/%E6%AF%8F%E6%97%A5%E4%B8%80%E5%8F%A53-8/</url>
-    <content><![CDATA[<p>原句：For a social epidemic to occur,however,each person so affected must then influcence his or her own acquaintances,who must in turn influence theirs,and so on;and just how many others pay attention to each of these people has little to do with the inital influential.</p>
-<p>生词：<code>in turn 反过来，依次。。。</code> <code>has little to do with 和...之间没多少关系</code></p>
-<p>翻译：然而，要让一种社会流行潮发生，每个受到影响的人必然会影响到他/她自己的熟人，这些人又反过来影响他们等等，有多人注意到这些人中的每一个人跟最初的影响者没有什么关系。</p>
-]]></content>
-      <categories>
-        <category>每日一句</category>
-      </categories>
-      <tags>
-        <tag>每日一句</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>电子书资源</title>
-    <url>/2023/02/11/%E7%94%B5%E5%AD%90%E4%B9%A6%E8%B5%84%E6%BA%90/</url>
-    <content><![CDATA[<h2 id="导航类"><a href="#导航类" class="headerlink" title="导航类"></a>导航类</h2><ul>
-<li><a href="https://search.chongbuluo.com/">虫部落</a></li>
-<li><a href="https://www.zhishikoo.com/">书籍知识库</a></li>
-<li><a href="https://xmsoushu.com/#/">熊猫搜书</a> </li>
-<li><a href="http://www.zoudupai.com/">走读派</a></li>
-</ul>
-<h2 id="在线搜索类"><a href="#在线搜索类" class="headerlink" title="在线搜索类"></a>在线搜索类</h2><h3 id="古籍"><a href="#古籍" class="headerlink" title="古籍"></a>古籍</h3><ol>
-<li><a href="https://new.shuge.org/">书格</a></li>
-</ol>
-<h3 id="心理学"><a href="#心理学" class="headerlink" title="心理学"></a>心理学</h3><ol>
-<li><a href="http://www.ixinqing.com/">心情</a></li>
-</ol>
-<h3 id="编程书籍"><a href="#编程书籍" class="headerlink" title="编程书籍"></a>编程书籍</h3><ol>
-<li><a href="http://www.banshujiang.cn/">搬书酱</a> </li>
-<li><a href="https://tanqingbo.cn/CSBook001/">计算机专业电子书下载_程序员免费高清PDF书籍</a></li>
-</ol>
-<h3 id="直接搜索"><a href="#直接搜索" class="headerlink" title="直接搜索"></a>直接搜索</h3><ol>
-<li><a href="singlelogin.me">Z-Libary</a>(需要科学上网)</li>
-<li><a href="https://www.ooopn.com/tool/zlibrary/">Z-Libary镜像</a>(国内可访问)</li>
-<li><a href="https://clibrary.cn/#/">C-Libary</a>(中文数字图书馆,图书来自Z-Library)</li>
-<li><a href="https://www.haodoo.net/">好读</a>(中文)</li>
-<li><a href="https://ebook2.lorefree.com/">LoreFree</a>(较为繁琐)</li>
-<li><a href="https://www.ebookapp.cc/">电书</a></li>
-</ol>
-<h2 id="国家图书馆"><a href="#国家图书馆" class="headerlink" title="国家图书馆"></a>国家图书馆</h2><ol>
-<li><a href="http://www.nlc.cn/">中国国家图书馆</a></li>
-</ol>
-]]></content>
-      <categories>
-        <category>电子书导航页</category>
-      </categories>
-      <tags>
-        <tag>电子书</tag>
-        <tag>在线资源</tag>
       </tags>
   </entry>
   <entry>
@@ -467,6 +408,21 @@
 <li>OSI体系结构<br>物理层，数据链路层，网络层，运输层，会话层，表示层，应用</li>
 <li>TCP/IP体系结构<br>网络接口层，网际层，运输层，应用层</li>
 <li>教学<br>物理层，数据链路层，网络层，运输层，应用层<h3 id="分层必要性"><a href="#分层必要性" class="headerlink" title="分层必要性"></a>分层必要性</h3></li>
+<li>物理层：解决使用何种信号来传输比特问题</li>
+<li>数据链路层：解决分组在一个网络（或一段链路）上传输的问题</li>
+<li>网络层：解决在多个网络上传输(路由)的问题</li>
+<li>运输层：解决进程之间基于网络的通信问题</li>
+<li>应用层：解决通过应用进程的交互来实现特定网络应用的问题<h3 id="专用术语"><a href="#专用术语" class="headerlink" title="专用术语"></a>专用术语</h3>实体：任何可发送或接收信息的硬件或软件进程<br>对等实体：收发双方相同层次中的实体<br>协议：控制两个对等实体进行逻辑通信的规则的集合<br>协议三要素<ol>
+<li>语法：定义所交换信息的格式</li>
+<li>语义：定义收发双方所要完成的操作</li>
+<li>同步：定义收发双发的时序关系<br>服务：在协议控制下，两个对等实体间的逻辑通信使得本层能够向上一层提供服务</li>
+</ol>
+<ul>
+<li>要实现本层协议，还需要使用下面一层所提供的服务</li>
+<li>协议是水平的，服务是垂直的</li>
+<li>实体看得见相邻下层所提供的服务，但不知道实现该服务的具体协议。下面的协议对上面的实体是透明的<br>服务访问点：在同一系统中相邻两层的实体交换信息的逻辑接口，用于区分不同的服务类型<br>服务原语：上层使用下层所提供的服务必须通过与下层交换一些命令，这些命令称为服务原语<br>协议数据单元PDU:对等层次之间传送的数据包称为该层的协议数据单元<br>服务数据单元SDU:同一系统内，层与层之间交换的数据包称为服务数据单元</li>
+</ul>
+</li>
 </ol>
 ]]></content>
       <categories>
@@ -474,6 +430,79 @@
       </categories>
       <tags>
         <tag>计算机网络</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>电子书资源</title>
+    <url>/2023/02/11/%E7%94%B5%E5%AD%90%E4%B9%A6%E8%B5%84%E6%BA%90/</url>
+    <content><![CDATA[<h2 id="导航类"><a href="#导航类" class="headerlink" title="导航类"></a>导航类</h2><ul>
+<li><a href="https://search.chongbuluo.com/">虫部落</a></li>
+<li><a href="https://www.zhishikoo.com/">书籍知识库</a></li>
+<li><a href="https://xmsoushu.com/#/">熊猫搜书</a> </li>
+<li><a href="http://www.zoudupai.com/">走读派</a></li>
+</ul>
+<h2 id="在线搜索类"><a href="#在线搜索类" class="headerlink" title="在线搜索类"></a>在线搜索类</h2><h3 id="古籍"><a href="#古籍" class="headerlink" title="古籍"></a>古籍</h3><ol>
+<li><a href="https://new.shuge.org/">书格</a></li>
+</ol>
+<h3 id="心理学"><a href="#心理学" class="headerlink" title="心理学"></a>心理学</h3><ol>
+<li><a href="http://www.ixinqing.com/">心情</a></li>
+</ol>
+<h3 id="编程书籍"><a href="#编程书籍" class="headerlink" title="编程书籍"></a>编程书籍</h3><ol>
+<li><a href="http://www.banshujiang.cn/">搬书酱</a> </li>
+<li><a href="https://tanqingbo.cn/CSBook001/">计算机专业电子书下载_程序员免费高清PDF书籍</a></li>
+</ol>
+<h3 id="直接搜索"><a href="#直接搜索" class="headerlink" title="直接搜索"></a>直接搜索</h3><ol>
+<li><a href="singlelogin.me">Z-Libary</a>(需要科学上网)</li>
+<li><a href="https://www.ooopn.com/tool/zlibrary/">Z-Libary镜像</a>(国内可访问)</li>
+<li><a href="https://clibrary.cn/#/">C-Libary</a>(中文数字图书馆,图书来自Z-Library)</li>
+<li><a href="https://www.haodoo.net/">好读</a>(中文)</li>
+<li><a href="https://ebook2.lorefree.com/">LoreFree</a>(较为繁琐)</li>
+<li><a href="https://www.ebookapp.cc/">电书</a></li>
+</ol>
+<h2 id="国家图书馆"><a href="#国家图书馆" class="headerlink" title="国家图书馆"></a>国家图书馆</h2><ol>
+<li><a href="http://www.nlc.cn/">中国国家图书馆</a></li>
+</ol>
+]]></content>
+      <categories>
+        <category>电子书导航页</category>
+      </categories>
+      <tags>
+        <tag>电子书</tag>
+        <tag>在线资源</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>每日一句3.14</title>
+    <url>/2023/03/14/%E6%AF%8F%E6%97%A5%E4%B8%80%E5%8F%A53-14/</url>
+    <content><![CDATA[<p>原句：The episode crystallizes the irony that although American men tend to talk more than women in public situations,they often takl less at home.</p>
+<p>生词：<code>episode 一段情节</code> <code>crystalliz 使结晶，使。。。具体化</code> <code>irony 讽刺</code>  </p>
+<p>翻译：这段情节讽刺化了尽管美国男性在公共场合比女性谈论更多但在家里时却交流很少。</p>
+]]></content>
+      <categories>
+        <category>每日一句</category>
+      </categories>
+      <tags>
+        <tag>每日一句</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>滑雪基础</title>
+    <url>/2023/02/07/%E6%BB%91%E9%9B%AA%E5%9F%BA%E7%A1%80/</url>
+    <content><![CDATA[<h1 id="滑雪初级技巧"><a href="#滑雪初级技巧" class="headerlink" title="滑雪初级技巧"></a>滑雪初级技巧</h1><h2 id="原地基础"><a href="#原地基础" class="headerlink" title="原地基础"></a>原地基础</h2><h3 id="握雪仗"><a href="#握雪仗" class="headerlink" title="握雪仗"></a>握雪仗</h3><p>握柄带套入约手腕位置，同时抓住柄带和握柄。<br><img src="/2023/02/07/%E6%BB%91%E9%9B%AA%E5%9F%BA%E7%A1%80/1.png" alt="握柄"></p>
+<h3 id="坡路穿板"><a href="#坡路穿板" class="headerlink" title="坡路穿板"></a>坡路穿板</h3><p>先穿下侧雪板，穿上下侧雪板后内刃刻在雪上,之后穿另一侧。<br><img src="/2023/02/07/%E6%BB%91%E9%9B%AA%E5%9F%BA%E7%A1%80/2.1.png" alt="坡路穿板1"><br><img src="/2023/02/07/%E6%BB%91%E9%9B%AA%E5%9F%BA%E7%A1%80/2.2.png" alt="坡路穿板2"></p>
+<h3 id="正确摔倒"><a href="#正确摔倒" class="headerlink" title="正确摔倒"></a>正确摔倒</h3><p>往两侧去摔倒<br><img src="/2023/02/07/%E6%BB%91%E9%9B%AA%E5%9F%BA%E7%A1%80/3.1.png" alt="摔倒"></p>
+<h3 id="站起"><a href="#站起" class="headerlink" title="站起"></a>站起</h3><p>板底冲山下，板头冲山上，雪仗在身体后方支撑，腰腹发力站起。<br><img src="/2023/02/07/%E6%BB%91%E9%9B%AA%E5%9F%BA%E7%A1%80/4.1.png" alt="站起1"><br><img src="/2023/02/07/%E6%BB%91%E9%9B%AA%E5%9F%BA%E7%A1%80/4.2.png" alt="站起2"><br><img src="/2023/02/07/%E6%BB%91%E9%9B%AA%E5%9F%BA%E7%A1%80/4.3.png" alt="站起3"></p>
+<h2 id="原地旋转"><a href="#原地旋转" class="headerlink" title="原地旋转"></a>原地旋转</h2><p>抬起一个雪板，刻住雪，翻转。两雪杖放在身体两侧，另一支板带回。<br><img src="/2023/02/07/%E6%BB%91%E9%9B%AA%E5%9F%BA%E7%A1%80/5.1.png" alt="旋转1"><br><img src="/2023/02/07/%E6%BB%91%E9%9B%AA%E5%9F%BA%E7%A1%80/5.2.png" alt="旋转2"></p>
+<h2 id="初级滑"><a href="#初级滑" class="headerlink" title="初级滑"></a>初级滑</h2><h3 id="支杆前进"><a href="#支杆前进" class="headerlink" title="支杆前进"></a>支杆前进</h3><p>雪杖支撑点撑在板头至脚尖距离的中点<br><img src="/2023/02/07/%E6%BB%91%E9%9B%AA%E5%9F%BA%E7%A1%80/6.1.png" alt="支杆前进"></p>
+<h3 id="横向登坡"><a href="#横向登坡" class="headerlink" title="横向登坡"></a>横向登坡</h3><p>往破上行走时，两膝盖同时下压，山下板内侧和山上板外侧刻住雪面。<br><img src="/2023/02/07/%E6%BB%91%E9%9B%AA%E5%9F%BA%E7%A1%80/7.1.png" alt="横向登坡"><br><img src="/2023/02/07/%E6%BB%91%E9%9B%AA%E5%9F%BA%E7%A1%80/7.2.png" alt="横向登坡"></p>
+<h3 id="梨式制动（梨式刹车）"><a href="#梨式制动（梨式刹车）" class="headerlink" title="梨式制动（梨式刹车）"></a>梨式制动（梨式刹车）</h3><p>身体前倾，重量放在两个板尖。两腿平均分配力量，一起蹬开。<br>蹬开之后，膝盖自动向里旋转，板刃内侧刻住雪面，外板边立起，两板尖约一拳之隔。<br><img src="/2023/02/07/%E6%BB%91%E9%9B%AA%E5%9F%BA%E7%A1%80/8.1.png" alt="梨式制动"><br><img src="/2023/02/07/%E6%BB%91%E9%9B%AA%E5%9F%BA%E7%A1%80/8.2.png" alt="梨式制动"></p>
+<h3 id="梨式滑降"><a href="#梨式滑降" class="headerlink" title="梨式滑降"></a>梨式滑降</h3><p>和梨式制动类似，板尖并上（约一拳之隔），板尾分开，内八字。<br>板尖，板尾宽度一直不变，重心在板尖处，虎口朝上，手往前伸，眼睛向前看，不要低头。<br>膝盖不越过鞋尖，臀部不超过鞋尾，手和腰平行。<br><img src="/2023/02/07/%E6%BB%91%E9%9B%AA%E5%9F%BA%E7%A1%80/9.1.png" alt="滑降"><br><img src="/2023/02/07/%E6%BB%91%E9%9B%AA%E5%9F%BA%E7%A1%80/9.2.png" alt="滑降"><br><img src="/2023/02/07/%E6%BB%91%E9%9B%AA%E5%9F%BA%E7%A1%80/9.3.png" alt="滑降"></p>
+]]></content>
+      <categories>
+        <category>随笔</category>
+      </categories>
+      <tags>
+        <tag>滑雪</tag>
       </tags>
   </entry>
 </search>
