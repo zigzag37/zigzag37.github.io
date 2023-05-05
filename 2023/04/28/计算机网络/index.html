@@ -27,7 +27,7 @@
 <meta property="og:description" content="第一章英特网概述网络： 结点+链路组成多个网络 + 路由器 &#x3D; 互联网（英特网）英特网：世界上最大的互联网络英特网 &#x3D; 边缘部分 + 核心部分边缘部分：所有连接在英特网上的主机组成，用户直接使用，通信+资源共享核心部分：由大量网络 + 路由器组成，为边缘部分提供服务 三种交换方式电路交换：  优点：通信时延小 有序控制 没有冲突 使用范围广 实时性强 控制简单 缺点：建立连接时间长，线路独占，使用">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2023-04-28T14:10:17.000Z">
-<meta property="article:modified_time" content="2023-05-05T04:40:22.859Z">
+<meta property="article:modified_time" content="2023-05-05T04:59:46.478Z">
 <meta property="article:author" content="zigzag37">
 <meta property="article:tag" content="计算机网络">
 <meta name="twitter:card" content="summary">
@@ -243,7 +243,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2023-05-05 12:40:22" itemprop="dateModified" datetime="2023-05-05T12:40:22+08:00">2023-05-05</time>
+      <time title="修改时间：2023-05-05 12:59:46" itemprop="dateModified" datetime="2023-05-05T12:59:46+08:00">2023-05-05</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -329,13 +329,15 @@
 </li>
 </ol>
 <h2 id="计算机网络体系结构"><a href="#计算机网络体系结构" class="headerlink" title="计算机网络体系结构"></a>计算机网络体系结构</h2><h3 id="常见结构"><a href="#常见结构" class="headerlink" title="常见结构"></a>常见结构</h3><ol>
-<li>OSI体系结构<br>物理层，数据链路层，网络层，运输层，会话层，表示层，应用</li>
+<li>OSI体系结构<br>物理层，数据链路层，网络层，运输层，会话层，表示层，应用层</li>
 <li>TCP/IP体系结构<br>网络接口层，网际层，运输层，应用层</li>
-<li>教学<br>物理层，数据链路层，网络层，运输层，应用层<h3 id="分层必要性"><a href="#分层必要性" class="headerlink" title="分层必要性"></a>分层必要性</h3></li>
+<li>五层原理体系结构<br>物理层，数据链路层，网络层，运输层，应用层<h3 id="分层必要性"><a href="#分层必要性" class="headerlink" title="分层必要性"></a>分层必要性</h3></li>
 <li>物理层：解决使用何种信号来传输比特问题</li>
 <li>数据链路层：解决分组在一个网络（或一段链路）上传输的问题</li>
 <li>网络层：解决在多个网络上传输(路由)的问题</li>
 <li>运输层：解决进程之间基于网络的通信问题</li>
+<li>会话层：解决进程之间进行会话问题</li>
+<li>表示层：解决通信双方交换信息的表示问题</li>
 <li>应用层：解决通过应用进程的交互来实现特定网络应用的问题<h3 id="专用术语"><a href="#专用术语" class="headerlink" title="专用术语"></a>专用术语</h3>实体：任何可发送或接收信息的硬件或软件进程<br>对等实体：收发双方相同层次中的实体<br>协议：控制两个对等实体进行逻辑通信的规则的集合<br>协议三要素<ol>
 <li>语法：定义所交换信息的格式</li>
 <li>语义：定义收发双方所要完成的操作</li>
