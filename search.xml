@@ -44,25 +44,6 @@
       </tags>
   </entry>
   <entry>
-    <title>vscode部署远程服务</title>
-    <url>/2023/02/10/vscode%E9%83%A8%E7%BD%B2%E8%BF%9C%E7%A8%8B%E6%9C%8D%E5%8A%A1/</url>
-    <content><![CDATA[<p><code>环境：阿里云centos7.9</code></p>
-<h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2><p>使用ssl登录无效，一直重复输入密码。  </p>
-<h2 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h2><ol>
-<li>修改远程服务器<code>.ssh</code>登文件权限  <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">chmod 700 ..</span><br><span class="line">chmod 700 .</span><br><span class="line">chmod 600 authorized_keys</span><br></pre></td></tr></table></figure></li>
-<li>修改ssh配置服务器信息 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">vim /etc/ssh/sshd_config </span><br><span class="line">    </span><br></pre></td></tr></table></figure>
- 把 <code>PubkeyAuthentication</code> 前的 # 号去掉</li>
-<li>修改本地私钥文件权限<br> <img src="/2023/02/10/vscode%E9%83%A8%E7%BD%B2%E8%BF%9C%E7%A8%8B%E6%9C%8D%E5%8A%A1/%E7%A7%81%E9%92%A5%E6%9D%83%E9%99%90.png" alt="私钥权限"></li>
-</ol>
-]]></content>
-      <categories>
-        <category>编程工具</category>
-      </categories>
-      <tags>
-        <tag>vscode,服务器</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>clash_for_widnows去除软件内广告</title>
     <url>/2023/02/11/clash-for-widnows%E5%8E%BB%E9%99%A4%E8%BD%AF%E4%BB%B6%E5%86%85%E5%B9%BF%E5%91%8A/</url>
     <content><![CDATA[<h1 id="解包app-asar"><a href="#解包app-asar" class="headerlink" title="解包app.asar"></a>解包app.asar</h1><ol>
@@ -85,6 +66,25 @@
       <tags>
         <tag>clash</tag>
         <tag>科学上网</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>vscode部署远程服务</title>
+    <url>/2023/02/10/vscode%E9%83%A8%E7%BD%B2%E8%BF%9C%E7%A8%8B%E6%9C%8D%E5%8A%A1/</url>
+    <content><![CDATA[<p><code>环境：阿里云centos7.9</code></p>
+<h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2><p>使用ssl登录无效，一直重复输入密码。  </p>
+<h2 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h2><ol>
+<li>修改远程服务器<code>.ssh</code>登文件权限  <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">chmod 700 ..</span><br><span class="line">chmod 700 .</span><br><span class="line">chmod 600 authorized_keys</span><br></pre></td></tr></table></figure></li>
+<li>修改ssh配置服务器信息 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">vim /etc/ssh/sshd_config </span><br><span class="line">    </span><br></pre></td></tr></table></figure>
+ 把 <code>PubkeyAuthentication</code> 前的 # 号去掉</li>
+<li>修改本地私钥文件权限<br> <img src="/2023/02/10/vscode%E9%83%A8%E7%BD%B2%E8%BF%9C%E7%A8%8B%E6%9C%8D%E5%8A%A1/%E7%A7%81%E9%92%A5%E6%9D%83%E9%99%90.png" alt="私钥权限"></li>
+</ol>
+]]></content>
+      <categories>
+        <category>编程工具</category>
+      </categories>
+      <tags>
+        <tag>vscode,服务器</tag>
       </tags>
   </entry>
   <entry>
@@ -145,19 +145,6 @@
       </tags>
   </entry>
   <entry>
-    <title>每日一句3.11</title>
-    <url>/2023/03/11/%E6%AF%8F%E6%97%A5%E4%B8%80%E5%8F%A53-11/</url>
-    <content><![CDATA[<p>原句：The longest bull run in a century of art-market history ended on a dramatic note with a sale of 56 works by Damien Hirst,Beautiful Inside My head Forever ,at Sotheby’s in London on September 15th 2008.<br>生词：<code>bull 牛市，市场上场（bull market)，</code> <code>run 状态，态势，一段时间</code>  <code>note 音符</code>  <code>Sotheby&#39;s su&#39;shibi</code></p>
-<p>翻译：2008年9月15日，在伦敦苏是比拍卖行举办的美永存心间拍卖会上，随着Damien Hirst的56件拍品成交，本世纪艺术品市场中最长的牛市迎来了戏剧性的结尾。</p>
-]]></content>
-      <categories>
-        <category>每日一句</category>
-      </categories>
-      <tags>
-        <tag>每日一句</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>每日一句3.12</title>
     <url>/2023/03/12/%E6%AF%8F%E6%97%A5%E4%B8%80%E5%8F%A53-12/</url>
     <content><![CDATA[<p>原句：But the market generates interest far beyond its size because it brings together great wealth,enormous egos,greed,passion and controversy in away matched by few other industries.</p>
@@ -171,10 +158,10 @@
       </tags>
   </entry>
   <entry>
-    <title>每日一句3.13</title>
-    <url>/2023/03/13/%E6%AF%8F%E6%97%A5%E4%B8%80%E5%8F%A53-13/</url>
-    <content><![CDATA[<p>原句：Almost everyone who was interviewed for this special report said the the biggest problem at the moment is not a lack of demand but a lack of good work to sell.</p>
-<p>翻译：几乎每一个被这篇专题报道采访过的人都表示，目前最大的问题不是缺乏需求，而是缺乏好的卖点。</p>
+    <title>每日一句3.11</title>
+    <url>/2023/03/11/%E6%AF%8F%E6%97%A5%E4%B8%80%E5%8F%A53-11/</url>
+    <content><![CDATA[<p>原句：The longest bull run in a century of art-market history ended on a dramatic note with a sale of 56 works by Damien Hirst,Beautiful Inside My head Forever ,at Sotheby’s in London on September 15th 2008.<br>生词：<code>bull 牛市，市场上场（bull market)，</code> <code>run 状态，态势，一段时间</code>  <code>note 音符</code>  <code>Sotheby&#39;s su&#39;shibi</code></p>
+<p>翻译：2008年9月15日，在伦敦苏是比拍卖行举办的美永存心间拍卖会上，随着Damien Hirst的56件拍品成交，本世纪艺术品市场中最长的牛市迎来了戏剧性的结尾。</p>
 ]]></content>
       <categories>
         <category>每日一句</category>
@@ -198,11 +185,10 @@
       </tags>
   </entry>
   <entry>
-    <title>每日一句3.17</title>
-    <url>/2023/03/17/%E6%AF%8F%E6%97%A5%E4%B8%80%E5%8F%A53-17/</url>
-    <content><![CDATA[<p>原句：Many Americans regard the jury sustem as a concrete expression of crucial democratic values,including the principles that all citizens who meet minimal qualifitions of age and literacy are equally competent to serve on juries;that jurors should be selected randomly from a representative cross section of the community;that no citizen should  be denied the right to serve on a jury on account of race,religion,sex,or national origin;that defendants are entitled to trial by their peers;and that verdicts should represent the conscience of the community and not just the letter of the law.</p>
-<p>生词：<code>contrete 具体的，实在的</code> <code>crucial 重要的</code> <code>competent 有能力的</code>  <code>on acount of  因为，由于</code> <code>verdict 判决</code> <code>conscience 良知</code> <code>defendant  被告，被告人</code></p>
-<p>翻译：许多美国人把陪审团制度视为重要民主价值的具体的表达，包括满足年龄和文化水平的最低资格的所有公民都有平等的权利去服务于陪审，陪审员应该随机地从社会各个代表中选出，没有人应该被否定参与陪审的权利因为种族，地区，性别，原始国籍，被告有机会被他的同僚审判，判决代表社会良知而不是法律条文。</p>
+    <title>每日一句3.13</title>
+    <url>/2023/03/13/%E6%AF%8F%E6%97%A5%E4%B8%80%E5%8F%A53-13/</url>
+    <content><![CDATA[<p>原句：Almost everyone who was interviewed for this special report said the the biggest problem at the moment is not a lack of demand but a lack of good work to sell.</p>
+<p>翻译：几乎每一个被这篇专题报道采访过的人都表示，目前最大的问题不是缺乏需求，而是缺乏好的卖点。</p>
 ]]></content>
       <categories>
         <category>每日一句</category>
@@ -212,53 +198,11 @@
       </tags>
   </entry>
   <entry>
-    <title>每日一句3.18</title>
-    <url>/2023/03/18/%E6%AF%8F%E6%97%A5%E4%B8%80%E5%8F%A53-18/</url>
-    <content><![CDATA[<p>原句：Although the Supreme Court of the United States had prohibited intentional racial discrimination in jury selection as early as the 1880 case of Strauder v.West Birginia,the practice of selecting so-called elite or blue-ribbon juries provided a convenient way around this and other antidiscrimination laws.</p>
-<p>生词：<code>elite 精英</code> <code>intentional 故意的</code> <code>practice 惯例，常规</code></p>
-<p>翻译：尽管美国最高法院早在1880年S vs W 的案件中禁止了故意的种族歧视在法庭挑选陪审员中，但挑选精英或蓝丝带陪审员的行为提供了一种方便的方式来绕过这种反歧视和其他反歧视法律。</p>
-]]></content>
-      <categories>
-        <category>每日一句</category>
-      </categories>
-      <tags>
-        <tag>每日一句</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>每日一句3.19</title>
-    <url>/2023/03/19/%E6%AF%8F%E6%97%A5%E4%B8%80%E5%8F%A53-19/</url>
-    <content><![CDATA[<p>原句：The decision of the New York Philharmonic to hire Alan Gilbert as its next music director has been the talk of the classical-music world ever since the sudden annoucement of his appointment in 2009.</p>
-<p>生词：<code>hire 租用;租借;聘用;录用;雇用;临时雇用</code> <code>appointment 就职，委任，约会，约定</code> </p>
-<p>翻译：纽约 Phiharmonic 聘用Alan Gilbert作为下一任音乐总监的决定一直在传统音乐界被讨论，自从2009年突然发布有关Alan Gilbert的聘用。</p>
-]]></content>
-      <categories>
-        <category>每日一句</category>
-      </categories>
-      <tags>
-        <tag>每日一句</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>每日一句3.2</title>
-    <url>/2023/03/02/%E6%AF%8F%E6%97%A5%E4%B8%80%E5%8F%A53-2/</url>
-    <content><![CDATA[<p>原句： Of all the changes that have taken place in English-language newspapers during the past quarter-century,perhaps the most far-reaching has been the inexorable decline in the scope and seriousness of their arts coverage.</p>
-<p>生词： <code>inexorable:不可阻挡的，无法改变的</code> <code>far-reaching:影响深远的，广泛的</code> <code>coverage:覆盖，报道</code></p>
-<p>翻译： 在过去25年里英文报纸发生的所有改变中可能最深远的就是艺术报道地严肃性和范围不可避免地下降。</p>
-]]></content>
-      <categories>
-        <category>每日一句</category>
-      </categories>
-      <tags>
-        <tag>每日一句</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>每日一句3.20</title>
-    <url>/2023/03/20/%E6%AF%8F%E6%97%A5%E4%B8%80%E5%8F%A53-20/</url>
-    <content><![CDATA[<p>原句：Devoted concertgoers who reply that recordings are no substitute for live performance are missing the point.</p>
-<p>生词：<code>Devoted 非常热衷的，献声的</code> <code>concert 音乐会</code> <code>concertgoer 去音乐会的人</code> <code>substitute 代替，替代</code> </p>
-<p>翻译：那帮认为录制品不能替代现场表演的音乐会死忠粉并没有抓住重点。</p>
+    <title>每日一句3.15</title>
+    <url>/2023/03/15/%E6%AF%8F%E6%97%A5%E4%B8%80%E5%8F%A53-15/</url>
+    <content><![CDATA[<p>原句：In short,the image that best represents the current crisis is the stereotypical cartoon scene of a man sitting at the breakfast table with a newspaper held up in front of his face,while a woman glares at the back of it,wanting to talk.</p>
+<p>生词：<code>In short 简而言之，长话多说</code> <code>represent 代表，表现</code> <code>stereotypical 典型的，老一套的，刻板化的，模式化的</code>  <code>glare 怒目而视，发出刺眼的光</code></p>
+<p>翻译：简而言之，最能代表当前危机的形象是一个老套的卡通场景，即一个男人在早餐桌前把报纸举在他的脸上，而一位女士盯着报纸的背面，想要说话。</p>
 ]]></content>
       <categories>
         <category>每日一句</category>
@@ -282,10 +226,80 @@
       </tags>
   </entry>
   <entry>
+    <title>每日一句3.17</title>
+    <url>/2023/03/17/%E6%AF%8F%E6%97%A5%E4%B8%80%E5%8F%A53-17/</url>
+    <content><![CDATA[<p>原句：Many Americans regard the jury sustem as a concrete expression of crucial democratic values,including the principles that all citizens who meet minimal qualifitions of age and literacy are equally competent to serve on juries;that jurors should be selected randomly from a representative cross section of the community;that no citizen should  be denied the right to serve on a jury on account of race,religion,sex,or national origin;that defendants are entitled to trial by their peers;and that verdicts should represent the conscience of the community and not just the letter of the law.</p>
+<p>生词：<code>contrete 具体的，实在的</code> <code>crucial 重要的</code> <code>competent 有能力的</code>  <code>on acount of  因为，由于</code> <code>verdict 判决</code> <code>conscience 良知</code> <code>defendant  被告，被告人</code></p>
+<p>翻译：许多美国人把陪审团制度视为重要民主价值的具体的表达，包括满足年龄和文化水平的最低资格的所有公民都有平等的权利去服务于陪审，陪审员应该随机地从社会各个代表中选出，没有人应该被否定参与陪审的权利因为种族，地区，性别，原始国籍，被告有机会被他的同僚审判，判决代表社会良知而不是法律条文。</p>
+]]></content>
+      <categories>
+        <category>每日一句</category>
+      </categories>
+      <tags>
+        <tag>每日一句</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>每日一句3.19</title>
+    <url>/2023/03/19/%E6%AF%8F%E6%97%A5%E4%B8%80%E5%8F%A53-19/</url>
+    <content><![CDATA[<p>原句：The decision of the New York Philharmonic to hire Alan Gilbert as its next music director has been the talk of the classical-music world ever since the sudden annoucement of his appointment in 2009.</p>
+<p>生词：<code>hire 租用;租借;聘用;录用;雇用;临时雇用</code> <code>appointment 就职，委任，约会，约定</code> </p>
+<p>翻译：纽约 Phiharmonic 聘用Alan Gilbert作为下一任音乐总监的决定一直在传统音乐界被讨论，自从2009年突然发布有关Alan Gilbert的聘用。</p>
+]]></content>
+      <categories>
+        <category>每日一句</category>
+      </categories>
+      <tags>
+        <tag>每日一句</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>每日一句3.18</title>
+    <url>/2023/03/18/%E6%AF%8F%E6%97%A5%E4%B8%80%E5%8F%A53-18/</url>
+    <content><![CDATA[<p>原句：Although the Supreme Court of the United States had prohibited intentional racial discrimination in jury selection as early as the 1880 case of Strauder v.West Birginia,the practice of selecting so-called elite or blue-ribbon juries provided a convenient way around this and other antidiscrimination laws.</p>
+<p>生词：<code>elite 精英</code> <code>intentional 故意的</code> <code>practice 惯例，常规</code></p>
+<p>翻译：尽管美国最高法院早在1880年S vs W 的案件中禁止了故意的种族歧视在法庭挑选陪审员中，但挑选精英或蓝丝带陪审员的行为提供了一种方便的方式来绕过这种反歧视和其他反歧视法律。</p>
+]]></content>
+      <categories>
+        <category>每日一句</category>
+      </categories>
+      <tags>
+        <tag>每日一句</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>每日一句3.20</title>
+    <url>/2023/03/20/%E6%AF%8F%E6%97%A5%E4%B8%80%E5%8F%A53-20/</url>
+    <content><![CDATA[<p>原句：Devoted concertgoers who reply that recordings are no substitute for live performance are missing the point.</p>
+<p>生词：<code>Devoted 非常热衷的，献声的</code> <code>concert 音乐会</code> <code>concertgoer 去音乐会的人</code> <code>substitute 代替，替代</code> </p>
+<p>翻译：那帮认为录制品不能替代现场表演的音乐会死忠粉并没有抓住重点。</p>
+]]></content>
+      <categories>
+        <category>每日一句</category>
+      </categories>
+      <tags>
+        <tag>每日一句</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>每日一句3.21</title>
     <url>/2023/03/21/%E6%AF%8F%E6%97%A5%E4%B8%80%E5%8F%A53-21/</url>
     <content><![CDATA[<p>原句：For the time,attention,and money of the art-loving public,classical instrumentalists must compete not onlu with opera houses,dance troupes,theater companies,and museums,but  also with the recorded performances of the great classical musicians of the 20th century.<br>生词：<code>troupe 巡回演出团，巡回演出</code> <code>concert 音乐会</code> <code>concertgoer 去音乐会的人</code> <code>substitute 代替，替代</code> </p>
 <p>翻译：为了得到艺术爱好者的时间，关注和金钱，古典音乐家们不但要和歌剧院，舞团，剧场公司，博物馆竞争，而且还要与20实际优秀的古典音乐家录制的表演竞争。</p>
+]]></content>
+      <categories>
+        <category>每日一句</category>
+      </categories>
+      <tags>
+        <tag>每日一句</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>每日一句3.2</title>
+    <url>/2023/03/02/%E6%AF%8F%E6%97%A5%E4%B8%80%E5%8F%A53-2/</url>
+    <content><![CDATA[<p>原句： Of all the changes that have taken place in English-language newspapers during the past quarter-century,perhaps the most far-reaching has been the inexorable decline in the scope and seriousness of their arts coverage.</p>
+<p>生词： <code>inexorable:不可阻挡的，无法改变的</code> <code>far-reaching:影响深远的，广泛的</code> <code>coverage:覆盖，报道</code></p>
+<p>翻译： 在过去25年里英文报纸发生的所有改变中可能最深远的就是艺术报道地严肃性和范围不可避免地下降。</p>
 ]]></content>
       <categories>
         <category>每日一句</category>
@@ -337,20 +351,6 @@
       </tags>
   </entry>
   <entry>
-    <title>每日一句3.15</title>
-    <url>/2023/03/15/%E6%AF%8F%E6%97%A5%E4%B8%80%E5%8F%A53-15/</url>
-    <content><![CDATA[<p>原句：In short,the image that best represents the current crisis is the stereotypical cartoon scene of a man sitting at the breakfast table with a newspaper held up in front of his face,while a woman glares at the back of it,wanting to talk.</p>
-<p>生词：<code>In short 简而言之，长话多说</code> <code>represent 代表，表现</code> <code>stereotypical 典型的，老一套的，刻板化的，模式化的</code>  <code>glare 怒目而视，发出刺眼的光</code></p>
-<p>翻译：简而言之，最能代表当前危机的形象是一个老套的卡通场景，即一个男人在早餐桌前把报纸举在他的脸上，而一位女士盯着报纸的背面，想要说话。</p>
-]]></content>
-      <categories>
-        <category>每日一句</category>
-      </categories>
-      <tags>
-        <tag>每日一句</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>每日一句3.6</title>
     <url>/2023/03/06/%E6%AF%8F%E6%97%A5%E4%B8%80%E5%8F%A53-6/</url>
     <content><![CDATA[<p>原句：The Federal Circuit issued an unusual order stating that the case would be heard by all 12 of the court’s judges,rather than a typical panel of three,and that one issue it wants to evaluate is whether it should “reconsider” its State Street Bank ruling.</p>
@@ -380,20 +380,6 @@
       </tags>
   </entry>
   <entry>
-    <title>每日一句3.7</title>
-    <url>/2023/03/08/%E6%AF%8F%E6%97%A5%E4%B8%80%E5%8F%A53-8/</url>
-    <content><![CDATA[<p>原句：For a social epidemic to occur,however,each person so affected must then influcence his or her own acquaintances,who must in turn influence theirs,and so on;and just how many others pay attention to each of these people has little to do with the inital influential.</p>
-<p>生词：<code>in turn 反过来，依次。。。</code> <code>has little to do with 和...之间没多少关系</code></p>
-<p>翻译：然而，要让一种社会流行潮发生，每个受到影响的人必然会影响到他/她自己的熟人，这些人又反过来影响他们等等，有多人注意到这些人中的每一个人跟最初的影响者没有什么关系。</p>
-]]></content>
-      <categories>
-        <category>每日一句</category>
-      </categories>
-      <tags>
-        <tag>每日一句</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>每日一句3.9</title>
     <url>/2023/03/09/%E6%AF%8F%E6%97%A5%E4%B8%80%E5%8F%A53-9/</url>
     <content><![CDATA[<p>原句：They found that the principal requirement for what is called “global cascades”一the widespread propagation of influence through networks一is the presence not of a few influentials but,rather,of a critical mass of easily influenced people.</p>
@@ -408,23 +394,17 @@
       </tags>
   </entry>
   <entry>
-    <title>滑雪基础</title>
-    <url>/2023/02/07/%E6%BB%91%E9%9B%AA%E5%9F%BA%E7%A1%80/</url>
-    <content><![CDATA[<h1 id="滑雪初级技巧"><a href="#滑雪初级技巧" class="headerlink" title="滑雪初级技巧"></a>滑雪初级技巧</h1><h2 id="原地基础"><a href="#原地基础" class="headerlink" title="原地基础"></a>原地基础</h2><h3 id="握雪仗"><a href="#握雪仗" class="headerlink" title="握雪仗"></a>握雪仗</h3><p>握柄带套入约手腕位置，同时抓住柄带和握柄。<br><img src="/2023/02/07/%E6%BB%91%E9%9B%AA%E5%9F%BA%E7%A1%80/1.png" alt="握柄"></p>
-<h3 id="坡路穿板"><a href="#坡路穿板" class="headerlink" title="坡路穿板"></a>坡路穿板</h3><p>先穿下侧雪板，穿上下侧雪板后内刃刻在雪上,之后穿另一侧。<br><img src="/2023/02/07/%E6%BB%91%E9%9B%AA%E5%9F%BA%E7%A1%80/2.1.png" alt="坡路穿板1"><br><img src="/2023/02/07/%E6%BB%91%E9%9B%AA%E5%9F%BA%E7%A1%80/2.2.png" alt="坡路穿板2"></p>
-<h3 id="正确摔倒"><a href="#正确摔倒" class="headerlink" title="正确摔倒"></a>正确摔倒</h3><p>往两侧去摔倒<br><img src="/2023/02/07/%E6%BB%91%E9%9B%AA%E5%9F%BA%E7%A1%80/3.1.png" alt="摔倒"></p>
-<h3 id="站起"><a href="#站起" class="headerlink" title="站起"></a>站起</h3><p>板底冲山下，板头冲山上，雪仗在身体后方支撑，腰腹发力站起。<br><img src="/2023/02/07/%E6%BB%91%E9%9B%AA%E5%9F%BA%E7%A1%80/4.1.png" alt="站起1"><br><img src="/2023/02/07/%E6%BB%91%E9%9B%AA%E5%9F%BA%E7%A1%80/4.2.png" alt="站起2"><br><img src="/2023/02/07/%E6%BB%91%E9%9B%AA%E5%9F%BA%E7%A1%80/4.3.png" alt="站起3"></p>
-<h2 id="原地旋转"><a href="#原地旋转" class="headerlink" title="原地旋转"></a>原地旋转</h2><p>抬起一个雪板，刻住雪，翻转。两雪杖放在身体两侧，另一支板带回。<br><img src="/2023/02/07/%E6%BB%91%E9%9B%AA%E5%9F%BA%E7%A1%80/5.1.png" alt="旋转1"><br><img src="/2023/02/07/%E6%BB%91%E9%9B%AA%E5%9F%BA%E7%A1%80/5.2.png" alt="旋转2"></p>
-<h2 id="初级滑"><a href="#初级滑" class="headerlink" title="初级滑"></a>初级滑</h2><h3 id="支杆前进"><a href="#支杆前进" class="headerlink" title="支杆前进"></a>支杆前进</h3><p>雪杖支撑点撑在板头至脚尖距离的中点<br><img src="/2023/02/07/%E6%BB%91%E9%9B%AA%E5%9F%BA%E7%A1%80/6.1.png" alt="支杆前进"></p>
-<h3 id="横向登坡"><a href="#横向登坡" class="headerlink" title="横向登坡"></a>横向登坡</h3><p>往破上行走时，两膝盖同时下压，山下板内侧和山上板外侧刻住雪面。<br><img src="/2023/02/07/%E6%BB%91%E9%9B%AA%E5%9F%BA%E7%A1%80/7.1.png" alt="横向登坡"><br><img src="/2023/02/07/%E6%BB%91%E9%9B%AA%E5%9F%BA%E7%A1%80/7.2.png" alt="横向登坡"></p>
-<h3 id="梨式制动（梨式刹车）"><a href="#梨式制动（梨式刹车）" class="headerlink" title="梨式制动（梨式刹车）"></a>梨式制动（梨式刹车）</h3><p>身体前倾，重量放在两个板尖。两腿平均分配力量，一起蹬开。<br>蹬开之后，膝盖自动向里旋转，板刃内侧刻住雪面，外板边立起，两板尖约一拳之隔。<br><img src="/2023/02/07/%E6%BB%91%E9%9B%AA%E5%9F%BA%E7%A1%80/8.1.png" alt="梨式制动"><br><img src="/2023/02/07/%E6%BB%91%E9%9B%AA%E5%9F%BA%E7%A1%80/8.2.png" alt="梨式制动"></p>
-<h3 id="梨式滑降"><a href="#梨式滑降" class="headerlink" title="梨式滑降"></a>梨式滑降</h3><p>和梨式制动类似，板尖并上（约一拳之隔），板尾分开，内八字。<br>板尖，板尾宽度一直不变，重心在板尖处，虎口朝上，手往前伸，眼睛向前看，不要低头。<br>膝盖不越过鞋尖，臀部不超过鞋尾，手和腰平行。<br><img src="/2023/02/07/%E6%BB%91%E9%9B%AA%E5%9F%BA%E7%A1%80/9.1.png" alt="滑降"><br><img src="/2023/02/07/%E6%BB%91%E9%9B%AA%E5%9F%BA%E7%A1%80/9.2.png" alt="滑降"><br><img src="/2023/02/07/%E6%BB%91%E9%9B%AA%E5%9F%BA%E7%A1%80/9.3.png" alt="滑降"></p>
+    <title>每日一句3.7</title>
+    <url>/2023/03/08/%E6%AF%8F%E6%97%A5%E4%B8%80%E5%8F%A53-8/</url>
+    <content><![CDATA[<p>原句：For a social epidemic to occur,however,each person so affected must then influcence his or her own acquaintances,who must in turn influence theirs,and so on;and just how many others pay attention to each of these people has little to do with the inital influential.</p>
+<p>生词：<code>in turn 反过来，依次。。。</code> <code>has little to do with 和...之间没多少关系</code></p>
+<p>翻译：然而，要让一种社会流行潮发生，每个受到影响的人必然会影响到他/她自己的熟人，这些人又反过来影响他们等等，有多人注意到这些人中的每一个人跟最初的影响者没有什么关系。</p>
 ]]></content>
       <categories>
-        <category>随笔</category>
+        <category>每日一句</category>
       </categories>
       <tags>
-        <tag>滑雪</tag>
+        <tag>每日一句</tag>
       </tags>
   </entry>
   <entry>
@@ -464,6 +444,26 @@
       <tags>
         <tag>电子书</tag>
         <tag>在线资源</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>滑雪基础</title>
+    <url>/2023/02/07/%E6%BB%91%E9%9B%AA%E5%9F%BA%E7%A1%80/</url>
+    <content><![CDATA[<h1 id="滑雪初级技巧"><a href="#滑雪初级技巧" class="headerlink" title="滑雪初级技巧"></a>滑雪初级技巧</h1><h2 id="原地基础"><a href="#原地基础" class="headerlink" title="原地基础"></a>原地基础</h2><h3 id="握雪仗"><a href="#握雪仗" class="headerlink" title="握雪仗"></a>握雪仗</h3><p>握柄带套入约手腕位置，同时抓住柄带和握柄。<br><img src="/2023/02/07/%E6%BB%91%E9%9B%AA%E5%9F%BA%E7%A1%80/1.png" alt="握柄"></p>
+<h3 id="坡路穿板"><a href="#坡路穿板" class="headerlink" title="坡路穿板"></a>坡路穿板</h3><p>先穿下侧雪板，穿上下侧雪板后内刃刻在雪上,之后穿另一侧。<br><img src="/2023/02/07/%E6%BB%91%E9%9B%AA%E5%9F%BA%E7%A1%80/2.1.png" alt="坡路穿板1"><br><img src="/2023/02/07/%E6%BB%91%E9%9B%AA%E5%9F%BA%E7%A1%80/2.2.png" alt="坡路穿板2"></p>
+<h3 id="正确摔倒"><a href="#正确摔倒" class="headerlink" title="正确摔倒"></a>正确摔倒</h3><p>往两侧去摔倒<br><img src="/2023/02/07/%E6%BB%91%E9%9B%AA%E5%9F%BA%E7%A1%80/3.1.png" alt="摔倒"></p>
+<h3 id="站起"><a href="#站起" class="headerlink" title="站起"></a>站起</h3><p>板底冲山下，板头冲山上，雪仗在身体后方支撑，腰腹发力站起。<br><img src="/2023/02/07/%E6%BB%91%E9%9B%AA%E5%9F%BA%E7%A1%80/4.1.png" alt="站起1"><br><img src="/2023/02/07/%E6%BB%91%E9%9B%AA%E5%9F%BA%E7%A1%80/4.2.png" alt="站起2"><br><img src="/2023/02/07/%E6%BB%91%E9%9B%AA%E5%9F%BA%E7%A1%80/4.3.png" alt="站起3"></p>
+<h2 id="原地旋转"><a href="#原地旋转" class="headerlink" title="原地旋转"></a>原地旋转</h2><p>抬起一个雪板，刻住雪，翻转。两雪杖放在身体两侧，另一支板带回。<br><img src="/2023/02/07/%E6%BB%91%E9%9B%AA%E5%9F%BA%E7%A1%80/5.1.png" alt="旋转1"><br><img src="/2023/02/07/%E6%BB%91%E9%9B%AA%E5%9F%BA%E7%A1%80/5.2.png" alt="旋转2"></p>
+<h2 id="初级滑"><a href="#初级滑" class="headerlink" title="初级滑"></a>初级滑</h2><h3 id="支杆前进"><a href="#支杆前进" class="headerlink" title="支杆前进"></a>支杆前进</h3><p>雪杖支撑点撑在板头至脚尖距离的中点<br><img src="/2023/02/07/%E6%BB%91%E9%9B%AA%E5%9F%BA%E7%A1%80/6.1.png" alt="支杆前进"></p>
+<h3 id="横向登坡"><a href="#横向登坡" class="headerlink" title="横向登坡"></a>横向登坡</h3><p>往破上行走时，两膝盖同时下压，山下板内侧和山上板外侧刻住雪面。<br><img src="/2023/02/07/%E6%BB%91%E9%9B%AA%E5%9F%BA%E7%A1%80/7.1.png" alt="横向登坡"><br><img src="/2023/02/07/%E6%BB%91%E9%9B%AA%E5%9F%BA%E7%A1%80/7.2.png" alt="横向登坡"></p>
+<h3 id="梨式制动（梨式刹车）"><a href="#梨式制动（梨式刹车）" class="headerlink" title="梨式制动（梨式刹车）"></a>梨式制动（梨式刹车）</h3><p>身体前倾，重量放在两个板尖。两腿平均分配力量，一起蹬开。<br>蹬开之后，膝盖自动向里旋转，板刃内侧刻住雪面，外板边立起，两板尖约一拳之隔。<br><img src="/2023/02/07/%E6%BB%91%E9%9B%AA%E5%9F%BA%E7%A1%80/8.1.png" alt="梨式制动"><br><img src="/2023/02/07/%E6%BB%91%E9%9B%AA%E5%9F%BA%E7%A1%80/8.2.png" alt="梨式制动"></p>
+<h3 id="梨式滑降"><a href="#梨式滑降" class="headerlink" title="梨式滑降"></a>梨式滑降</h3><p>和梨式制动类似，板尖并上（约一拳之隔），板尾分开，内八字。<br>板尖，板尾宽度一直不变，重心在板尖处，虎口朝上，手往前伸，眼睛向前看，不要低头。<br>膝盖不越过鞋尖，臀部不超过鞋尾，手和腰平行。<br><img src="/2023/02/07/%E6%BB%91%E9%9B%AA%E5%9F%BA%E7%A1%80/9.1.png" alt="滑降"><br><img src="/2023/02/07/%E6%BB%91%E9%9B%AA%E5%9F%BA%E7%A1%80/9.2.png" alt="滑降"><br><img src="/2023/02/07/%E6%BB%91%E9%9B%AA%E5%9F%BA%E7%A1%80/9.3.png" alt="滑降"></p>
+]]></content>
+      <categories>
+        <category>随笔</category>
+      </categories>
+      <tags>
+        <tag>滑雪</tag>
       </tags>
   </entry>
   <entry>
