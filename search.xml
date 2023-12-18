@@ -1,6 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>C++笔记（转载）</title>
+    <url>/2021/12/09/C++%E7%AC%94%E8%AE%B0%EF%BC%88%E8%BD%AC%E8%BD%BD%EF%BC%89/</url>
+    <content><![CDATA[<h4 id="侯捷C-课程笔记01-面向对象高级编程（上）"><a href="#侯捷C-课程笔记01-面向对象高级编程（上）" class="headerlink" title="侯捷C++课程笔记01: 面向对象高级编程（上）"></a>侯捷C++课程笔记01: 面向对象高级编程（上）</h4><p><a href="https://blog.csdn.net/ncepu_Chen/article/details/113843775">https://blog.csdn.net/ncepu_Chen/article/details/113843775</a></p>
+<h4 id="侯捷C-课程笔记02-面向对象高级编程（下）"><a href="#侯捷C-课程笔记02-面向对象高级编程（下）" class="headerlink" title="侯捷C++课程笔记02: 面向对象高级编程（下）"></a>侯捷C++课程笔记02: 面向对象高级编程（下）</h4><p><a href="https://blog.csdn.net/ncepu_Chen/article/details/114686488">https://blog.csdn.net/ncepu_Chen/article/details/114686488</a></p>
+<h4 id="侯捷C-课程笔记02-面向对象高级编程（下）-1"><a href="#侯捷C-课程笔记02-面向对象高级编程（下）-1" class="headerlink" title="侯捷C++课程笔记02: 面向对象高级编程（下）"></a>侯捷C++课程笔记02: 面向对象高级编程（下）</h4><p><a href="https://blog.csdn.net/ncepu_Chen/article/details/114686488">https://blog.csdn.net/ncepu_Chen/article/details/114686488</a></p>
+<h4 id="侯捷C-课程笔记03-STL标准库与泛型编程"><a href="#侯捷C-课程笔记03-STL标准库与泛型编程" class="headerlink" title="侯捷C++课程笔记03: STL标准库与泛型编程"></a>侯捷C++课程笔记03: STL标准库与泛型编程</h4><p><a href="https://blog.csdn.net/ncepu_Chen/article/details/114947710">https://blog.csdn.net/ncepu_Chen/article/details/114947710</a></p>
+<h4 id="侯捷C-课程笔记04-C-2-0新特性"><a href="#侯捷C-课程笔记04-C-2-0新特性" class="headerlink" title="侯捷C++课程笔记04: C++2.0新特性"></a>侯捷C++课程笔记04: C++2.0新特性</h4><p><a href="https://blog.csdn.net/ncepu_Chen/article/details/115375559">https://blog.csdn.net/ncepu_Chen/article/details/115375559</a></p>
+]]></content>
+      <categories>
+        <category>C++</category>
+      </categories>
+      <tags>
+        <tag>C++</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>24小时直播间</title>
     <url>/2023/02/28/24%E5%B0%8F%E6%97%B6%E7%9B%B4%E6%92%AD%E9%97%B4/</url>
     <content><![CDATA[<h3 id="配置环境"><a href="#配置环境" class="headerlink" title="配置环境"></a>配置环境</h3><ol>
@@ -25,22 +41,6 @@
       </categories>
       <tags>
         <tag>Linux</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>C++笔记（转载）</title>
-    <url>/2021/12/09/C++%E7%AC%94%E8%AE%B0%EF%BC%88%E8%BD%AC%E8%BD%BD%EF%BC%89/</url>
-    <content><![CDATA[<h4 id="侯捷C-课程笔记01-面向对象高级编程（上）"><a href="#侯捷C-课程笔记01-面向对象高级编程（上）" class="headerlink" title="侯捷C++课程笔记01: 面向对象高级编程（上）"></a>侯捷C++课程笔记01: 面向对象高级编程（上）</h4><p><a href="https://blog.csdn.net/ncepu_Chen/article/details/113843775">https://blog.csdn.net/ncepu_Chen/article/details/113843775</a></p>
-<h4 id="侯捷C-课程笔记02-面向对象高级编程（下）"><a href="#侯捷C-课程笔记02-面向对象高级编程（下）" class="headerlink" title="侯捷C++课程笔记02: 面向对象高级编程（下）"></a>侯捷C++课程笔记02: 面向对象高级编程（下）</h4><p><a href="https://blog.csdn.net/ncepu_Chen/article/details/114686488">https://blog.csdn.net/ncepu_Chen/article/details/114686488</a></p>
-<h4 id="侯捷C-课程笔记02-面向对象高级编程（下）-1"><a href="#侯捷C-课程笔记02-面向对象高级编程（下）-1" class="headerlink" title="侯捷C++课程笔记02: 面向对象高级编程（下）"></a>侯捷C++课程笔记02: 面向对象高级编程（下）</h4><p><a href="https://blog.csdn.net/ncepu_Chen/article/details/114686488">https://blog.csdn.net/ncepu_Chen/article/details/114686488</a></p>
-<h4 id="侯捷C-课程笔记03-STL标准库与泛型编程"><a href="#侯捷C-课程笔记03-STL标准库与泛型编程" class="headerlink" title="侯捷C++课程笔记03: STL标准库与泛型编程"></a>侯捷C++课程笔记03: STL标准库与泛型编程</h4><p><a href="https://blog.csdn.net/ncepu_Chen/article/details/114947710">https://blog.csdn.net/ncepu_Chen/article/details/114947710</a></p>
-<h4 id="侯捷C-课程笔记04-C-2-0新特性"><a href="#侯捷C-课程笔记04-C-2-0新特性" class="headerlink" title="侯捷C++课程笔记04: C++2.0新特性"></a>侯捷C++课程笔记04: C++2.0新特性</h4><p><a href="https://blog.csdn.net/ncepu_Chen/article/details/115375559">https://blog.csdn.net/ncepu_Chen/article/details/115375559</a></p>
-]]></content>
-      <categories>
-        <category>C++</category>
-      </categories>
-      <tags>
-        <tag>C++</tag>
       </tags>
   </entry>
   <entry>
@@ -171,11 +171,10 @@
       </tags>
   </entry>
   <entry>
-    <title>每日一句3.14</title>
-    <url>/2023/03/14/%E6%AF%8F%E6%97%A5%E4%B8%80%E5%8F%A53-14/</url>
-    <content><![CDATA[<p>原句：The episode crystallizes the irony that although American men tend to talk more than women in public situations,they often takl less at home.</p>
-<p>生词：<code>episode 一段情节</code> <code>crystalliz 使结晶，使。。。具体化</code> <code>irony 讽刺</code>  </p>
-<p>翻译：这段情节讽刺化了尽管美国男性在公共场合比女性谈论更多但在家里时却交流很少。</p>
+    <title>每日一句3.13</title>
+    <url>/2023/03/13/%E6%AF%8F%E6%97%A5%E4%B8%80%E5%8F%A53-13/</url>
+    <content><![CDATA[<p>原句：Almost everyone who was interviewed for this special report said the the biggest problem at the moment is not a lack of demand but a lack of good work to sell.</p>
+<p>翻译：几乎每一个被这篇专题报道采访过的人都表示，目前最大的问题不是缺乏需求，而是缺乏好的卖点。</p>
 ]]></content>
       <categories>
         <category>每日一句</category>
@@ -185,10 +184,11 @@
       </tags>
   </entry>
   <entry>
-    <title>每日一句3.13</title>
-    <url>/2023/03/13/%E6%AF%8F%E6%97%A5%E4%B8%80%E5%8F%A53-13/</url>
-    <content><![CDATA[<p>原句：Almost everyone who was interviewed for this special report said the the biggest problem at the moment is not a lack of demand but a lack of good work to sell.</p>
-<p>翻译：几乎每一个被这篇专题报道采访过的人都表示，目前最大的问题不是缺乏需求，而是缺乏好的卖点。</p>
+    <title>每日一句3.14</title>
+    <url>/2023/03/14/%E6%AF%8F%E6%97%A5%E4%B8%80%E5%8F%A53-14/</url>
+    <content><![CDATA[<p>原句：The episode crystallizes the irony that although American men tend to talk more than women in public situations,they often takl less at home.</p>
+<p>生词：<code>episode 一段情节</code> <code>crystalliz 使结晶，使。。。具体化</code> <code>irony 讽刺</code>  </p>
+<p>翻译：这段情节讽刺化了尽管美国男性在公共场合比女性谈论更多但在家里时却交流很少。</p>
 ]]></content>
       <categories>
         <category>每日一句</category>
@@ -240,11 +240,11 @@
       </tags>
   </entry>
   <entry>
-    <title>每日一句3.19</title>
-    <url>/2023/03/19/%E6%AF%8F%E6%97%A5%E4%B8%80%E5%8F%A53-19/</url>
-    <content><![CDATA[<p>原句：The decision of the New York Philharmonic to hire Alan Gilbert as its next music director has been the talk of the classical-music world ever since the sudden annoucement of his appointment in 2009.</p>
-<p>生词：<code>hire 租用;租借;聘用;录用;雇用;临时雇用</code> <code>appointment 就职，委任，约会，约定</code> </p>
-<p>翻译：纽约 Phiharmonic 聘用Alan Gilbert作为下一任音乐总监的决定一直在传统音乐界被讨论，自从2009年突然发布有关Alan Gilbert的聘用。</p>
+    <title>每日一句3.18</title>
+    <url>/2023/03/18/%E6%AF%8F%E6%97%A5%E4%B8%80%E5%8F%A53-18/</url>
+    <content><![CDATA[<p>原句：Although the Supreme Court of the United States had prohibited intentional racial discrimination in jury selection as early as the 1880 case of Strauder v.West Birginia,the practice of selecting so-called elite or blue-ribbon juries provided a convenient way around this and other antidiscrimination laws.</p>
+<p>生词：<code>elite 精英</code> <code>intentional 故意的</code> <code>practice 惯例，常规</code></p>
+<p>翻译：尽管美国最高法院早在1880年S vs W 的案件中禁止了故意的种族歧视在法庭挑选陪审员中，但挑选精英或蓝丝带陪审员的行为提供了一种方便的方式来绕过这种反歧视和其他反歧视法律。</p>
 ]]></content>
       <categories>
         <category>每日一句</category>
@@ -254,11 +254,11 @@
       </tags>
   </entry>
   <entry>
-    <title>每日一句3.18</title>
-    <url>/2023/03/18/%E6%AF%8F%E6%97%A5%E4%B8%80%E5%8F%A53-18/</url>
-    <content><![CDATA[<p>原句：Although the Supreme Court of the United States had prohibited intentional racial discrimination in jury selection as early as the 1880 case of Strauder v.West Birginia,the practice of selecting so-called elite or blue-ribbon juries provided a convenient way around this and other antidiscrimination laws.</p>
-<p>生词：<code>elite 精英</code> <code>intentional 故意的</code> <code>practice 惯例，常规</code></p>
-<p>翻译：尽管美国最高法院早在1880年S vs W 的案件中禁止了故意的种族歧视在法庭挑选陪审员中，但挑选精英或蓝丝带陪审员的行为提供了一种方便的方式来绕过这种反歧视和其他反歧视法律。</p>
+    <title>每日一句3.19</title>
+    <url>/2023/03/19/%E6%AF%8F%E6%97%A5%E4%B8%80%E5%8F%A53-19/</url>
+    <content><![CDATA[<p>原句：The decision of the New York Philharmonic to hire Alan Gilbert as its next music director has been the talk of the classical-music world ever since the sudden annoucement of his appointment in 2009.</p>
+<p>生词：<code>hire 租用;租借;聘用;录用;雇用;临时雇用</code> <code>appointment 就职，委任，约会，约定</code> </p>
+<p>翻译：纽约 Phiharmonic 聘用Alan Gilbert作为下一任音乐总监的决定一直在传统音乐界被讨论，自从2009年突然发布有关Alan Gilbert的聘用。</p>
 ]]></content>
       <categories>
         <category>每日一句</category>
@@ -323,11 +323,11 @@
       </tags>
   </entry>
   <entry>
-    <title>每日一句3.4</title>
-    <url>/2023/03/04/%E6%AF%8F%E6%97%A5%E4%B8%80%E5%8F%A53-4/</url>
-    <content><![CDATA[<p>原句： Now the nation‘s top patent court appears completely ready to scale back on business-method patents,which hava been controversial ever since they were first authorized 10 years ago.</p>
-<p>生词：<code>scale back 缩减</code></p>
-<p>翻译：现在国家顶级专利法庭似乎完全准备好缩减早在十年前第一次批准时就一直都饱受争议的商业方法专利。</p>
+    <title>每日一句3.5</title>
+    <url>/2023/03/05/%E6%AF%8F%E6%97%A5%E4%B8%80%E5%8F%A53-5/</url>
+    <content><![CDATA[<p>原句：Curbs on business-method claims would be adramatic about-face,because it was the Federal Circuit itself the introduced such patents with its 1998 decision in the so-called State Street Bank case ,approving a patent on a way of pooling mutual-fund assets.</p>
+<p>生词：<code>curb 限制</code> <code>about-face 逆转，转变</code> <code>Federal Circuit 联邦法庭</code> <code>mutual-fund 共同基金</code> <code>polling 聚集的</code></p>
+<p>翻译：对商业方法专利的限制是一个巨大的转变，因为在1998年提出的叫道富银行案件中,联邦法庭自己通过了关于聚集共同基金资产的专利。</p>
 ]]></content>
       <categories>
         <category>每日一句</category>
@@ -337,11 +337,11 @@
       </tags>
   </entry>
   <entry>
-    <title>每日一句3.5</title>
-    <url>/2023/03/05/%E6%AF%8F%E6%97%A5%E4%B8%80%E5%8F%A53-5/</url>
-    <content><![CDATA[<p>原句：Curbs on business-method claims would be adramatic about-face,because it was the Federal Circuit itself the introduced such patents with its 1998 decision in the so-called State Street Bank case ,approving a patent on a way of pooling mutual-fund assets.</p>
-<p>生词：<code>curb 限制</code> <code>about-face 逆转，转变</code> <code>Federal Circuit 联邦法庭</code> <code>mutual-fund 共同基金</code> <code>polling 聚集的</code></p>
-<p>翻译：对商业方法专利的限制是一个巨大的转变，因为在1998年提出的叫道富银行案件中,联邦法庭自己通过了关于聚集共同基金资产的专利。</p>
+    <title>每日一句3.4</title>
+    <url>/2023/03/04/%E6%AF%8F%E6%97%A5%E4%B8%80%E5%8F%A53-4/</url>
+    <content><![CDATA[<p>原句： Now the nation‘s top patent court appears completely ready to scale back on business-method patents,which hava been controversial ever since they were first authorized 10 years ago.</p>
+<p>生词：<code>scale back 缩减</code></p>
+<p>翻译：现在国家顶级专利法庭似乎完全准备好缩减早在十年前第一次批准时就一直都饱受争议的商业方法专利。</p>
 ]]></content>
       <categories>
         <category>每日一句</category>
@@ -380,11 +380,11 @@
       </tags>
   </entry>
   <entry>
-    <title>每日一句3.9</title>
-    <url>/2023/03/09/%E6%AF%8F%E6%97%A5%E4%B8%80%E5%8F%A53-9/</url>
-    <content><![CDATA[<p>原句：They found that the principal requirement for what is called “global cascades”一the widespread propagation of influence through networks一is the presence not of a few influentials but,rather,of a critical mass of easily influenced people.</p>
-<p>生词：<code>principal 主要的，重要的，首要的</code> <code>cascade 瀑布，水流</code> <code>propagation 传播，传达</code> <code>critical 批判的，批评的，至关重要的</code></p>
-<p>翻译：他们发现针对“全球瀑布流”(通过网络广泛传播)的首要条件，不是一些有影响力的人的存在，而是一大群至关重要的大量的容易被影响的人的存在。</p>
+    <title>每日一句3.7</title>
+    <url>/2023/03/08/%E6%AF%8F%E6%97%A5%E4%B8%80%E5%8F%A53-8/</url>
+    <content><![CDATA[<p>原句：For a social epidemic to occur,however,each person so affected must then influcence his or her own acquaintances,who must in turn influence theirs,and so on;and just how many others pay attention to each of these people has little to do with the inital influential.</p>
+<p>生词：<code>in turn 反过来，依次。。。</code> <code>has little to do with 和...之间没多少关系</code></p>
+<p>翻译：然而，要让一种社会流行潮发生，每个受到影响的人必然会影响到他/她自己的熟人，这些人又反过来影响他们等等，有多人注意到这些人中的每一个人跟最初的影响者没有什么关系。</p>
 ]]></content>
       <categories>
         <category>每日一句</category>
@@ -394,11 +394,31 @@
       </tags>
   </entry>
   <entry>
-    <title>每日一句3.7</title>
-    <url>/2023/03/08/%E6%AF%8F%E6%97%A5%E4%B8%80%E5%8F%A53-8/</url>
-    <content><![CDATA[<p>原句：For a social epidemic to occur,however,each person so affected must then influcence his or her own acquaintances,who must in turn influence theirs,and so on;and just how many others pay attention to each of these people has little to do with the inital influential.</p>
-<p>生词：<code>in turn 反过来，依次。。。</code> <code>has little to do with 和...之间没多少关系</code></p>
-<p>翻译：然而，要让一种社会流行潮发生，每个受到影响的人必然会影响到他/她自己的熟人，这些人又反过来影响他们等等，有多人注意到这些人中的每一个人跟最初的影响者没有什么关系。</p>
+    <title>滑雪基础</title>
+    <url>/2023/02/07/%E6%BB%91%E9%9B%AA%E5%9F%BA%E7%A1%80/</url>
+    <content><![CDATA[<h1 id="滑雪初级技巧"><a href="#滑雪初级技巧" class="headerlink" title="滑雪初级技巧"></a>滑雪初级技巧</h1><h2 id="原地基础"><a href="#原地基础" class="headerlink" title="原地基础"></a>原地基础</h2><h3 id="握雪仗"><a href="#握雪仗" class="headerlink" title="握雪仗"></a>握雪仗</h3><p>握柄带套入约手腕位置，同时抓住柄带和握柄。<br><img src="/2023/02/07/%E6%BB%91%E9%9B%AA%E5%9F%BA%E7%A1%80/1.png" alt="握柄"></p>
+<h3 id="坡路穿板"><a href="#坡路穿板" class="headerlink" title="坡路穿板"></a>坡路穿板</h3><p>先穿下侧雪板，穿上下侧雪板后内刃刻在雪上,之后穿另一侧。<br><img src="/2023/02/07/%E6%BB%91%E9%9B%AA%E5%9F%BA%E7%A1%80/2.1.png" alt="坡路穿板1"><br><img src="/2023/02/07/%E6%BB%91%E9%9B%AA%E5%9F%BA%E7%A1%80/2.2.png" alt="坡路穿板2"></p>
+<h3 id="正确摔倒"><a href="#正确摔倒" class="headerlink" title="正确摔倒"></a>正确摔倒</h3><p>往两侧去摔倒<br><img src="/2023/02/07/%E6%BB%91%E9%9B%AA%E5%9F%BA%E7%A1%80/3.1.png" alt="摔倒"></p>
+<h3 id="站起"><a href="#站起" class="headerlink" title="站起"></a>站起</h3><p>板底冲山下，板头冲山上，雪仗在身体后方支撑，腰腹发力站起。<br><img src="/2023/02/07/%E6%BB%91%E9%9B%AA%E5%9F%BA%E7%A1%80/4.1.png" alt="站起1"><br><img src="/2023/02/07/%E6%BB%91%E9%9B%AA%E5%9F%BA%E7%A1%80/4.2.png" alt="站起2"><br><img src="/2023/02/07/%E6%BB%91%E9%9B%AA%E5%9F%BA%E7%A1%80/4.3.png" alt="站起3"></p>
+<h2 id="原地旋转"><a href="#原地旋转" class="headerlink" title="原地旋转"></a>原地旋转</h2><p>抬起一个雪板，刻住雪，翻转。两雪杖放在身体两侧，另一支板带回。<br><img src="/2023/02/07/%E6%BB%91%E9%9B%AA%E5%9F%BA%E7%A1%80/5.1.png" alt="旋转1"><br><img src="/2023/02/07/%E6%BB%91%E9%9B%AA%E5%9F%BA%E7%A1%80/5.2.png" alt="旋转2"></p>
+<h2 id="初级滑"><a href="#初级滑" class="headerlink" title="初级滑"></a>初级滑</h2><h3 id="支杆前进"><a href="#支杆前进" class="headerlink" title="支杆前进"></a>支杆前进</h3><p>雪杖支撑点撑在板头至脚尖距离的中点<br><img src="/2023/02/07/%E6%BB%91%E9%9B%AA%E5%9F%BA%E7%A1%80/6.1.png" alt="支杆前进"></p>
+<h3 id="横向登坡"><a href="#横向登坡" class="headerlink" title="横向登坡"></a>横向登坡</h3><p>往破上行走时，两膝盖同时下压，山下板内侧和山上板外侧刻住雪面。<br><img src="/2023/02/07/%E6%BB%91%E9%9B%AA%E5%9F%BA%E7%A1%80/7.1.png" alt="横向登坡"><br><img src="/2023/02/07/%E6%BB%91%E9%9B%AA%E5%9F%BA%E7%A1%80/7.2.png" alt="横向登坡"></p>
+<h3 id="梨式制动（梨式刹车）"><a href="#梨式制动（梨式刹车）" class="headerlink" title="梨式制动（梨式刹车）"></a>梨式制动（梨式刹车）</h3><p>身体前倾，重量放在两个板尖。两腿平均分配力量，一起蹬开。<br>蹬开之后，膝盖自动向里旋转，板刃内侧刻住雪面，外板边立起，两板尖约一拳之隔。<br><img src="/2023/02/07/%E6%BB%91%E9%9B%AA%E5%9F%BA%E7%A1%80/8.1.png" alt="梨式制动"><br><img src="/2023/02/07/%E6%BB%91%E9%9B%AA%E5%9F%BA%E7%A1%80/8.2.png" alt="梨式制动"></p>
+<h3 id="梨式滑降"><a href="#梨式滑降" class="headerlink" title="梨式滑降"></a>梨式滑降</h3><p>和梨式制动类似，板尖并上（约一拳之隔），板尾分开，内八字。<br>板尖，板尾宽度一直不变，重心在板尖处，虎口朝上，手往前伸，眼睛向前看，不要低头。<br>膝盖不越过鞋尖，臀部不超过鞋尾，手和腰平行。<br><img src="/2023/02/07/%E6%BB%91%E9%9B%AA%E5%9F%BA%E7%A1%80/9.1.png" alt="滑降"><br><img src="/2023/02/07/%E6%BB%91%E9%9B%AA%E5%9F%BA%E7%A1%80/9.2.png" alt="滑降"><br><img src="/2023/02/07/%E6%BB%91%E9%9B%AA%E5%9F%BA%E7%A1%80/9.3.png" alt="滑降"></p>
+]]></content>
+      <categories>
+        <category>随笔</category>
+      </categories>
+      <tags>
+        <tag>滑雪</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>每日一句3.9</title>
+    <url>/2023/03/09/%E6%AF%8F%E6%97%A5%E4%B8%80%E5%8F%A53-9/</url>
+    <content><![CDATA[<p>原句：They found that the principal requirement for what is called “global cascades”一the widespread propagation of influence through networks一is the presence not of a few influentials but,rather,of a critical mass of easily influenced people.</p>
+<p>生词：<code>principal 主要的，重要的，首要的</code> <code>cascade 瀑布，水流</code> <code>propagation 传播，传达</code> <code>critical 批判的，批评的，至关重要的</code></p>
+<p>翻译：他们发现针对“全球瀑布流”(通过网络广泛传播)的首要条件，不是一些有影响力的人的存在，而是一大群至关重要的大量的容易被影响的人的存在。</p>
 ]]></content>
       <categories>
         <category>每日一句</category>
@@ -444,26 +464,6 @@
       <tags>
         <tag>电子书</tag>
         <tag>在线资源</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>滑雪基础</title>
-    <url>/2023/02/07/%E6%BB%91%E9%9B%AA%E5%9F%BA%E7%A1%80/</url>
-    <content><![CDATA[<h1 id="滑雪初级技巧"><a href="#滑雪初级技巧" class="headerlink" title="滑雪初级技巧"></a>滑雪初级技巧</h1><h2 id="原地基础"><a href="#原地基础" class="headerlink" title="原地基础"></a>原地基础</h2><h3 id="握雪仗"><a href="#握雪仗" class="headerlink" title="握雪仗"></a>握雪仗</h3><p>握柄带套入约手腕位置，同时抓住柄带和握柄。<br><img src="/2023/02/07/%E6%BB%91%E9%9B%AA%E5%9F%BA%E7%A1%80/1.png" alt="握柄"></p>
-<h3 id="坡路穿板"><a href="#坡路穿板" class="headerlink" title="坡路穿板"></a>坡路穿板</h3><p>先穿下侧雪板，穿上下侧雪板后内刃刻在雪上,之后穿另一侧。<br><img src="/2023/02/07/%E6%BB%91%E9%9B%AA%E5%9F%BA%E7%A1%80/2.1.png" alt="坡路穿板1"><br><img src="/2023/02/07/%E6%BB%91%E9%9B%AA%E5%9F%BA%E7%A1%80/2.2.png" alt="坡路穿板2"></p>
-<h3 id="正确摔倒"><a href="#正确摔倒" class="headerlink" title="正确摔倒"></a>正确摔倒</h3><p>往两侧去摔倒<br><img src="/2023/02/07/%E6%BB%91%E9%9B%AA%E5%9F%BA%E7%A1%80/3.1.png" alt="摔倒"></p>
-<h3 id="站起"><a href="#站起" class="headerlink" title="站起"></a>站起</h3><p>板底冲山下，板头冲山上，雪仗在身体后方支撑，腰腹发力站起。<br><img src="/2023/02/07/%E6%BB%91%E9%9B%AA%E5%9F%BA%E7%A1%80/4.1.png" alt="站起1"><br><img src="/2023/02/07/%E6%BB%91%E9%9B%AA%E5%9F%BA%E7%A1%80/4.2.png" alt="站起2"><br><img src="/2023/02/07/%E6%BB%91%E9%9B%AA%E5%9F%BA%E7%A1%80/4.3.png" alt="站起3"></p>
-<h2 id="原地旋转"><a href="#原地旋转" class="headerlink" title="原地旋转"></a>原地旋转</h2><p>抬起一个雪板，刻住雪，翻转。两雪杖放在身体两侧，另一支板带回。<br><img src="/2023/02/07/%E6%BB%91%E9%9B%AA%E5%9F%BA%E7%A1%80/5.1.png" alt="旋转1"><br><img src="/2023/02/07/%E6%BB%91%E9%9B%AA%E5%9F%BA%E7%A1%80/5.2.png" alt="旋转2"></p>
-<h2 id="初级滑"><a href="#初级滑" class="headerlink" title="初级滑"></a>初级滑</h2><h3 id="支杆前进"><a href="#支杆前进" class="headerlink" title="支杆前进"></a>支杆前进</h3><p>雪杖支撑点撑在板头至脚尖距离的中点<br><img src="/2023/02/07/%E6%BB%91%E9%9B%AA%E5%9F%BA%E7%A1%80/6.1.png" alt="支杆前进"></p>
-<h3 id="横向登坡"><a href="#横向登坡" class="headerlink" title="横向登坡"></a>横向登坡</h3><p>往破上行走时，两膝盖同时下压，山下板内侧和山上板外侧刻住雪面。<br><img src="/2023/02/07/%E6%BB%91%E9%9B%AA%E5%9F%BA%E7%A1%80/7.1.png" alt="横向登坡"><br><img src="/2023/02/07/%E6%BB%91%E9%9B%AA%E5%9F%BA%E7%A1%80/7.2.png" alt="横向登坡"></p>
-<h3 id="梨式制动（梨式刹车）"><a href="#梨式制动（梨式刹车）" class="headerlink" title="梨式制动（梨式刹车）"></a>梨式制动（梨式刹车）</h3><p>身体前倾，重量放在两个板尖。两腿平均分配力量，一起蹬开。<br>蹬开之后，膝盖自动向里旋转，板刃内侧刻住雪面，外板边立起，两板尖约一拳之隔。<br><img src="/2023/02/07/%E6%BB%91%E9%9B%AA%E5%9F%BA%E7%A1%80/8.1.png" alt="梨式制动"><br><img src="/2023/02/07/%E6%BB%91%E9%9B%AA%E5%9F%BA%E7%A1%80/8.2.png" alt="梨式制动"></p>
-<h3 id="梨式滑降"><a href="#梨式滑降" class="headerlink" title="梨式滑降"></a>梨式滑降</h3><p>和梨式制动类似，板尖并上（约一拳之隔），板尾分开，内八字。<br>板尖，板尾宽度一直不变，重心在板尖处，虎口朝上，手往前伸，眼睛向前看，不要低头。<br>膝盖不越过鞋尖，臀部不超过鞋尾，手和腰平行。<br><img src="/2023/02/07/%E6%BB%91%E9%9B%AA%E5%9F%BA%E7%A1%80/9.1.png" alt="滑降"><br><img src="/2023/02/07/%E6%BB%91%E9%9B%AA%E5%9F%BA%E7%A1%80/9.2.png" alt="滑降"><br><img src="/2023/02/07/%E6%BB%91%E9%9B%AA%E5%9F%BA%E7%A1%80/9.3.png" alt="滑降"></p>
-]]></content>
-      <categories>
-        <category>随笔</category>
-      </categories>
-      <tags>
-        <tag>滑雪</tag>
       </tags>
   </entry>
   <entry>
@@ -913,7 +913,7 @@
 <li>集线器HUB:<br>早期以太网互联设备<br>工作在OSI体系结构的物理层<br>对接收到的信号进行放大，转发<br>使用集线器作为互联设备的以太网仍然属于共享总线式以太网，集线器互连起来的所有主机共享总线带宽，属于同一个碰撞域和广播域</li>
 <li>交换机SWITCH:<br>目前以太网使用最广泛的互联设备<br>工作在OSI体系结构的数据链路层（也包括物理层）<br>根据MAC地址对帧进行转发<br>使用交换机作为互联设备的以太网，称为交换式以太网。交换机可以根据MAC地址过滤帧，即隔离碰撞域<br>交换机隔离碰撞域但不隔离广播域</li>
 </ol>
-<h2 id="3-9以太网交换机自学习和转发帧的流程"><a href="#3-9以太网交换机自学习和转发帧的流程" class="headerlink" title="3.9以太网交换机自学习和转发帧的流程"></a>3.9以太网交换机自学习和转发帧的流程</h2><p>以太网交换机工作在数据链路层（也包括物理层）<br>以太网交换机收到帧后，在帧交换表中查找帧的目的MAC地址所对应的接口号，然后通过该接口转发帧<br>以太网交换机是一种即插即用设备，刚上电启动时其内部的帧交换表是空的。随着网络中各主机间的通信，<br>以太网交换机通过自学习算法自动逐渐建立起帧交换表。<br>以太网交换机自学习和转发帧的流程：<br>①收到帧后进行登记。登记的内容为帧的源MAC地址及进入交换机的接口号；<br>②根据帧的目的MAC地址和交换机的帧交换表对帧进行转发，有以下三种情况：</p>
+<h2 id="以太网交换机自学习和转发帧的流程"><a href="#以太网交换机自学习和转发帧的流程" class="headerlink" title="以太网交换机自学习和转发帧的流程"></a>以太网交换机自学习和转发帧的流程</h2><p>以太网交换机工作在数据链路层（也包括物理层）<br>以太网交换机收到帧后，在帧交换表中查找帧的目的MAC地址所对应的接口号，然后通过该接口转发帧<br>以太网交换机是一种即插即用设备，刚上电启动时其内部的帧交换表是空的。随着网络中各主机间的通信，<br>以太网交换机通过自学习算法自动逐渐建立起帧交换表。<br>以太网交换机自学习和转发帧的流程：<br>①收到帧后进行登记。登记的内容为帧的源MAC地址及进入交换机的接口号；<br>②根据帧的目的MAC地址和交换机的帧交换表对帧进行转发，有以下三种情况：</p>
 <ul>
 <li>明确转发：交换机知道应当从哪个（或哪些）接口转发该帧(单播，多播，广播)</li>
 <li>盲目转发：交换机不知道应当从哪个端口转发帧，只能将其通过除进入交换机的接口外的其他所有接口转发（也称为泛洪）。</li>
